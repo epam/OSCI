@@ -32,6 +32,7 @@ def run_query_from_file(database, path_to_file):
         cursor = conn.cursor()
         file = open(path_to_file, 'r')
         sql = " ".join(file.readlines())
+        file.close()
         cursor.execute(sql)
         cursor.commit()
         try:

@@ -42,8 +42,9 @@ def format_json_file(file_path, clear_src=False):
     :param file_path: path to the file
     """
     lines = []
-    for line in open(file_path, encoding='utf-8'):
-        lines.append(json.loads(line))
+    with open(file_path, encoding='utf-8') as infile:
+        for line in infile:
+            lines.append(json.loads(line))
     with open(file_path.strip('.json') + '-formatted.json', 'w') as outfile:
         json.dump(lines, outfile)
     if clear_src is True:
