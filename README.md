@@ -10,9 +10,9 @@
 
 * OSCI analyses push event data from [GH Archive](https://www.gharchive.org/)
 * The Author Email address field in the commit event data is used to identify the organization to which the commit author belongs
-* OSCI measures the Active Community (10+ commits) and the Total Community (1+ commit) at each organization
+* OSCI measures the Active Community (10+ commits) and the Total Community (1+ commit) at each organization
 * Analysis is done for the current year-to-date
-* OSCI’s algorithm is transparently published as an open source project on GitHub
+* OSCI’s algorithm is transparently published as an open source project on GitHub
 
 
 ![GitHub OSCI Schematic Diagram](https://github.com/epam/OSCI/blob/master/images/GitHub_OSCI_Schematic.png)
@@ -51,8 +51,10 @@ This project is sponsored by EPAM Systems and the latest results are visible on 
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
 Contact us at <TBA>.
 
-# Instructions for using the OSCI code
+## Technical Note
+We built OSCI this an Azure cloud environment using MS SQL Server. The code published here on GitHub does not require the Azure cloud, however in the current version MS SQL Server is required. Our future plans include support for an open source database.
 
+# Instructions for using the OSCI code
 
 These scripts are for downloading data from gharchive.org, processing and loading to the SQL Server.
 1) Install MS SQL Server on PC.
@@ -72,11 +74,10 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 4) Finally run script file_loader.py and wait for successful script execution. It can take some time.
 
-After it becomes possible to generate the following reports such as:
+Once the data is prepared, you can possible generate reports such as:
 
-    top_30_commits_ranking.sql - the list of companies ordered by number of commits.
-    top_30_employees_combined.sql - the list of companies employees and active employees. 
-    Table was ordered by active employees, active meaning where the employee made greater than or equal to "10" number of commits.
+    top_30_employees_combined.sql - the top 30 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
+    top_30_commits_ranking.sql - the count of commits per company.
     
     
 # License
