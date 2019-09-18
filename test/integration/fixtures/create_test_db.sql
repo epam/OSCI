@@ -1,0 +1,3 @@
+IF DB_ID (N'test_db') IS NOT NULL DROP DATABASE test_db;
+
+CREATE DATABASE test_db COLLATE SQL_Latin1_General_CP1_CI_AS;
