@@ -52,7 +52,7 @@ This is a new project. We are more than happy to listen to any feedback which wi
 Contact us at OSCI@epam.com
 
 ## Technical Note
-We built OSCI this an Azure cloud environment using MS SQL Server. The code published here on GitHub does not require the Azure cloud, however in the current version MS SQL Server is required. Our future plans include support for an open source database.
+We built OSCI this an Azure cloud environment using Azure SQL Server. The code published here on GitHub does not require the Azure cloud, however in the current version MS SQL Server is required. Our future plans include support for an open source database.
 
 # Instructions for using the OSCI code
 
@@ -63,12 +63,12 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 2) Create a file secrets.py in the same directory as the other python files. A sample file is included.
    
    In the file create the follow fields:
+                   
+        UID = 'login        
    
-   UID = 'login'
+        PWD = 'password'
    
-   PWD = 'password'
-   
-   Server = 'server_name'
+        Server = 'server_name'
 
 3) Fill fields "year" and "month" in function "get_month_data('year', 'month')" in the file 
    file_loader.py if you want to load data for a specific month.  Use get_year('year') for loading data for whole year.
