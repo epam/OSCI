@@ -74,7 +74,7 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 4) Finally run script file_loader.py and wait for successful script execution. It can take some time.
 
-Once the data is prepared, you can possible generate reports such as:
+Once the data is prepared, you can generate reports as follows:
 
     top_30_employees_combined.sql - the top 30 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
     top_30_commits_ranking.sql - the count of commits per company.
