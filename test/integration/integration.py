@@ -1,3 +1,19 @@
+"""Copyright since 2019, EPAM Systems
+
+   This file is part of OSCI.
+
+   OSCI is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   OSCI is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 
 import os
@@ -34,7 +50,7 @@ class IntegrationTest(unittest.TestCase):
         path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'service_queries',
                             'create_filtered_table.sql')
         run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
-        path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'github',
+        path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'reports',
                             'top_30_commits_ranking.sql')
         result = run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
         self.assertEqual(tuple(result[0]), ('Travis CI', 1))
