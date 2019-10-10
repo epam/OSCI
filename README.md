@@ -1,5 +1,12 @@
 ﻿# OSCI, the Open Source Contributor Index
 
+## NEWS UPDATE (October 10th 2019)
+
+The latest OSCI report showing the ranking to end of September 2019 can now be downloaded (Excel format): [2019.09 OSCI Ranking.xlsx](Archive/2019.09_OSCI_Ranking.xlsx).
+
+The [Archive folder](Archive) contains this and previous reports.
+
+
 ## What is OSCI?
 
 * OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
