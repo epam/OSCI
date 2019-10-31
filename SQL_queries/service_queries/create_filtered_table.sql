@@ -32,6 +32,7 @@ begin try
      join GitEvents ge
        on ge.EventId = gc.GitEventId
     where ge.EventType = 'PushEvent'
+      and OrgId is not NULL
       and (
     AuthorMailDomain = 'microsoft.com' or AuthorMailDomain like '%.microsoft.com' or
     AuthorMailDomain = 'google.com' or AuthorMailDomain like '%.google.com' or
@@ -42,10 +43,13 @@ begin try
     AuthorMailDomain = 'sap.com' or AuthorMailDomain like '%.sap.%' or
     AuthorMailDomain = 'thoughtworks.com' or AuthorMailDomain like '%.thoughtworks.com' or
     AuthorMailDomain = 'alibaba-inc.com' or AuthorMailDomain like '%.alibaba-inc.com' or
-    AuthorMailDomain = 'github.com' or
-    AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or AuthorMailDomain = 'fb.com' or AuthorMailDomain like '%.fb.com' or
+    AuthorMailDomain = 'github.com' or AuthorMailDomain = 'dependabot.com' or
+    AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or
+    AuthorMailDomain = 'fb.com' or AuthorMailDomain like '%.fb.com' or
+    AuthorMailDomain = 'apache.org' or
     AuthorMailDomain = 'tencent.com' or AuthorMailDomain like '%.tencent.com' or
     AuthorMailDomain = 'pivotal.io' or AuthorMailDomain like '%.pivotal.io' or
+    AuthorMailDomain = 'springframework.org' or
     AuthorMailDomain = 'epam.com' or AuthorMailDomain like '%.epam.com' or
     AuthorMailDomain = 'baidu.com' or AuthorMailDomain like '%.baidu.com' or
     AuthorMailDomain = 'mozilla.com' or AuthorMailDomain like '%.mozilla.%' or AuthorMailDomain like 'mozilla.%' or
@@ -71,7 +75,6 @@ begin try
     AuthorMailDomain = 'travis-ci.org' or AuthorMailDomain like 'travis-ci.%' or
     AuthorMailDomain = 'liferay.com' or
     AuthorMailDomain = 'jetbrains.com' or
-    AuthorMailDomain = 'osrfoundation.org' or
     AuthorMailDomain = 'docker.com' or AuthorMailDomain like 'docker.%' or
     AuthorMailDomain = 'sonarsource.com' or
     AuthorMailDomain = 'linaro.org' or
@@ -87,8 +90,86 @@ begin try
     AuthorMailDomain = 'bbc.co.uk' or
     AuthorMailDomain = 'twitter.com' or
     AuthorMailDomain = 'sonymobile.com' or
-    AuthorMailDomain = 'autodesk.com'
-    AuthorMailDomain = 'capgemini.com' or AuthorMailDomain like '%.capgemini.com'
+    AuthorMailDomain = 'autodesk.com' or
+    AuthorMailDomain = 'renovateapp.com' or
+    AuthorMailDomain = 'exoplatform.com' or AuthorMailDomain like '%.exoplatform.org' or
+    AuthorMailDomain = 'pyup.io' or
+    AuthorMailDomain = 'odoo.com' or AuthorMailDomain like '%.odoo.com' or
+    AuthorMailDomain = 'infosiftr.com' or
+    AuthorMailDomain = 'shopkeep.com' or
+    AuthorMailDomain = 'dynatrace.com' or AuthorMailDomain like '%.dynatrace.com' or
+    AuthorMailDomain = 'dynatrace.org' or AuthorMailDomain like '%.dynatrace.org' or
+    AuthorMailDomain = 'spryker.com' or
+    AuthorMailDomain = 'wso2.com' or AuthorMailDomain = 'wso2.org' or
+    AuthorMailDomain = 'chef.io' or
+    AuthorMailDomain = 'datadoghq.com' or
+    AuthorMailDomain = 'iohk.io' or
+    AuthorMailDomain = 'elastic.co' or AuthorMailDomain like '%.elastic.co' or
+    AuthorMailDomain = 'alfresco.com' or AuthorMailDomain like '%.alfresco.com' or
+    AuthorMailDomain = 'nuxeo.com' or
+    AuthorMailDomain = 'adguard.com' or
+    AuthorMailDomain = 'openrobotics.org' or AuthorMailDomain = 'osrfoundation.org' or
+    AuthorMailDomain = '5minds.de' or AuthorMailDomain like '%.5minds.de' or
+    AuthorMailDomain = 'couchbase.com' or AuthorMailDomain like '%.couchbase.com' or
+    AuthorMailDomain = 'autonomous.nyc' or
+    AuthorMailDomain = 'com3elles.com' or
+    AuthorMailDomain = 'guardian.co.uk' or
+    AuthorMailDomain = 'gradle.com' or AuthorMailDomain = 'gradle.org' or
+    AuthorMailDomain = 'kaltura.com' or AuthorMailDomain = 'kaltura.org' or
+    AuthorMailDomain = 'secops.in' or
+    AuthorMailDomain = 'automattic.com' or
+    AuthorMailDomain = 'mapbox.com' or AuthorMailDomain like '%.mapbox.com' or
+    AuthorMailDomain = 'scality.com' or
+    AuthorMailDomain = 'collabora.com' or AuthorMailDomain = 'collabora.co.uk' or
+    AuthorMailDomain = 'hashicorp.com' or AuthorMailDomain = 'hashicorp.co' or AuthorMailDomain = 'hashicorp.io' or
+    AuthorMailDomain = 'atomist.com' or
+    AuthorMailDomain = 'igalia.com' or
+    AuthorMailDomain = 'mulesoft.com' or
+    AuthorMailDomain = 'palantir.com' or
+    AuthorMailDomain = 'puppet.com' or AuthorMailDomain like '%.puppet.com' or
+    AuthorMailDomain = 'shopware.com' or AuthorMailDomain = 'shopware.de' or
+    AuthorMailDomain = 'brave.com' or
+    AuthorMailDomain = 'mesosphere.com' or AuthorMailDomain = 'mesosphere.io' or
+    AuthorMailDomain = 'lightcurve.io' or
+    AuthorMailDomain = 'originprotocol.com' or
+    AuthorMailDomain = 'mongodb.com' or
+    AuthorMailDomain = 'nxp.com' or AuthorMailDomain like '%.nxp.com' or
+    AuthorMailDomain = 'acsone.eu' or
+    AuthorMailDomain = 'camunda.com' or
+    AuthorMailDomain = 'analog.com' or
+    AuthorMailDomain = 'decred.org' or
+    AuthorMailDomain = 'percona.com' or AuthorMailDomain like '%.percona.com' or
+    AuthorMailDomain = 'nextcloud.com' or
+    AuthorMailDomain = 'tutanota.com' or AuthorMailDomain = 'tutanota.de' or
+    AuthorMailDomain = 'cockroachlabs.com' or
+    AuthorMailDomain = 'obvious.in' or
+    AuthorMailDomain = 'vaadin.com' or AuthorMailDomain like '%.vaadin.com' or
+    AuthorMailDomain = 'stripe.com' or
+    AuthorMailDomain = 'sifive.com' or
+    AuthorMailDomain = 'ti.com' or
+    AuthorMailDomain = 'bosch-si.com' or AuthorMailDomain = 'bosch.com' or AuthorMailDomain like '%.bosch.com' or
+    AuthorMailDomain = 'confluent.io' or AuthorMailDomain = 'confluent.com' or
+    AuthorMailDomain = 'indexdata.com' or AuthorMailDomain = 'indexdata.dk' or
+    AuthorMailDomain = 'yahoo-inc.com' or
+    AuthorMailDomain = 'endlessm.com' or
+    AuthorMailDomain = 'balena.io' or
+    AuthorMailDomain = 'mariadb.com' or AuthorMailDomain = 'mariadb.org' or
+    AuthorMailDomain = 'shopsys.com' or AuthorMailDomain = 'shopsys.cz' or
+    AuthorMailDomain = 'azavea.com' or
+    AuthorMailDomain = 'hortonworks.com' or AuthorMailDomain like '%.hortonworks.com' or
+    AuthorMailDomain = 'joyent.com' or
+    AuthorMailDomain = 'galeracluster.com' or
+    AuthorMailDomain = 'flatironschool.com' or
+    AuthorMailDomain = 'signalfx.com' or
+    AuthorMailDomain = 'mysociety.org' or
+    AuthorMailDomain = 'eficent.com' or
+    AuthorMailDomain = 'giantswarm.io' or
+    AuthorMailDomain = 'nymea.io' or
+    AuthorMailDomain = 'finbourne.com' or
+    AuthorMailDomain = 'h2o.ai' or AuthorMailDomain = 'h2oai.com' or
+    AuthorMailDomain = 'tweag.io' or
+    AuthorMailDomain = 'digitalbazaar.com' or
+    AuthorMailDomain = 'instructure.com'
     );
 
     update AllCommits set AuthorMailDomain = 'microsoft.com' where AuthorMailDomain like '%.microsoft.com';
@@ -100,9 +181,10 @@ begin try
     update AllCommits set AuthorMailDomain = 'sap.com' where AuthorMailDomain like '%.sap.%';
     update AllCommits set AuthorMailDomain = 'thoughtworks.com' where AuthorMailDomain like '%.thoughtworks.com';
     update AllCommits set AuthorMailDomain = 'alibaba-inc.com' where AuthorMailDomain like '%.alibaba-inc.com';
+    update AllCommits set AuthorMailDomain = 'github.com' where AuthorMailDomain = 'dependabot.com';
     update AllCommits set AuthorMailDomain = 'fb.com' where AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or AuthorMailDomain like '%.fb.com';
     update AllCommits set AuthorMailDomain = 'tencent.com' where AuthorMailDomain like '%.tencent.com';
-    update AllCommits set AuthorMailDomain = 'pivotal.io' where AuthorMailDomain like '%.pivotal.io';
+    update AllCommits set AuthorMailDomain = 'pivotal.io' where AuthorMailDomain like '%.pivotal.io' or AuthorMailDomain = 'springframework.org';
     update AllCommits set AuthorMailDomain = 'epam.com' where AuthorMailDomain like '%.epam.com';
     update AllCommits set AuthorMailDomain = 'baidu.com' where AuthorMailDomain like '%.baidu.com';
     update AllCommits set AuthorMailDomain = 'mozilla.com' where AuthorMailDomain like '%.mozilla.%' or AuthorMailDomain like 'mozilla.%';
@@ -129,6 +211,35 @@ begin try
     update AllCommits set AuthorMailDomain = 'docker.com' where AuthorMailDomain like 'docker.%';
     update AllCommits set AuthorMailDomain = 'samsung.com' where AuthorMailDomain like '%.samsung.com';
     update AllCommits set AuthorMailDomain = 'capgemini.com' where AuthorMailDomain like '%.capgemini.com';
+    update AllCommits set AuthorMailDomain = 'collabora.com' where AuthorMailDomain = 'collabora.co.uk';
+    update AllCommits set AuthorMailDomain = 'exoplatform.com' where AuthorMailDomain like '%.exoplatform.org';
+    update AllCommits set AuthorMailDomain = 'odoo.com' where AuthorMailDomain like '%.odoo.com';
+    update AllCommits set AuthorMailDomain = 'dynatrace.com' where AuthorMailDomain like '%.dynatrace.com' or AuthorMailDomain = 'dynatrace.org' or AuthorMailDomain like '%.dynatrace.org';
+    update AllCommits set AuthorMailDomain = 'wso2.com' where AuthorMailDomain = 'wso2.org';
+    update AllCommits set AuthorMailDomain = 'elastic.co' where AuthorMailDomain like '%.elastic.co';
+    update AllCommits set AuthorMailDomain = 'alfresco.com' where AuthorMailDomain like '%.alfresco.com';
+    update AllCommits set AuthorMailDomain = 'osrfoundation.org' where AuthorMailDomain = 'openrobotics.org';
+    update AllCommits set AuthorMailDomain = '5minds.de' where AuthorMailDomain like '%.5minds.de';
+    update AllCommits set AuthorMailDomain = 'couchbase.com' where AuthorMailDomain like '%.couchbase.com';
+    update AllCommits set AuthorMailDomain = 'gradle.com' where AuthorMailDomain = 'gradle.org';
+    update AllCommits set AuthorMailDomain = 'kaltura.com' where AuthorMailDomain = 'kaltura.org';
+    update AllCommits set AuthorMailDomain = 'mapbox.com' where AuthorMailDomain like '%.mapbox.com';
+    update AllCommits set AuthorMailDomain = 'hashicorp.com' where AuthorMailDomain = 'hashicorp.co' or AuthorMailDomain = 'hashicorp.io';
+    update AllCommits set AuthorMailDomain = 'puppet.com' where AuthorMailDomain like '%.puppet.com';
+    update AllCommits set AuthorMailDomain = 'shopware.com' where AuthorMailDomain = 'shopware.de';
+    update AllCommits set AuthorMailDomain = 'mesosphere.com' where AuthorMailDomain = 'mesosphere.io';
+    update AllCommits set AuthorMailDomain = 'nxp.com' where AuthorMailDomain like '%.nxp.com';
+    update AllCommits set AuthorMailDomain = 'percona.com' where AuthorMailDomain like '%.percona.com';
+    update AllCommits set AuthorMailDomain = 'tutanota.com' where AuthorMailDomain = 'tutanota.de';
+    update AllCommits set AuthorMailDomain = 'vaadin.com' where AuthorMailDomain like '%.vaadin.com';
+    update AllCommits set AuthorMailDomain = 'bosch.com' where AuthorMailDomain like '%.bosch.com' or AuthorMailDomain = 'bosch-si.com';
+    update AllCommits set AuthorMailDomain = 'confluent.io' where AuthorMailDomain = 'confluent.com';
+    update AllCommits set AuthorMailDomain = 'indexdata.com' where AuthorMailDomain = 'indexdata.dk';
+    update AllCommits set AuthorMailDomain = 'mariadb.com' where AuthorMailDomain = 'mariadb.org';
+    update AllCommits set AuthorMailDomain = 'shopsys.com' where AuthorMailDomain = 'shopsys.cz';
+    update AllCommits set AuthorMailDomain = 'hortonworks.com' where AuthorMailDomain like '%.hortonworks.com';
+    update AllCommits set AuthorMailDomain = 'h2o.ai' where AuthorMailDomain = 'h2oai.com';
+
     commit tran;
 end try
 begin catch
