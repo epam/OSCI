@@ -51,9 +51,9 @@ class IntegrationTest(unittest.TestCase):
                             'create_filtered_table.sql')
         run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
         path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'reports',
-                            'top_30_commits_ranking.sql')
+                            'top_commits_ranking.sql')
         result = run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
-        self.assertEqual(tuple(result[0]), ('Travis CI', 1))
+        self.assertEqual(tuple(result[0]), ('Huawei', 2))
 
     @classmethod
     def tearDownClass(cls):

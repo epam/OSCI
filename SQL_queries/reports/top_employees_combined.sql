@@ -17,9 +17,6 @@
 */
 
 
- declare @commits_threshold INT
- set @commits_threshold = 10;
-
  with base as(select [AuthorName]
                     ,[AuthorMailDomain]
                     ,[Sha]
@@ -49,13 +46,13 @@
 							  where rn = 1
 							  group by [AuthorName]
 									   ,[AuthorMailDomain]
-							 having count([Sha]) >= @commits_threshold
+							 having count([Sha]) >= 10
 							) t2
 				     group by [AuthorMailDomain]
        )
-select top(30) [OrgName]
-			  ,oc.[Commits >= 1]
-			  ,tc.[Commits >= 10]
+select top(50) [OrgName]
+               ,tc.[Commits >= 10]
+			   ,oc.[Commits >= 1]
   from one_commit oc
   left join ten_commits tc
     on tc.[AuthorMailDomain] = oc.[AuthorMailDomain]
