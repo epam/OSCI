@@ -73,7 +73,6 @@ BEGIN
     ('Alibaba', 'alibaba-inc.com'),
     ('GitHub', 'github.com'),
     ('Facebook', 'fb.com'),
-    ('Apache', 'apache.org'),
     ('Pivotal', 'pivotal.io'),
     ('EPAM', 'epam.com'),
     ('Baidu', 'baidu.com'),

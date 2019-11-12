@@ -46,7 +46,6 @@ begin try
     AuthorMailDomain = 'github.com' or AuthorMailDomain = 'dependabot.com' or
     AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or
     AuthorMailDomain = 'fb.com' or AuthorMailDomain like '%.fb.com' or
-    AuthorMailDomain = 'apache.org' or
     AuthorMailDomain = 'tencent.com' or AuthorMailDomain like '%.tencent.com' or
     AuthorMailDomain = 'pivotal.io' or AuthorMailDomain like '%.pivotal.io' or
     AuthorMailDomain = 'springframework.org' or
