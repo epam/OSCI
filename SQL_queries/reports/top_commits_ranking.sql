@@ -22,7 +22,7 @@ with base as (select [AuthorMailDomain]
                                               order by [EventCreated]) rn
                 from AllCommits
                where [OrgId] is not null)
-select top(30) [OrgName]
+select top(50) [OrgName]
        ,count(*) Commits
   from base b
   left join OrganizationsNames orgs
