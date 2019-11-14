@@ -1,11 +1,10 @@
 ﻿# OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (October 10th 2019)
+## NEWS UPDATE (November 14th 2019)
 
-The latest OSCI report showing the ranking to end of September 2019 can now be downloaded (Excel format): [2019.09 OSCI Ranking.xlsx](Archive/2019.09_OSCI_Ranking.xlsx).
-
-The [Archive folder](Archive) contains this and previous reports.
-
+The OSCI ranking has now been extended to the top 50 companies, and updated to the end of October.  
+The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2019.10 OSCI Ranking.xlsx](Archive/2019.10_OSCI_Ranking.xlsx).
 
 ## What is OSCI?
 
@@ -91,8 +90,8 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 Once the data is prepared, you can generate reports as shown below. The reports will be generated on all the downloaded data in the AllCommits table. So to make a report for 2019 - for example - download all the 2019 data as described above.
 
-    top_30_employees_combined.sql - the top 30 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
-    top_30_commits_ranking.sql - the count of commits per company.
+    top_employees_combined.sql - the top 50 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
+    top_commits_ranking.sql - the count of commits per company.
     
     
 # License
