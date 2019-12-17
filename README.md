@@ -1,6 +1,5 @@
-﻿# OSCI, the Open Source Contributor Index
 ![OSCI Logo](https://github.com/epam/OSCI/blob/master/images/OSCI_Logo.png)
-![OSCI Logo](https://git.epam.com/epm-foss/epm-foss/blob/devpub/images/OSCI_Logo.png)
+# OSCI, the Open Source Contributor Index
 
 ## NEWS UPDATE (December 17th 2019)
 
