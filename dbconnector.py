@@ -16,7 +16,7 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 
-import pyodbc
+import sqlalchemy
 
 from secrets import Server, PWD, UID
 
@@ -27,12 +27,10 @@ class DBConnector:
         self.db_name = db_name
 
     def __enter__(self):
-        self.conn = pyodbc.connect('Driver={SQL Server};'
-                                   'Server=%s;'
-                                   'Database=%s;'
-                                   'UID=%s;'
-                                   'PWD=%s;'
-                                   'Trusted_Connection=yes;' % (Server, self.db_name, UID, PWD), autocommit=True)
+        self.engine = sqlalchemy.create_engine(
+                f'mssql+pyodbc://{UID}:{PWD}/{Server}/{self.db_name}?driver=SQL+Server&autocommit=True'
+        )
+        self.conn = engine.raw_connection()
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
