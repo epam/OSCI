@@ -1,11 +1,11 @@
 ![OSCI Logo](https://github.com/epam/OSCI/blob/master/images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (December 17th 2019)
+## NEWS UPDATE (January 2nd 2020)
 
-The OSCI ranking has now been updated to the end of October.  
+The OSCI ranking has now been updated to the end of December 2019.  
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2019.11 OSCI Ranking.xlsx](Archive/2019.11_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2019.12 OSCI Ranking.xlsx](Archive/2019.12_OSCI_Ranking.xlsx).
 
 ## What is OSCI?
 
