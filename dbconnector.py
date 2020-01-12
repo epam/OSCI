@@ -29,7 +29,7 @@ class DBConnector:
         self.engine = sqlalchemy.create_engine(
             f"mssql+pyodbc://{UID}:{PWD}@{Server}/{self.db_name}?driver=SQL+Server&autocommit=True"
         )
-        self.conn = engine.raw_connection()
+        self.conn = self.engine.raw_connection()
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
