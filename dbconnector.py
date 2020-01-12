@@ -22,16 +22,20 @@ from secrets import Server, PWD, UID
 
 
 class DBConnector:
-
     def __init__(self, db_name):
         self.db_name = db_name
 
     def __enter__(self):
         self.engine = sqlalchemy.create_engine(
-                f'mssql+pyodbc://{UID}:{PWD}/{Server}/{self.db_name}?driver=SQL+Server&autocommit=True'
+            f"mssql+pyodbc://{UID}:{PWD}@{Server}/{self.db_name}?driver=SQL+Server&autocommit=True"
         )
         self.conn = engine.raw_connection()
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.conn.close()
+
+
+if __name__ == "__main__":
+    with DBConnector("testdb") as conn:
+        print(conn)
