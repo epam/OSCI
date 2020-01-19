@@ -9,5 +9,5 @@ install:
 
 script:
   # test connection
-  - python dbconnection.py
+  - python dbconnector.py
 
