@@ -1,9 +1,11 @@
 language: python
 
+dist: bionic
+
 # MSSQL support, 3 lines
 # until https://github.com/epam/OSCI/issues/2 is fixed
 install:
-  - sudo apt install unixodbc-dev
+  - sudo apt-get -y install unixodbc-dev
 
 script:
   # test connection
