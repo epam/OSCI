@@ -20,15 +20,16 @@ import sqlalchemy
 
 from secrets import Server, PWD, UID, Driver
 
+Driver = "SQL+Server"
+# Driver = "FreeTDS"
+
 
 class DBConnector:
     def __init__(self, db_name):
-        self.db_name = db_name
+        self.db_url = f"mssql+pyodbc://{UID}:{PWD}@{Server}/{db_name}?driver={Driver}&autocommit=True"
 
     def __enter__(self):
-        self.engine = sqlalchemy.create_engine(
-            f'mssql+pyodbc://{UID}:{PWD}@{Server}/{self.db_name}?driver={Driver}&autocommit=True'
-        )
+        self.engine = sqlalchemy.create_engine(self.db_url)
         self.conn = self.engine.raw_connection()
         return self.conn
 
