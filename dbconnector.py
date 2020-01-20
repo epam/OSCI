@@ -18,6 +18,7 @@
 import os
 
 import sqlalchemy
+from sqlalchemy_utils import database_exists
 
 from secrets import Server, PWD, UID, Driver
 
@@ -40,6 +41,9 @@ class DBConnector:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.conn.close()
+
+    def exists(self):
+        return database_exists(self.db_url)
 
 
 if __name__ == "__main__":
