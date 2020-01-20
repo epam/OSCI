@@ -24,9 +24,13 @@ from multiprocessing.pool import Pool
 
 import requests
 
+from dbconnector import DBConnector
 from sql_runner import run_query_from_file, run_query
 from sql_uploader import upload_to_database
 from utils import format_json_file, unpack_file, clear_directory
+
+
+echo = print
 
 
 def get_day_data(year, month, day):
@@ -127,9 +131,15 @@ def upload_files_from_directory(directory, database):
 
 if __name__ == '__main__':
     _database = 'GitAnalytics'
-    run_query(database='master',
-              query='IF DB_ID (N\'{0}\') IS NULL CREATE DATABASE {0} COLLATE SQL_Latin1_General_CP1_CI_AS;'.format(
-                  _database))
+    if not DBConnector(_database).exists():
+        echo(f"Creating database '{_database}'..")
+        run_query(
+            database="master",
+            query="CREATE DATABASE {0} COLLATE SQL_Latin1_General_CP1_CI_AS;".format(
+                _database))
+    else:
+        echo(f"Using existing database '{_database}'..")
+
     run_query_from_file(database=_database,
                         path_to_file=os.path.join('SQL_queries', 'service_queries', 'create_empty_tables.sql'))
 
