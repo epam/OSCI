@@ -11,6 +11,9 @@ install:
 
   - pip install -r requirements.txt
 
+env:
+  # MSSQL support, 1 line
+  - DATABASE_URL: "mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/{db_name}?driver=FreeTDS&autocommit=True"
 script:
   # test connection
   - python dbconnector.py
