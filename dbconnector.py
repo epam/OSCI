@@ -50,5 +50,6 @@ if __name__ == "__main__":
         + "{db_name}"
         + "?driver=FreeTDS&autocommit=True"
     ) """
+    print('env DATABASE_URL=' + DATABASE_URL)
     with DBConnector("master") as conn:
         print(conn)

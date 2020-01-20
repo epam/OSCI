@@ -16,5 +16,6 @@ env:
   - DATABASE_URL: 'mssql+pyodbc://sa:yourStrong\(!\)Password@127.0.0.1:1433/{db_name}?driver=FreeTDS&autocommit=True'
 script:
   # test connection
+  - echo "$DATABASE_URL"
   - python dbconnector.py
 
