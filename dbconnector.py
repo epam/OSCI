@@ -15,18 +15,23 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
+import os
 
 import sqlalchemy
 
 from secrets import Server, PWD, UID, Driver
 
-Driver = "SQL+Server"
-# Driver = "FreeTDS"
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
+    f"mssql+pyodbc://{UID}:{PWD}@{Server}/"
+    + "{db_name}"
+    + "?driver=SQL+Server&autocommit=True",
+)
 
 
 class DBConnector:
     def __init__(self, db_name):
-        self.db_url = f"mssql+pyodbc://{UID}:{PWD}@{Server}/{db_name}?driver={Driver}&autocommit=True"
+        self.db_url = DATABASE_URL.format(db_name=db_name)
 
     def __enter__(self):
         self.engine = sqlalchemy.create_engine(self.db_url)
@@ -38,5 +43,11 @@ class DBConnector:
 
 
 if __name__ == "__main__":
+    # Override with FreeTDS driver for Linux
+    DATABASE_URL = (
+        "mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/"
+        + "{db_name}"
+        + "?driver=FreeTDS&autocommit=True"
+    )
     with DBConnector("master") as conn:
         print(conn)
