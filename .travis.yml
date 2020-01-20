@@ -13,6 +13,9 @@ install:
 
   - cp secrets.travis.py secrets.py
 
+env:
+  # MSSQL support, 1 line
+  - DATABASE_URL: 'mssql+pyodbc://sa:yourStrong\(!\)Password@127.0.0.1:1433/{db_name}?driver=FreeTDS&autocommit=True'
 script:
   - python -m pytest test/unit/test.py
   # integration test are failing

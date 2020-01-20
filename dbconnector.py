@@ -43,11 +43,12 @@ class DBConnector:
 
 
 if __name__ == "__main__":
-    # Override with FreeTDS driver for Linux
+    # Example of connecting with FreeTDS driver on Linux
+    """
     DATABASE_URL = (
         "mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/"
         + "{db_name}"
         + "?driver=FreeTDS&autocommit=True"
-    )
+    ) """
     with DBConnector("master") as conn:
         print(conn)
