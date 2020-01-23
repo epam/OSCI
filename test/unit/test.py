@@ -27,7 +27,8 @@ from shutil import copy2
 
 
 class TestModules(unittest.TestCase):
-    FIXTURE_FOLDER = 'fixtures'
+    CWD = os.path.abspath(os.path.dirname(__file__))
+    FIXTURE_FOLDER = CWD + '/fixtures'
     TMP_FOLDER = 'resources'
     ARCHIVE_FILE = '2019-01-01-23.json.gz'
     FILE = '2019-01-01-23.json'
