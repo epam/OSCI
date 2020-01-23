@@ -22,5 +22,5 @@ script:
   # test connection
   - python dbconnector.py
   # run tests
-  - pipenv run python -m pytest test/unit/test.py
+  - python -m pytest test/unit/test.py
 
