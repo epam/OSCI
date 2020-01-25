@@ -19,4 +19,5 @@ script:
   - python dbconnector.py
   # run tests
   - python -m pytest test/unit/test.py
+  - python -m pytest test/integration/integration.py
 
