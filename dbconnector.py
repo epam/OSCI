@@ -18,7 +18,7 @@
 
 import pyodbc
 
-from secrets import Server, PWD, UID
+from secrets import Server, PWD, UID, Driver
 
 
 class DBConnector:
@@ -27,13 +27,18 @@ class DBConnector:
         self.db_name = db_name
 
     def __enter__(self):
-        self.conn = pyodbc.connect('Driver={SQL Server};'
+        self.conn = pyodbc.connect('Driver={%s};'
                                    'Server=%s;'
+                                   'Port=1433;'
                                    'Database=%s;'
                                    'UID=%s;'
-                                   'PWD=%s;'
-                                   'Trusted_Connection=yes;' % (Server, self.db_name, UID, PWD), autocommit=True)
+                                   'PWD=%s;' % (Driver, Server, self.db_name, UID, PWD), autocommit=True)
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.conn.close()
+
+
+if __name__ == "__main__":
+    with DBConnector("master") as conn:
+        print(conn)

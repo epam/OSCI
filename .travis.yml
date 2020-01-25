@@ -12,6 +12,9 @@ install:
   - pip install -r requirements.txt
 
 script:
+  # setup and test connection
+  - sed -i -r 's/SQL\+Server/FreeTDS/g' secrets.py
+  - git diff
   # test connection
   - python dbconnector.py
   # run tests
