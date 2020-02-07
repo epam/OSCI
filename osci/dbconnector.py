@@ -18,13 +18,15 @@
 
 import pyodbc
 
-from secrets import Server, PWD, UID
+from osci.secrets import Server, PWD, UID
 
 
 class DBConnector:
+    """Create database connection"""
 
     def __init__(self, db_name):
         self.db_name = db_name
+        self.conn = None
 
     def __enter__(self):
         self.conn = pyodbc.connect('Driver={SQL Server};'

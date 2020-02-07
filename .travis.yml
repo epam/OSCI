@@ -1,0 +1,14 @@
+language: python
+python: "3.7"
+install: pip install -r requirements.txt
+stages:
+  - pre-test
+  - test
+jobs:
+  include:
+    - name: "PyLint test"
+        stage: pre-test
+        script: pylint osci
+    - name: "Unit tests"
+      stage: test
+      script: pytest test/unit
