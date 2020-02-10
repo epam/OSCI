@@ -11,4 +11,4 @@ jobs:
         script: pylint osci
     - name: "Unit tests"
       stage: test
-      script: pytest test/unit
+      script: python -m pytest test/unit
