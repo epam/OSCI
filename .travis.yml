@@ -3,21 +3,22 @@ language: python
 dist: bionic
 
 install:
-  # MSSQL support, 4 lines
+  # MSSQL support, 3 lines
   # until https://github.com/epam/OSCI/issues/2 is fixed
-  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_PID=Express' -p 127.0.0.1:1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest-ubuntu
   - sudo apt-get -y install unixodbc-dev tdsodbc
   - sudo odbcinst -i -d -f /usr/share/tdsodbc/odbcinst.ini
 
   - pip install -r requirements.txt
 
-script:
-  # setup and test connection
-  - sed -i -r 's/SQL\+Server/FreeTDS/g' secrets.py
-  - git diff
-  # test connection
+before_script:
+  # MSSQL support, 1 line
+  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_PID=Express' -p 127.0.0.1:1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+
+  - cp secrets.travis.py secrets.py
+  # check database is ready
   - python dbconnector.py
-  # run tests
+
+script:
   - python -m pytest test/unit/test.py
   - python -m pytest test/integration/integration.py
 
