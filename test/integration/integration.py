@@ -19,15 +19,16 @@
 import os
 import unittest
 import zipfile
+from pathlib import Path
 
 from file_loader import upload_files_from_directory
 from sql_runner import run_query_from_file
 
 
 class IntegrationTest(unittest.TestCase):
-    CWD = os.path.abspath(os.path.dirname(__file__))
-    FIXTURE_FOLDER = CWD + '/fixtures'
-    QUERY_FOLDER = os.path.abspath(CWD + "../../../SQL_queries/service_queries")
+    CWD = Path(__file__).parent.resolve()
+    FIXTURE_FOLDER = CWD / 'fixtures'
+    QUERY_FOLDER = CWD.parents[2] / "SQL_queries/service_queries"
     TMP_FOLDER = 'resources'
     TEST_DB_NAME = 'test_db'
 
@@ -36,6 +37,7 @@ class IntegrationTest(unittest.TestCase):
         if not os.path.exists(cls.TMP_FOLDER):
             os.mkdir(cls.TMP_FOLDER)
         path = os.path.join(cls.FIXTURE_FOLDER, 'create_test_db.sql')
+        assert os.path.exists(path)
         run_query_from_file('master', path)
         path = os.path.join(cls.QUERY_FOLDER, 'create_empty_tables.sql')
         run_query_from_file(database=cls.TEST_DB_NAME, path_to_file=path)

@@ -18,6 +18,7 @@
 
 import os
 import unittest
+from pathlib import Path
 
 import mock
 
@@ -27,8 +28,8 @@ from shutil import copy2
 
 
 class TestModules(unittest.TestCase):
-    CWD = os.path.abspath(os.path.dirname(__file__))
-    FIXTURE_FOLDER = CWD + '/fixtures'
+    CWD = Path(__file__).parent.resolve()
+    FIXTURE_FOLDER = CWD / 'fixtures'
     TMP_FOLDER = 'resources'
     ARCHIVE_FILE = '2019-01-01-23.json.gz'
     FILE = '2019-01-01-23.json'
