@@ -28,7 +28,7 @@ from sql_runner import run_query_from_file
 class IntegrationTest(unittest.TestCase):
     CWD = Path(__file__).parent.resolve()
     FIXTURE_FOLDER = CWD / 'fixtures'
-    QUERY_FOLDER = CWD.parents[2] / "SQL_queries/service_queries"
+    QUERY_FOLDER = CWD.parents[1] / "SQL_queries/service_queries"
     TMP_FOLDER = 'resources'
     TEST_DB_NAME = 'test_db'
 
