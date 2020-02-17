@@ -26,7 +26,7 @@ DATABASE_URL = os.environ.get(
     "DATABASE_URL",
     f"mssql+pyodbc://{UID}:{PWD}@{Server}/"
     + "{db_name}"
-    + "?driver=SQL+Server&autocommit=True",
+    + f"?driver={Driver}&autocommit=True",
 )
 
 
@@ -47,13 +47,6 @@ class DBConnector:
 
 
 if __name__ == "__main__":
-    # Example of connecting with FreeTDS driver on Linux
-    """
-    DATABASE_URL = (
-        "mssql+pyodbc://sa:yourStrong(!)Password@127.0.0.1:1433/"
-        + "{db_name}"
-        + "?driver=FreeTDS&autocommit=True"
-    ) """
     print('using DATABASE_URL=' + DATABASE_URL)
     with DBConnector("master") as conn:
         print(conn)
