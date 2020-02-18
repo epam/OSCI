@@ -22,9 +22,11 @@ from osci.secrets import Server, PWD, UID, Driver, PORT
 
 
 class DBConnector:
+    """Create connection to database"""
 
     def __init__(self, db_name):
         self.db_name = db_name
+        self.conn = None
 
     def __enter__(self):
         self.conn = pyodbc.connect(f'Driver={{{Driver}}};'
