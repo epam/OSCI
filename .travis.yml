@@ -20,5 +20,4 @@ jobs:
       name: "Unit Tests"
       script: python -m pytest test/unit
     - name: "Integration Tests"
-        - echo "Skipped til fix https://github.com/epam/OSCI/issues/9"
-        # - python -m pytest test/integration
+      script: echo "Skipped til fix https://github.com/epam/OSCI/issues/9" # - python -m pytest test/integration
