@@ -18,6 +18,7 @@
 
 import os
 import unittest
+from pathlib import Path
 
 import mock
 
@@ -27,9 +28,9 @@ from shutil import copy2
 
 
 class TestModules(unittest.TestCase):
-    CWD = os.path.abspath(os.path.dirname(__file__))
-    FIXTURE_FOLDER = os.path.join(CWD, 'fixtures')
-    TMP_FOLDER = os.path.join(CWD, 'resources')
+    CWD = Path(__file__).parent.resolve()
+    FIXTURE_FOLDER = CWD / 'fixtures'
+    TMP_FOLDER = 'resources'
     ARCHIVE_FILE = '2019-01-01-23.json.gz'
     FILE = '2019-01-01-23.json'
     FORMATTED_FILE = '2019-01-01-23-formatted.json'
@@ -62,7 +63,8 @@ class TestModules(unittest.TestCase):
                    year='2019',
                    month='01',
                    day='01',
-                   hour='23')
+                   hour='23'
+                   )
         self.assertTrue(os.path.isfile(os.path.join(self.TMP_FOLDER, self.FORMATTED_FILE)))
 
     def test_unpack_file(self):
