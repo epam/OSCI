@@ -1,10 +1,6 @@
 language: python
 python: "3.7"
 dist: bionic
-stages:
-  - pre-test
-  - unit-test
-  - integration-test
 install:
   # MSSQL support, 4 lines
   # until https://github.com/epam/OSCI/issues/2 is fixed
@@ -15,17 +11,14 @@ install:
   - pip install -r requirements.txt
 
   - cp secrets.travis.py osci/secrets.py
-
 jobs:
   include:
-    - name: "PyLint test"
-        stage: pre-test
-        script: pylint osci
-    - name: "Unit tests"
-      stage: unit-test
+    - stage: "PyLint test"
+      name: "PyLint test"
+      script: pylint osci
+    - stage: "Tests"
+      name: "Unit Tests"
       script: python -m pytest test/unit
-    - name: "Integration tests"
-        stage: integration-test
-        script:
-          - echo "Skipped til fix https://github.com/epam/OSCI/issues/9"
-          # - python -m pytest test/integration
+    - name: "Integration Tests"
+        - echo "Skipped til fix https://github.com/epam/OSCI/issues/9"
+        # - python -m pytest test/integration
