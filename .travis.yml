@@ -1,6 +1,9 @@
 language: python
 python: "3.7"
 dist: bionic
+env:
+ global:
+   - ENV = test
 install:
   # MSSQL support, 4 lines
   # until https://github.com/epam/OSCI/issues/2 is fixed
@@ -9,8 +12,6 @@ install:
   - sudo odbcinst -i -d -f /usr/share/tdsodbc/odbcinst.ini
 
   - pip install -r requirements.txt
-
-  - cp secrets.travis.py osci/secrets.py
 jobs:
   include:
     - stage: "PyLint test"
