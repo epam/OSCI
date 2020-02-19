@@ -4,7 +4,7 @@ Contributions are welcome and are greatly appreciated! Every little bit helps, a
 ## Discussion
 
 
-If you've run into behavior in Mypy you don't understand, or you're
+If you've run into behavior in OSCI you don't understand, or you're
 having trouble working out a good way to apply it to your code, or
 you've found a bug or would like a feature it doesn't have, we want to
 hear from you!
@@ -21,6 +21,11 @@ issue tracker, pull requests is expected to treat
 other people with respect and more generally to follow the guidelines
 articulated in the [Python Community Code of
 Conduct](https://www.python.org/psf/codeofconduct/).
+
+#### Highlighted rules
+
+   * Don't take it personally if your contribution is not accepted. The reviewer should have explained the reasons clearly.
+   * All discussions of issues and review feedback must be objective and use neutral tone of language. We are professionals.
 
 ## Roles
 Much like projects in [ASF](https://www.apache.org/foundation/how-it-works.html#roles), 
@@ -65,6 +70,10 @@ Before you submit a pull request from your forked repo, check that it
 meets these guidelines:
  
 * Always wait for tests to pass before merging PRs.
+* Always create tests covering new functionality. All tests should be included in the pipeline testing.
+* Don't mix more than one issue or feature in a single PR. This complicates the review and merge process.
+* All PR reviews should be done objectively and in-line with the goals and standards of the project.
+* All PR feedback should justify clearly the reasons why changes are needed or the PR not accepted.
 * Add an [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html) header to all new files
 * Use "[Squash and merge](https://github.com/blog/2141-squash-your-commits)"
   to merge PRs.
