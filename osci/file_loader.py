@@ -24,9 +24,9 @@ from multiprocessing.pool import Pool
 
 import requests
 
-from sql_runner import run_query_from_file, run_query
-from sql_uploader import upload_to_database
-from utils import format_json_file, unpack_file, clear_directory
+from osci.sql_runner import run_query_from_file, run_query
+from osci.sql_uploader import upload_to_database
+from osci.utils import format_json_file, unpack_file, clear_directory
 
 
 def get_day_data(year, month, day):
@@ -45,13 +45,13 @@ def get_day_data(year, month, day):
             print('Directory "{}" already exists and not empty'.format(directory))
             return
     if cpu_count() > 1:
-        p = Pool(cpu_count() - 1)
+        pool = Pool(cpu_count() - 1)
     else:
-        p = Pool(1)
+        pool = Pool(1)
     for hour in range(24):
-        p.apply_async(worker, args=(directory, year, month, day, hour))
-    p.close()
-    p.join()
+        pool.apply_async(worker, args=(directory, year, month, day, hour))
+    pool.close()
+    pool.join()
 
 
 def worker(work_dir, year, month, day, hour):
@@ -65,10 +65,10 @@ def worker(work_dir, year, month, day, hour):
     """
     url = 'https://data.gharchive.org/{}-{}-{}-{}.json.gz'.format(year, month, day, hour)
     path = os.path.join(work_dir, '{}-{}-{}-{}'.format(year, month, day, hour))
-    r = requests.get(url)
-    if r.status_code == 200:
+    response = requests.get(url)
+    if response.status_code == 200:
         with open("".join((path, ".json.gz")), 'wb') as f:
-            f.write(r.content)
+            f.write(response.content)
         unpack_file("".join((path, ".json.gz")))
         format_json_file("".join((path, ".json")), clear_src=True)
     else:
@@ -137,4 +137,3 @@ if __name__ == '__main__':
 
     run_query_from_file(database=_database,
                         path_to_file=os.path.join('SQL_queries', 'service_queries', 'create_filtered_table.sql'))
-

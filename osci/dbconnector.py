@@ -18,21 +18,23 @@
 
 import pyodbc
 
-from secrets import Server, PWD, UID, Driver
+from osci.secrets import Server, PWD, UID, Driver, PORT
 
 
 class DBConnector:
+    """Create connection to database"""
 
     def __init__(self, db_name):
         self.db_name = db_name
+        self.conn = None
 
     def __enter__(self):
-        self.conn = pyodbc.connect('Driver={%s};'
-                                   'Server=%s;'
-                                   'Port=1433;'
-                                   'Database=%s;'
-                                   'UID=%s;'
-                                   'PWD=%s;' % (Driver, Server, self.db_name, UID, PWD), autocommit=True)
+        self.conn = pyodbc.connect(f'Driver={{{Driver}}};'
+                                   f'Server={Server};'
+                                   f'Port={PORT};'
+                                   f'Database={self.db_name};'
+                                   f'UID={UID};'
+                                   f'PWD={PWD};', autocommit=True)
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):

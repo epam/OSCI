@@ -22,8 +22,8 @@ from pathlib import Path
 
 import mock
 
-from file_loader import worker
-from utils import unpack_file
+from osci.file_loader import worker
+from osci.utils import unpack_file
 from shutil import copy2
 
 

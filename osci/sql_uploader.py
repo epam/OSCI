@@ -18,7 +18,7 @@
 
 import os
 
-from sql_runner import run_query
+from osci.sql_runner import run_query
 
 
 def upload_to_database(file_path, db_name):

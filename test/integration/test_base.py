@@ -15,14 +15,13 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-
 import os
 import unittest
 import zipfile
 from pathlib import Path
 
-from file_loader import upload_files_from_directory
-from sql_runner import run_query_from_file
+from osci.file_loader import upload_files_from_directory
+from osci.sql_runner import run_query_from_file
 
 
 class IntegrationTest(unittest.TestCase):
@@ -64,3 +63,4 @@ class IntegrationTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
