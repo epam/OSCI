@@ -67,8 +67,8 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 1) Install MS SQL Server.
 
-2) Create a file `local.yml` (by default this file added to .gitignore) in the directory [`osci/configs`](osci/configs). 
-A sample file [`default.yml`](osci/configs/default.yml) is included, please don't change values in this file
+2) Create a file `local.yml` (by default this file added to .gitignore) in the directory [`configs`](configs). 
+A sample file [`default.yml`](configs/default.yml) is included, please don't change values in this file
 3) Fill fields "year" and "month" in function "get_month_data('year', 'month')" in the file 
    file_loader.py if you want to load data for a specific month.  Use get_year('year') for loading data for whole year.
    For example: 
