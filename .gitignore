@@ -132,4 +132,4 @@ dmypy.json
 .idea
 
 # Local config file
-configs/local.yml
+osci/config/files/local.yml
