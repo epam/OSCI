@@ -15,10 +15,9 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-
 import pyodbc
 
-from osci.secrets import Server, PWD, UID, Driver, PORT
+from osci.config import Config
 
 
 class DBConnector:
@@ -29,12 +28,7 @@ class DBConnector:
         self.conn = None
 
     def __enter__(self):
-        self.conn = pyodbc.connect(f'Driver={{{Driver}}};'
-                                   f'Server={Server};'
-                                   f'Port={PORT};'
-                                   f'Database={self.db_name};'
-                                   f'UID={UID};'
-                                   f'PWD={PWD};', autocommit=True)
+        self.conn = pyodbc.connect(f'Database={self.db_name};{Config().database_connection_string}', autocommit=True)
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
