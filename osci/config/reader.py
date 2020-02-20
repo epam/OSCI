@@ -42,7 +42,7 @@ class BaseConfigReader:
 class BaseYmlConfigReader(BaseConfigReader):
     """YAML config file reader"""
 
-    DEFAULT_DIRECTORY_NAME = 'configs'
+    DEFAULT_DIRECTORY_NAME = 'files'
     DEFAULT_DIRECTORY_PATH = Path(__file__).parent.resolve() / DEFAULT_DIRECTORY_NAME
     DEFAULT_FILE_FORMAT = 'yml'
 
