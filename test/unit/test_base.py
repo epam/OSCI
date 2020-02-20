@@ -49,9 +49,7 @@ class TestModules(unittest.TestCase):
         mock_resp.status_code = status
         mock_resp.content = content
         if json_data:
-            mock_resp.json = mock.Mock(
-                return_value=json_data
-            )
+            mock_resp.json = mock.Mock(return_value=json_data)
         return mock_resp
 
     @mock.patch('requests.get')
@@ -63,8 +61,7 @@ class TestModules(unittest.TestCase):
                    year='2019',
                    month='01',
                    day='01',
-                   hour='23'
-                   )
+                   hour='23')
         self.assertTrue(os.path.isfile(os.path.join(self.TMP_FOLDER, self.FORMATTED_FILE)))
 
     def test_unpack_file(self):
