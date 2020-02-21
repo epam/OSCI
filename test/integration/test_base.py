@@ -15,17 +15,19 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-
 import os
 import unittest
 import zipfile
+from pathlib import Path
 
-from file_loader import upload_files_from_directory
-from sql_runner import run_query_from_file
+from osci.file_loader import upload_files_from_directory
+from osci.sql_runner import run_query_from_file
 
 
 class IntegrationTest(unittest.TestCase):
-    FIXTURE_FOLDER = 'fixtures'
+    CWD = Path(__file__).parent.resolve()
+    FIXTURE_FOLDER = CWD / 'fixtures'
+    QUERY_FOLDER = CWD.parents[1] / "SQL_queries/service_queries"
     TMP_FOLDER = 'resources'
     TEST_DB_NAME = 'test_db'
 
@@ -34,9 +36,9 @@ class IntegrationTest(unittest.TestCase):
         if not os.path.exists(cls.TMP_FOLDER):
             os.mkdir(cls.TMP_FOLDER)
         path = os.path.join(cls.FIXTURE_FOLDER, 'create_test_db.sql')
+        assert os.path.exists(path)
         run_query_from_file('master', path)
-        path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'service_queries',
-                            'create_empty_tables.sql')
+        path = os.path.join(cls.QUERY_FOLDER, 'create_empty_tables.sql')
         run_query_from_file(database=cls.TEST_DB_NAME, path_to_file=path)
 
     def _unzip_test_data(self):
@@ -47,11 +49,9 @@ class IntegrationTest(unittest.TestCase):
         self._unzip_test_data()
         path = os.path.join(self.TMP_FOLDER)
         upload_files_from_directory(path, database=self.TEST_DB_NAME)
-        path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'service_queries',
-                            'create_filtered_table.sql')
+        path = os.path.join(self.QUERY_FOLDER, 'create_filtered_table.sql')
         run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
-        path = os.path.join(os.path.abspath(os.path.join("..", os.pardir)), 'SQL_queries', 'reports',
-                            'top_commits_ranking.sql')
+        path = os.path.join(self.QUERY_FOLDER, 'top_commits_ranking.sql')
         result = run_query_from_file(database=self.TEST_DB_NAME, path_to_file=path)
         self.assertEqual(tuple(result[0]), ('Huawei', 2))
 
@@ -63,3 +63,4 @@ class IntegrationTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

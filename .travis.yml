@@ -1,0 +1,24 @@
+language: python
+python: "3.7"
+dist: bionic
+env:
+ global:
+   - ENV = test
+install:
+  # MSSQL support, 4 lines
+  # until https://github.com/epam/OSCI/issues/2 is fixed
+  - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_PID=Express' -p 127.0.0.1:1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+  - sudo apt-get -y install unixodbc-dev tdsodbc
+  - sudo odbcinst -i -d -f /usr/share/tdsodbc/odbcinst.ini
+
+  - pip install -r requirements.txt
+jobs:
+  include:
+    - stage: "PyLint test"
+      name: "PyLint test"
+      script: pylint osci
+    - stage: "Tests"
+      name: "Unit Tests"
+      script: python -m pytest test/unit
+    - name: "Integration Tests"
+      script: echo "Skipped til fix https://github.com/epam/OSCI/issues/9" # - python -m pytest test/integration

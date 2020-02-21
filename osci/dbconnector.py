@@ -15,25 +15,26 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-
 import pyodbc
 
-from secrets import Server, PWD, UID
+from osci.config import Config
 
 
 class DBConnector:
+    """Create connection to database"""
 
     def __init__(self, db_name):
         self.db_name = db_name
+        self.conn = None
 
     def __enter__(self):
-        self.conn = pyodbc.connect('Driver={SQL Server};'
-                                   'Server=%s;'
-                                   'Database=%s;'
-                                   'UID=%s;'
-                                   'PWD=%s;'
-                                   'Trusted_Connection=yes;' % (Server, self.db_name, UID, PWD), autocommit=True)
+        self.conn = pyodbc.connect(f'Database={self.db_name};{Config().database_connection_string}', autocommit=True)
         return self.conn
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.conn.close()
+
+
+if __name__ == "__main__":
+    with DBConnector("master") as conn:
+        print(conn)

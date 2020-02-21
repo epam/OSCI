@@ -18,16 +18,18 @@
 
 import os
 import unittest
+from pathlib import Path
 
 import mock
 
-from file_loader import worker
-from utils import unpack_file
+from osci.file_loader import worker
+from osci.utils import unpack_file
 from shutil import copy2
 
 
 class TestModules(unittest.TestCase):
-    FIXTURE_FOLDER = 'fixtures'
+    CWD = Path(__file__).parent.resolve()
+    FIXTURE_FOLDER = CWD / 'fixtures'
     TMP_FOLDER = 'resources'
     ARCHIVE_FILE = '2019-01-01-23.json.gz'
     FILE = '2019-01-01-23.json'
@@ -47,9 +49,7 @@ class TestModules(unittest.TestCase):
         mock_resp.status_code = status
         mock_resp.content = content
         if json_data:
-            mock_resp.json = mock.Mock(
-                return_value=json_data
-            )
+            mock_resp.json = mock.Mock(return_value=json_data)
         return mock_resp
 
     @mock.patch('requests.get')
@@ -61,8 +61,7 @@ class TestModules(unittest.TestCase):
                    year='2019',
                    month='01',
                    day='01',
-                   hour='23'
-                   )
+                   hour='23')
         self.assertTrue(os.path.isfile(os.path.join(self.TMP_FOLDER, self.FORMATTED_FILE)))
 
     def test_unpack_file(self):

@@ -18,7 +18,7 @@
 
 import pyodbc
 
-from dbconnector import DBConnector
+from osci.dbconnector import DBConnector
 
 
 def run_query_from_file(database, path_to_file):
