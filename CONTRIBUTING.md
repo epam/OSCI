@@ -1,6 +1,20 @@
 # How to contribute
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
 
+## What to Contribute
+
+We are pending to update our Issues list. Until that is completed, let the following serve
+as a guideline what is in line with our vision for the OSCI project.  If you have other suggestions 
+feel free to contact us via GitHub or osci@epam.com and we can discuss.
+
+   * Extend OSCI to cover open source data hosting sources beyond GitHub. We have already analysed some. 
+     Support to implement these and analyse others is welcome
+   * Improved identification of the company where contributors work. Currently we filter 
+     using email domain but there are other options that can be explored - such as information in the 
+     user's profile or the orgs they belong to.
+   * Explore what is the outcome if OSCI counts active contributors in different ways than the number of commits.
+   * Support for an open source database rather than MSSql.
+
 ## Discussion
 
 
