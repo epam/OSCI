@@ -58,7 +58,45 @@ This project is sponsored by EPAM Systems and the latest results are visible on 
 
 ## What if your think your organization is missing or you believe there is an error in our logic
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
-Contact us at OSCI@epam.com
+Contact us at OSCI@epam.com or modify the companies filter yourself.
+
+## How can I add a company which is missing from the OSCI ranking
+The goal of the OSCI is to rank the GitHub contributions by companies (commercial organizations).
+
+In order to add a company to the OSCI ranking, do the following:
+
+1) Check whether the organization you propose to add matches our definition of a company:
+- is not an educational, governmental, non-profit or research institution;
+- is not a free-mail, like gmail.com, yahoo.com, hotmail.com, etc;
+- is a registered, commercial company;
+- a simple "rule of thumb" - does the organization's website sell a product or service?  If not, it is probably not a company by our definition.
+
+2) Create a new pull request.
+
+3) Go to https://github.com/epam/OSCI/blob/master/SQL_queries/service_queries/create_empty_tables.sql
+
+4) Confirm that the company you wish to add is not listed.
+
+5) Add the **main domain** of the company and the company name to the table. For example:
+        
+         ('Facebook', 'fb.com')  
+
+6) Go to https://github.com/epam/OSCI/blob/master/SQL_queries/service_queries/create_filtered_table.sql
+
+7) Add the company email domain in the end of the first table.
+     
+         AuthorMailDomain = 'fb.com'
+
+8) If the company has more than 1 email domain for its employees, add all of them (or at least those you are aware of). For example:
+        
+         AuthorMailDomain = 'fb.com' or AuthorMailDomain like 'facebook.com' or AuthorMailDomain = '%.facebook.com' or AuthorMailDomain = 'facebook.%'
+
+9) If the company has more than 1 domain in the company, add the **main one** to the mapping in the end of the table. For example:
+        
+         update AllCommits set AuthorMailDomain = 'fb.com' where AuthorMailDomain = 'facebook.com' or AuthorMailDomain = '%.facebook.com' or AuthorMailDomain = 'facebook.%'
+
+
+We will review your pull request and if it matches our requirements, we will merge it. 
 
 ## Technical Note
 We built OSCI this an Azure cloud environment using Azure SQL Server. The code published here on GitHub does not require the Azure cloud, however in the current version MS SQL Server is required. Our future plans include support for an open source database.
@@ -95,7 +133,7 @@ Once the data is prepared, you can generate reports as shown below. The reports 
 
     top_employees_combined.sql - the top 50 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
     top_commits_ranking.sql - the count of commits per company.
-    
-    
+  
+  
 # License
 OSCI is GNU General Public License v3.0.
