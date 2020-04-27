@@ -13,7 +13,7 @@ feel free to contact us via GitHub or osci@epam.com and we can discuss.
      using email domain but there are other options that can be explored - such as information in the 
      user's profile or the orgs they belong to.
    * Explore what is the outcome if OSCI counts active contributors in different ways than the number of commits.
-   * Support for an open source database rather than MS SQL (we need T-SQL + Python expertise to decouple data loading from MS SQL specific pocedure, see #9 for details).
+   * Support for an open source database rather than MS SQL (we need T-SQL + Python expertise to decouple data loading from MS SQL specific pocedure, see [#9](https://github.com/epam/OSCI/issues/9) for details).
 
 ## Discussion
 
