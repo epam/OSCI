@@ -9,8 +9,7 @@ This month we revised our algorithm to include 165 new companies and many new em
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
 Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.04 OSCI Ranking.xlsx](Archive/2020.04_OSCI_Ranking.xlsx).
 
-We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) which analyses the OSCI ranking changes from 2016 until Q1 2020.
-
+We also updated the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) to add the trends we observe in Q1 2020.
 ## What is OSCI?
 
 * OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
