@@ -43,6 +43,7 @@ begin try
     AuthorMailDomain = 'sap.com' or AuthorMailDomain like '%.sap.%' or
     AuthorMailDomain = 'thoughtworks.com' or AuthorMailDomain like '%.thoughtworks.com' or
     AuthorMailDomain = 'alibaba-inc.com' or AuthorMailDomain like '%.alibaba-inc.com' or
+    AuthorMailDomain = 'aliyun.com' or AuthorMailDomain like '%.aliyun.com' or
     AuthorMailDomain = 'github.com' or AuthorMailDomain = 'dependabot.com' or
     AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or
     AuthorMailDomain = 'fb.com' or AuthorMailDomain like '%.fb.com' or
@@ -179,7 +180,7 @@ begin try
     update AllCommits set AuthorMailDomain = 'amazon.com' where AuthorMailDomain like '%.amazon.com';
     update AllCommits set AuthorMailDomain = 'sap.com' where AuthorMailDomain like '%.sap.%';
     update AllCommits set AuthorMailDomain = 'thoughtworks.com' where AuthorMailDomain like '%.thoughtworks.com';
-    update AllCommits set AuthorMailDomain = 'alibaba-inc.com' where AuthorMailDomain like '%.alibaba-inc.com';
+    update AllCommits set AuthorMailDomain = 'alibaba-inc.com' where AuthorMailDomain like '%.alibaba-inc.com' or AuthorMailDomain = 'aliyun.com' or AuthorMailDomain like '%.aliyun.com';
     update AllCommits set AuthorMailDomain = 'github.com' where AuthorMailDomain = 'dependabot.com';
     update AllCommits set AuthorMailDomain = 'fb.com' where AuthorMailDomain = 'facebook.com' or AuthorMailDomain like '%.facebook.com' or AuthorMailDomain like '%.fb.com';
     update AllCommits set AuthorMailDomain = 'tencent.com' where AuthorMailDomain like '%.tencent.com';
