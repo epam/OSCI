@@ -169,7 +169,8 @@ begin try
     AuthorMailDomain = 'h2o.ai' or AuthorMailDomain = 'h2oai.com' or
     AuthorMailDomain = 'tweag.io' or
     AuthorMailDomain = 'digitalbazaar.com' or
-    AuthorMailDomain = 'instructure.com'
+    AuthorMailDomain = 'instructure.com' or
+    AuthorMailDomain = 'khubla.com'
     );
 
     update AllCommits set AuthorMailDomain = 'microsoft.com' where AuthorMailDomain like '%.microsoft.com';

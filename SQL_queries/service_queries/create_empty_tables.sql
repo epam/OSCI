@@ -194,5 +194,6 @@ BEGIN
     ('H2O.ai', 'h2o.ai'),
     ('tweag.io', 'tweag.io'),
     ('Digital Bazaar', 'digitalbazaar.com'),
-    ('Instructure', 'instructure.com');
+    ('Instructure', 'instructure.com'),
+    ('khubla.com', 'khubla.com');
 END;
