@@ -56,7 +56,7 @@ Our inspiration for OSCI is the work done earlier in the Open Source community, 
 
 
 ## Where can I see the latest rankings
-This project is sponsored by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
+This project is created by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
 
 ## What if your think your organization is missing or you believe there is an error in our logic
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
