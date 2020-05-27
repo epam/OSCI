@@ -344,7 +344,6 @@ BEGIN
     ('Toucan Toco', 'toucantoco.com'),
     ('Travis CI', 'travis-ci.org'),
     ('Truss Works', 'truss.works'),
-    ('Tutanota', 'tutanota.com'),
     ('Twilio', 'twilio.com'),
     ('Twitter', 'twitter.com'),
     ('Tyro', 'tyro.com'),
