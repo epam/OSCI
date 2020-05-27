@@ -140,7 +140,6 @@ begin try
     AuthorMailDomain = 'decred.org' or
     AuthorMailDomain = 'percona.com' or AuthorMailDomain like '%.percona.com' or
     AuthorMailDomain = 'nextcloud.com' or
-    AuthorMailDomain = 'tutanota.com' or AuthorMailDomain = 'tutanota.de' or
     AuthorMailDomain = 'cockroachlabs.com' or
     AuthorMailDomain = 'obvious.in' or
     AuthorMailDomain = 'vaadin.com' or AuthorMailDomain like '%.vaadin.com' or
@@ -230,7 +229,6 @@ begin try
     update AllCommits set AuthorMailDomain = 'mesosphere.com' where AuthorMailDomain = 'mesosphere.io';
     update AllCommits set AuthorMailDomain = 'nxp.com' where AuthorMailDomain like '%.nxp.com';
     update AllCommits set AuthorMailDomain = 'percona.com' where AuthorMailDomain like '%.percona.com';
-    update AllCommits set AuthorMailDomain = 'tutanota.com' where AuthorMailDomain = 'tutanota.de';
     update AllCommits set AuthorMailDomain = 'vaadin.com' where AuthorMailDomain like '%.vaadin.com';
     update AllCommits set AuthorMailDomain = 'bosch.com' where AuthorMailDomain like '%.bosch.com' or AuthorMailDomain = 'bosch-si.com';
     update AllCommits set AuthorMailDomain = 'confluent.io' where AuthorMailDomain = 'confluent.com';
