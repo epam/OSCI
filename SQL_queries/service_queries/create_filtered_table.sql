@@ -427,11 +427,11 @@ begin try
     update AllCommits set AuthorMailDomain = 'shopsys.com' where AuthorMailDomain = 'shopsys.cz';
     update AllCommits set AuthorMailDomain = 'hortonworks.com' where AuthorMailDomain like '%.hortonworks.com';
     update AllCommits set AuthorMailDomain = 'h2o.ai' where AuthorMailDomain = 'h2oai.com';
-    update ParsedData set AuthorMailDomain = 'test.com' where AuthorMailDomain = 'gaugeonline.com';
-    update ParsedData set AuthorMailDomain = 'prisme.ai' where AuthorMailDomain = 'gogowego.com';
-    update ParsedData set AuthorMailDomain = 'hortonworks.com' where AuthorMailDomain = 'cloudera.com';
-	update ParsedData set AuthorMailDomain = 'mountblue.io'	where AuthorMailDomain = 'mountblue.tech';
-	update ParsedData set AuthorMailDomain = 'eyeo.com'	where AuthorMailDomain = 'adblockplus.org';
+    update AllCommits set AuthorMailDomain = 'test.com' where AuthorMailDomain = 'gaugeonline.com';
+    update AllCommits set AuthorMailDomain = 'prisme.ai' where AuthorMailDomain = 'gogowego.com';
+    update AllCommits set AuthorMailDomain = 'hortonworks.com' where AuthorMailDomain = 'cloudera.com';
+	update AllCommits set AuthorMailDomain = 'mountblue.io'	where AuthorMailDomain = 'mountblue.tech';
+	update AllCommits set AuthorMailDomain = 'eyeo.com'	where AuthorMailDomain = 'adblockplus.org';
 
     commit tran;
 end try
