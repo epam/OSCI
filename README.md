@@ -1,13 +1,13 @@
 ![OSCI Logo](https://github.com/epam/OSCI/blob/master/images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (June 9th 2020)
+## NEWS UPDATE (July 6th 2020)
 
-The OSCI ranking has now been updated with the data for May 2020.
-This month we added domains for Alibaba resulting in them leaping up 8 places.
+The OSCI ranking has now been updated with the data for June 2020.
+This month we added a further 24 companies to our analysis, and this resulted in 2 new companies appearing in the top 100 - Dell and Rockchip.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.05 OSCI Ranking.xlsx](Archive/2020.05_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.06 OSCI Ranking.xlsx](Archive/2020.06_OSCI_Ranking.xlsx).
 
 We also updated the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) to add the trends we observe in Q1 2020.
 ## What is OSCI?
