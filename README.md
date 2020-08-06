@@ -1,15 +1,15 @@
 ![OSCI Logo](https://github.com/epam/OSCI/blob/master/images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (July 6th 2020)
+## NEWS UPDATE (August 5th 2020)
 
-The OSCI ranking has now been updated with the data for June 2020.
-This month we added a further 24 companies to our analysis, and this resulted in 2 new companies appearing in the top 100 - Dell and Rockchip.
+The OSCI ranking has now been updated with the data for July 2020.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.06 OSCI Ranking.xlsx](Archive/2020.06_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.07 OSCI Ranking.xlsx](Archive/2020.07_OSCI_Ranking.xlsx).
 
-We also updated the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) to add the trends we observe in Q1 2020.
+We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) which analyses the OSCI ranking changes from 2016 until Q1 2020.
+
 ## What is OSCI?
 
 * OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
@@ -56,9 +56,6 @@ Our inspiration for OSCI is the work done earlier in the Open Source community, 
 
 ## Where can I see the latest rankings
 This project is created by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
-
-## How I can contribute to OSCI
-If you would like to contribute to OSCI, please take a look at our guidelines [here.](https://github.com/epam/OSCI/blob/master/CONTRIBUTING.md)
 
 ## What if your think your organization is missing or you believe there is an error in our logic
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
@@ -111,8 +108,16 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 1) Install MS SQL Server.
 
-2) Create a file `local.yml` (by default this file added to .gitignore) in the directory [`configs`](osci/config/files). 
-A sample file [`default.yml`](osci/config/files/default.yml) is included, please don't change values in this file
+2) Create a file secrets.py in the same directory as the other python files. A sample file is included.
+   
+   In the file create the follow fields:
+                   
+        UID = 'login        
+   
+        PWD = 'password'
+   
+        Server = 'server_name'
+
 3) Fill fields "year" and "month" in function "get_month_data('year', 'month')" in the file 
    file_loader.py if you want to load data for a specific month.  Use get_year('year') for loading data for whole year.
    For example: 
