@@ -1,3 +1,7 @@
+/2019
+/2020
+/data
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -99,6 +103,7 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.venv/
 env/
 venv/
 ENV/
@@ -122,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDE artifacts
+.idea/
+.idea
+.vscode/
+
+# Local config file
+__app__/config/files/local.yml
+
+# Azure Functions artifacts
+bin
+obj
+appsettings.json
+local.settings.json
+.python_packages

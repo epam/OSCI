@@ -57,6 +57,12 @@ Our inspiration for OSCI is the work done earlier in the Open Source community, 
 ## Where can I see the latest rankings
 This project is created by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
 
+## How I can contribute to OSCI
+If you would like to contribute to OSCI, please take a look at our guidelines [here.](https://github.com/epam/OSCI/blob/master/CONTRIBUTING.md)
+
+## How I can contribute to OSCI
+If you would like to contribute to OSCI, please take a look at our guidelines [here.](https://github.com/epam/OSCI/blob/master/CONTRIBUTING.md)
+
 ## What if your think your organization is missing or you believe there is an error in our logic
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
 Contact us at OSCI@epam.com or modify the companies filter yourself.
@@ -108,16 +114,8 @@ These scripts are for downloading data from gharchive.org, processing and loadin
 
 1) Install MS SQL Server.
 
-2) Create a file secrets.py in the same directory as the other python files. A sample file is included.
-   
-   In the file create the follow fields:
-                   
-        UID = 'login        
-   
-        PWD = 'password'
-   
-        Server = 'server_name'
-
+2) Create a file `local.yml` (by default this file added to .gitignore) in the directory [`configs`](osci/config/files). 
+A sample file [`default.yml`](osci/config/files/default.yml) is included, please don't change values in this file
 3) Fill fields "year" and "month" in function "get_month_data('year', 'month')" in the file 
    file_loader.py if you want to load data for a specific month.  Use get_year('year') for loading data for whole year.
    For example: 
