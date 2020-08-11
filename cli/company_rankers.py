@@ -119,8 +119,8 @@ def daily_company_rankings(company: str, to_day: datetime):
         commits = company_contributors_ranking_job.extract(to_date=to_day).cache()
 
         company_contributors_ranking_job.load(df=company_contributors_ranking_job.transform(commits), date=to_day)
-        company_contributors_repos_ranking_job.load(df=company_contributors_ranking_job.transform(commits), date=to_day)
-        company_repos_ranking_job.load(df=company_contributors_ranking_job.transform(commits), date=to_day)
+        company_contributors_repos_ranking_job.load(df=company_contributors_repos_ranking_job.transform(commits), date=to_day)
+        company_repos_ranking_job.load(df=company_repos_ranking_job.transform(commits), date=to_day)
         if date_period == DatePeriodType.YTD:
             company_month_by_month_commits_amount_job.load(
                 df=company_month_by_month_commits_amount_job.transform(commits),
