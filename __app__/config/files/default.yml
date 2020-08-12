@@ -1,0 +1,15 @@
+meta:
+  config_source: 'yaml'
+  file_system_type: 'local'
+file_system:
+  base_path: '/data'
+areas:
+  landing:
+    container: 'landing'
+  staging:
+    container: 'staging'
+  public:
+    container: 'public'
+bq:
+  project: ''
+  secret: '{}'

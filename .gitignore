@@ -1,5 +1,6 @@
 /2019
 /2020
+/data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -127,9 +128,17 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# PyCharm
+# IDE artifacts
 .idea/
 .idea
+.vscode/
 
 # Local config file
-osci/config/files/local.yml
+__app__/config/files/local.yml
+
+# Azure Functions artifacts
+bin
+obj
+appsettings.json
+local.settings.json
+.python_packages

@@ -157,6 +157,9 @@ disable=print-statement,
         ungrouped-imports,  # Disabled to avoid conflict with isort import order rules, which is enabled in the project.
         missing-module-docstring,
         import-outside-toplevel,    # We import outside toplevel to avoid cyclic imports
+        missing-class-docstring,
+        missing-function-docstring,
+        wrong-import-order
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -278,7 +281,7 @@ ignored-classes=optparse.Values,thread._local,_thread._local,sqlalchemy.orm.scop
 # (useful for modules/projects where namespaces are manipulated during runtime
 # and thus existing member attributes cannot be deduced by static analysis. It
 # supports qualified module names, as well as Unix pattern matching.
-ignored-modules=alembic.op
+ignored-modules=alembic.op,pyspark.sql
 
 # Show a hint with possible names when a member name was not found. The aspect
 # of finding the hint is based on edit distance.

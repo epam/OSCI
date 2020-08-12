@@ -1,4 +1,4 @@
-![OSCI Logo](https://github.com/epam/OSCI/blob/master/images/OSCI_Logo.png)
+![OSCI Logo](images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
 ## NEWS UPDATE (August 5th 2020)
@@ -25,7 +25,7 @@ We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.
 * OSCI’s algorithm is transparently published as an open source project on GitHub
 
 
-![GitHub OSCI Schematic Diagram](https://github.com/epam/OSCI/blob/master/images/GitHub_OSCI_Schematic.png)
+![GitHub OSCI Schematic Diagram](images/OSCI_Schematic_Architecture.png)
 
 ## How did we decide on the ranking logic?
 
@@ -57,9 +57,12 @@ Our inspiration for OSCI is the work done earlier in the Open Source community, 
 ## Where can I see the latest rankings
 This project is created by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
 
+## How I can contribute to OSCI
+If you would like to contribute to OSCI, please take a look at our guidelines [here.](CONTRIBUTING.md)
+
 ## What if your think your organization is missing or you believe there is an error in our logic
 This is a new project. We are more than happy to listen to any feedback which will help us improve.
-Contact us at OSCI@epam.com or modify the companies filter yourself.
+Contact us at [OSCI@epam.com](mailto:OSCI@epam.com) or modify the companies filter yourself.
 
 ## How can I add a company which is missing from the OSCI ranking
 The goal of the OSCI is to rank the GitHub contributions by companies (commercial organizations).
@@ -72,69 +75,67 @@ In order to add a company to the OSCI ranking, do the following:
 - is a registered, commercial company;
 - a simple "rule of thumb" - does the organization's website sell a product or service?  If not, it is probably not a company by our definition.
 
-2) Create a new pull request.
+1) Create a new pull request.
 
-3) Go to https://github.com/epam/OSCI/blob/master/SQL_queries/service_queries/create_empty_tables.sql
+1) Go to company domain match list ([company_domain_match_list.yaml](__app__/match_company/company_domain_match_list.yaml))
 
-4) Confirm that the company you wish to add is not listed.
+1) Confirm that the company you wish to add is not listed.
 
-5) Add the **main domain** of the company and the company name to the table. For example:
-        
-         ('Facebook', 'fb.com')  
-
-6) Go to https://github.com/epam/OSCI/blob/master/SQL_queries/service_queries/create_filtered_table.sql
-
-7) Add the company email domain in the end of the first table.
-     
-         AuthorMailDomain = 'fb.com'
-
-8) If the company has more than 1 email domain for its employees, add all of them (or at least those you are aware of). For example:
-        
-         AuthorMailDomain = 'fb.com' or AuthorMailDomain like 'facebook.com' or AuthorMailDomain = '%.facebook.com' or AuthorMailDomain = 'facebook.%'
-
-9) If the company has more than 1 domain in the company, add the **main one** to the mapping in the end of the table. For example:
-        
-         update AllCommits set AuthorMailDomain = 'fb.com' where AuthorMailDomain = 'facebook.com' or AuthorMailDomain = '%.facebook.com' or AuthorMailDomain = 'facebook.%'
-
+1) Add the **main domain** of the company and the company name to the table. For example:
+    ```yaml
+    - company: Facebook
+      domains:
+        - fb.com
+      regex:
+    ```     
+1) If the company has more than 1 email domain for its employees, add all of them to block `domains` (or `regex` for using regular expression). For example:
+    ```yaml
+    - company: Facebook
+      domains:
+        - fb.com
+        - facebook.com
+      regex:
+        - ^.*\.fb\.com$
+        - ^.*\.facebook\.com$
+    ```
 
 We will review your pull request and if it matches our requirements, we will merge it. 
 
+# QuickStart
 ## Technical Note
-We built OSCI this an Azure cloud environment using Azure SQL Server. The code published here on GitHub does not require the Azure cloud, however in the current version MS SQL Server is required. Our future plans include support for an open source database.
+We built OSCI this an Azure cloud environment using Azure DataFactory, Azure Function and Azure HDInsight. 
+The code published here on GitHub does not require the Azure cloud. You can reproduce everything in the corresponding instruction with cli.
+## Installation
+1) Clone repository
+    ```shell script
+         git clone https://github.com/epam/OSCI.git
+    ```
+1) Go to project directory
+    ```shell script
+         cd OSCI
+    ```
+1) Install requirements
+    ```shell script
+         pip install -r requirements.txt
+   ```
 
-# Instructions for using the OSCI code
+## Configuration
+Create a file `local.yml` (by default this file added to .gitignore) in the directory [`__app__/config/files`](__app__/config/files). 
+A sample file [`default.yml`](__app__/config/files/default.yml) is included, please don't change values in this file
 
-These scripts are for downloading data from gharchive.org, processing and loading to the SQL Server.
-
-1) Install MS SQL Server.
-
-2) Create a file secrets.py in the same directory as the other python files. A sample file is included.
-   
-   In the file create the follow fields:
-                   
-        UID = 'login        
-   
-        PWD = 'password'
-   
-        Server = 'server_name'
-
-3) Fill fields "year" and "month" in function "get_month_data('year', 'month')" in the file 
-   file_loader.py if you want to load data for a specific month.  Use get_year('year') for loading data for whole year.
-   For example: 
-        
-        get_month_data('2019', '05')
-        
-        get_year('2019')
-   
-   If necessary, repeat this function for other months or years.
-
-4) Finally run script file_loader.py and wait for successful script execution. It can take some time to download and transform the data.
-
-Once the data is prepared, you can generate reports as shown below. The reports will be generated on all the downloaded data in the AllCommits table. So to make a report for 2019 - for example - download all the 2019 data as described above.
-
-    top_employees_combined.sql - the top 50 companies ordered by employees with 10+ commits and also showing count of employees with 1+ commit. 
-    top_commits_ranking.sql - the count of commits per company.
-  
+## Sample run
+1) Run script to download data from archive (for example for 01 January 2020)
+    ```shell script
+         python3 osci.py get_github_daily_push_events -d 2020-01-01
+    ```
+1) Run script to add company field (matched by domain) (for example for 01 January 2020)
+    ```shell script
+         python3 osci.py process-github-daily-push-events -d 2020-01-01
+    ```
+1) Run script to add company field (matched by domain) (for example for 01 January 2020)
+    ```shell script
+         python3 osci.py daily-osci-rankings -td 2020-01-02
+    ```
   
 # License
-OSCI is GNU General Public License v3.0.
+OSCI is [GNU General Public License v3.0](LICENSE).
