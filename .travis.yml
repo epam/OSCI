@@ -1,6 +1,13 @@
 language: python
 python: "3.7"
 dist: bionic
+before_install:
+  - mkdir -p /opt
+  - wget -q -O /opt/spark.tgz https://archive.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+  - tar xzf /opt/spark.tgz -C /opt/
+  - rm /opt/spark.tgz
+  - export SPARK_HOME=/opt/spark-2.4.5-bin-hadoop2.7
+  - export PATH=$PATH:/opt/spark-2.4.5-bin-hadoop2.7/bin
 env:
   global:
     - ENV = test
