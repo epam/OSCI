@@ -8,6 +8,8 @@ The OSCI ranking has now been updated with the data for July 2020.
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
 Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.07 OSCI Ranking.xlsx](Archive/2020.07_OSCI_Ranking.xlsx).
 
+This month we have analysed the usage of open source licenses on GitHub and created an article describing our findings. Check it out on our [website](https://solutionshub.epam.com/blog/post/examining-open-source-license-usage).
+
 We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) which analyses the OSCI ranking changes from 2016 until Q1 2020.
 
 ## What is OSCI?
