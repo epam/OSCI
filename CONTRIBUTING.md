@@ -1,22 +1,25 @@
-# How to contribute
+# Contributing
+- [How to contribute](#How to contribute)
+- [What to contribute](#What to contribute)
+- [Discussion](#Discussion)
+  * [Code of Conduct](#Code of Conduct)
+  * [Highlighted rules](#Highlighted rules)
+- [Roles](#Roles)
+- [Development](#Development)
+  * [Installation](#Installation)
+  * [RTC Model](#RTC Model)
+  * [Coding style guidelines](#Coding style guidelines)
+  * [Pull request guidelines](#Pull request guidelines)
+- [Infrastructure](#Infrastructure)
+  * [Continuous integration](#Continuous integration)
+
+## How to contribute
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
 
 ## What to Contribute
-
-We are pending to update our Issues list. Until that is completed, let the following serve
-as a guideline what is in line with our vision for the OSCI project.  If you have other suggestions 
-feel free to contact us via GitHub or osci@epam.com and we can discuss.
-
-   * Extend OSCI to cover open source data hosting sources beyond GitHub. We have already analysed some. 
-     Support to implement these and analyse others is welcome
-   * Improved identification of the company where contributors work. Currently we filter 
-     using email domain but there are other options that can be explored - such as information in the 
-     user's profile or the orgs they belong to.
-   * Explore what is the outcome if OSCI counts active contributors in different ways than the number of commits.
-   * Support for an open source database rather than MSSql.
+Check out our open list of [issues](https://github.com/epam/OSCI/issues).
 
 ## Discussion
-
 
 If you've run into behavior in OSCI you don't understand, or you're
 having trouble working out a good way to apply it to your code, or
@@ -42,9 +45,7 @@ Conduct](https://www.python.org/psf/codeofconduct/).
    * All discussions of issues and review feedback must be objective and use neutral tone of language. We are professionals.
 
 ## Roles
-Much like projects in [ASF](https://www.apache.org/foundation/how-it-works.html#roles), 
-OSCI recognizes a few roles. Unlike ASF's projects, our structure is a way simpler.
-There are only two types:
+OSCI recognizes two types of roles:
   * __A Contributor__ is a user who contributes to a project in the form of code 
   	or documentation. Developers take extra steps to participate in a project,
   	are active on the developer forums, participate in discussions, 
@@ -62,6 +63,9 @@ There are only two types:
 
 ## Development
 
+### Installation
+Find OSCI installation guide in our [README file](README.md).
+
 ### RTC model
 
 OSCI supports Review-Then-Commit model of development. The following rules are 
@@ -74,10 +78,13 @@ used in the RTC process:
     community feedback before it gets committed unless it has an explicit +1
     from a committer
   * any non-document PR needs to address all the comment and reach consensus
-    before it gets committed without a +1 from other committers
+    before it gets committed without a +1 from other commiters
   * a committer can commit documentation patches without explicit review process.
   	However, we encourage you to seek the feedback.
   	
+### Coding style guidelines
+OSCI uses [PEP - 8 for Python Styleguide](https://www.python.org/dev/peps/pep-0008/) - the most common coding conventions.
+
 ### Pull Request Guidelines
 
 Before you submit a pull request from your forked repo, check that it
@@ -112,5 +119,8 @@ PS: Please read this excellent [article](http://chris.beams.io/posts/git-commit/
 commit messages and adhere to them. It makes the lives of those who
 come after you a lot easier.
 
+## Infrastructure
 
+### Continuous integration
+All committed code is tested using [Travis CI](https://travis-ci.org/). Configuration file: [.travis.yml](.travis.yml) For every commit, Travis runs all the unit tests.
 
