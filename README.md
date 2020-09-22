@@ -106,7 +106,7 @@ We will review your pull request and if it matches our requirements, we will mer
 # QuickStart
 ## Technical Note
 We built OSCI this an Azure cloud environment using Azure DataFactory, Azure Function and Azure HDInsight. 
-The code published here on GitHub does not require the Azure cloud. You can reproduce everything in the corresponding instruction with cli.
+The code published here on GitHub does not require the Azure cloud. You can reproduce everything in the corresponding instruction with CLI (Command line interface).
 ## Installation
 1) Clone repository
     ```shell script
