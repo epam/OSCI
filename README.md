@@ -6,7 +6,7 @@
 The OSCI ranking has now been updated with the data for September 2020.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.09 OSCI Ranking.xlsx](Archive/2020.09_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.09 OSCI Ranking.xlsx](https://github.com/epam/OSCI/blob/master/Archive/2020.09%20OSCI%20Ranking.xlsx).
 
 The latest data continues to show Google solidifying their hold on the #1 position, and we observe significantly above-average growth in contributors at both Huawei and Tencent, reflecting the rise in open source activity in Asia.
 
