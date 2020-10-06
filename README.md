@@ -1,14 +1,14 @@
 ﻿![OSCI Logo](images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (September 8th 2020)
+## NEWS UPDATE (October 6th 2020)
 
-The OSCI ranking has now been updated with the data for August 2020.
+The OSCI ranking has now been updated with the data for September 2020.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.08 OSCI Ranking.xlsx](Archive/2020.08_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.09 OSCI Ranking.xlsx](Archive/2020.09_OSCI_Ranking.xlsx).
 
-The latest data shows that Google have strongly established themselves in the #1 position.
+The latest data continues to show Google solidifying their hold on the #1 position, and we observe significantly above-average growth in contributors at both Huawei and Tencent, reflecting the rise in open source activity in Asia.
 
 Also why not take a look at our [newly-published blog page](https://solutionshub.epam.com/blog/post/open-source-osci-2016-2020-analysis) analyzing the OSCI rankings from 2016 until mid-2020.
 
