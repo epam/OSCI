@@ -1,7 +1,14 @@
 ﻿![OSCI Logo](images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
-## NEWS UPDATE (October 6th 2020)
+## What is OSCI?
+
+* OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
+* OSCI also tracks the Total Community of open source contributors for these companies
+* The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://solutionshub.epam.com/osci)
+
+## [News update](news.md)
+### [October 6th 2020](news.md#october-6th-2020)
 
 The OSCI ranking has now been updated with the data for September 2020.
 
@@ -12,11 +19,7 @@ The latest data continues to show Google solidifying their hold on the #1 positi
 
 Also why not take a look at our [newly-published blog page](https://solutionshub.epam.com/blog/post/open-source-osci-2016-2020-analysis) analyzing the OSCI rankings from 2016 until mid-2020.
 
-## What is OSCI?
-
-* OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
-* OSCI also tracks the Total Community of open source contributors for these companies
-* The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://solutionshub.epam.com/osci)
+[Previous updates](news.md)
 
 ## How does OSCI work?
 
