@@ -1171,6 +1171,11 @@
 - company: Verizon Media
   domains:
     - verizonmedia.com
+    - oath.com
+    - ryot.org
+    - verizondigitalmedia.com
+    - flurry.com
+    - vdms.com
   regex:
 - company: WIX
   domains:
