@@ -17,7 +17,7 @@ Alternatively the updated ranking can be downloaded (Excel format) from our [Arc
 
 The latest data continues to show Google solidifying their hold on the #1 position, and we observe significantly above-average growth in contributors at both Huawei and Tencent, reflecting the rise in open source activity in Asia.
 
-Also why not take a look at our [newly-published blog page](https://solutionshub.epam.com/blog/post/open-source-osci-2016-2020-analysis) analyzing the OSCI rankings from 2016 until mid-2020.
+Also why not take a look at our [newly-published blog page](https://solutionshub.epam.com/rise-of-open-source) analyzing the OSCI rankings from 2016 until mid-2020.
 
 [Previous updates](news.md)
 
