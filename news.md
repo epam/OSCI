@@ -82,7 +82,7 @@ The OSCI ranking has now been updated with the data for  [**March 2020**][rank-2
 
 The OSCI ranking has now been updated with the data for  [**February 2020**][rank-2020.02]
 
-We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/blog/post/open-source-contributor-index) which analyses the OSCI ranking changes from 2016 until now.
+We have also published the [OSCI 2016-2019 Deep Dive](https://solutionshub.epam.com/rise-of-open-source) which analyses the OSCI ranking changes from 2016 until now.
 
 [Download rank][rank-2020.02]
 
