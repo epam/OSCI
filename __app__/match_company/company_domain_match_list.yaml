@@ -804,6 +804,10 @@
   domains:
     - openlattice.com
   regex:
+- company: Optum
+  domains:
+    - optum.com
+  regex:
 - company: Oracle
   domains:
     - oracle.com
@@ -1148,6 +1152,10 @@
 - company: Uninvention
   domains:
     - univention.de
+  regex:
+- company: United Healthcare
+  domains:
+    - uhc.com
   regex:
 - company: Unity Technologies
   domains:
