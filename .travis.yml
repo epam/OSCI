@@ -11,6 +11,7 @@ before_install:
 env:
   global:
     - ENV = test
+    - SPARK_HOME=/opt/spark-2.4.5-bin-hadoop2.7
 install:
   - pip install -r requirements.txt
 jobs:
