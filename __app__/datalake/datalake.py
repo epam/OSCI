@@ -16,8 +16,7 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from typing import Tuple, Mapping, Callable
 
-from __app__.utils import MetaSingleton
-from __app__.config import Config, FileSystemType
+from .config import Config, FileSystemType, MetaSingleton
 
 from .base import BaseLandingArea, BaseStagingArea, BasePublicArea
 from .local import LocalLandingArea, LocalStagingArea, LocalPublicArea

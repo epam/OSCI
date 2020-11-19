@@ -16,8 +16,8 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 from .base import BlobArea
-from __app__.datalake.base import BaseStagingArea, DatePeriodType
-from __app__.utils import get_pandas_data_frame_info, normalize_company
+from ...datalake.base import BaseStagingArea, DatePeriodType
+from ...utils import get_pandas_data_frame_info, normalize_company
 
 from datetime import datetime
 from typing import Union, Iterable, List

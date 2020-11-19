@@ -21,7 +21,7 @@ import json
 
 from typing import Mapping, Any, Dict
 from .reader import BaseYmlConfigReader
-from __app__.utils import MetaSingleton
+from ...utils import MetaSingleton
 
 log = logging.getLogger(__name__)
 

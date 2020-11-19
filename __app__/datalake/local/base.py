@@ -15,7 +15,7 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-from __app__.datalake.base import BaseDataLakeArea
+from ...datalake.base import BaseDataLakeArea
 
 from pathlib import Path
 from typing import Iterator, Union

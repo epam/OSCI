@@ -1,4 +1,4 @@
-from __app__.config import Config
+from __app__.datalake.config import Config
 
 
 def test_config_singleton():

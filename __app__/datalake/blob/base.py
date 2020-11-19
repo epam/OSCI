@@ -15,13 +15,12 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-from __app__.utils import get_pandas_data_frame_info, get_azure_blob_connection_string
-from __app__.datalake.base import BaseDataLakeArea
+from ...utils import get_pandas_data_frame_info, get_azure_blob_connection_string
+from ...datalake.base import BaseDataLakeArea
 
 from azure.storage.blob import BlobServiceClient, ContainerClient
 from azure.core.exceptions import ResourceNotFoundError
 from io import BytesIO, StringIO
-from typing import Tuple, Optional
 
 import logging
 import pandas as pd

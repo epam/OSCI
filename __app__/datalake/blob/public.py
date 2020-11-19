@@ -17,8 +17,8 @@
 from datetime import datetime
 
 from .base import BlobArea
-from __app__.datalake.base import BasePublicArea
-from __app__.utils import normalize_company
+from ...datalake.base import BasePublicArea
+from ...utils import normalize_company
 
 import logging
 import pandas as pd

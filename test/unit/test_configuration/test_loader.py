@@ -1,5 +1,5 @@
 import pytest
-from __app__.config.reader import BaseYmlConfigReader, BaseConfigReader
+from __app__.datalake.config.reader import BaseYmlConfigReader, BaseConfigReader
 
 
 def test_base_config_abstract___read():

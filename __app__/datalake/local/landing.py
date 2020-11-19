@@ -16,8 +16,8 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 from .base import LocalSystemArea
-from __app__.datalake.base import BaseLandingArea
-from __app__.utils import get_pandas_data_frame_info
+from ...datalake.base import BaseLandingArea
+from ...utils import get_pandas_data_frame_info
 
 from datetime import datetime
 from pathlib import Path

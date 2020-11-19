@@ -134,7 +134,7 @@ dmypy.json
 .vscode/
 
 # Local config file
-__app__/config/files/local.yml
+__app__/datalake/config/files/local.yml
 
 # Azure Functions artifacts
 bin
