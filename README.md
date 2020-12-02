@@ -8,16 +8,16 @@
 * The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://solutionshub.epam.com/osci)
 
 ## [News update](news.md)
-### [November 16th 2020](news.md#november-16th-2020)
+### [December 2nd 2020](news.md#december-2nd-2020)
 
-The OSCI ranking has now been updated with the data for October 2020.
+The OSCI ranking has now been updated with the data for November 2020.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.10 OSCI Ranking.xlsx](Archive/2020.10_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.11 OSCI Ranking.xlsx](Archive/2020.11_OSCI_Ranking.xlsx).
 
-The latest data continues to show Google solidifying their hold on the #1 position, with both Verizon & Capgemini making impressive gains this month too.
+The top leading organisations remain the same once again this month. There’s steady growth in the total Active Contributors from Huawei, Tencent and Alibaba too.
 
-Also why not take a look at our [refreshed blog post](https://solutionshub.epam.com/rise-of-open-source) analyzing the OSCI rankings from 2016 until mid-2020.
+Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
 
 [Previous updates](news.md)
 
