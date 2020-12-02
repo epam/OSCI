@@ -12,10 +12,17 @@
 |------	            |-----	            |-----	            |-----	          |
 | [Jan][2020.01]    | [Feb][2020.02] 	| [Mar][2020.03]    | [Apr][2020.04]  |
 | [May][2020.05] 	| [Jun][2020.06]    | [Jul][2020.07]  	| [Aug][2020.08]  |
-| [Sep][2020.09]    | [Oct][2020.10]	| [Nov][2020.11]    | Dec             |
+| [Sep][2020.09]    | [Oct][2020.10]	| [Nov][2020.11]    | [Dec][2020.12]   |
 
 ## 2020 updates
+### December 2nd 2020
+The OSCI ranking has now been updated with the data for [**November 2020**][rank-2020.11]
 
+The top leading organisations remain the same once again this month. There’s steady growth in the total Active Contributors from Huawei, Tencent and Alibaba too.
+
+[Download rank][rank-2020.11]
+
+---
 ### November 16th 2020
 The OSCI ranking has now been updated with the data for  [**October 2020**][rank-2020.10]
 
@@ -159,6 +166,7 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2020.08]: Archive/2020.08_OSCI_Ranking.xlsx
 [rank-2020.09]: Archive/2020.09_OSCI_Ranking.xlsx 
 [rank-2020.10]: Archive/2020.10_OSCI_Ranking.xlsx 
+[rank-2020.11]: Archive/2020.11_OSCI_Ranking.xlsx 
 
 <!-- 2019 News -->
 [2019]: #2019-updates
@@ -181,6 +189,8 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [2020.09]: #september-8th-2020
 [2020.10]: #october-6th-2020
 [2020.11]: #november-16th-2020
+[2020.12]: #december-2nd-2020
+
 
 
 <!-- END Links section -->
