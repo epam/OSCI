@@ -40,6 +40,7 @@
 - company: Adobe
   domains:
     - adobe.com
+    - magento.com
   regex:
     - ^.*\.adobe\.com$
 - company: Agaric
@@ -668,10 +669,6 @@
 - company: Made Tech
   domains:
     - madetech.com
-  regex:
-- company: Magento
-  domains:
-    - magento.com
   regex:
 - company: ManpowerGroup
   domains:
