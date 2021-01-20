@@ -1281,3 +1281,7 @@
   domains:
     - what.digital
   regex: 
+- company: Bjerk
+  domains:
+    - bjerk.io
+    - cobraz.no
