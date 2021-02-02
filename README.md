@@ -8,14 +8,14 @@
 * The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://solutionshub.epam.com/osci)
 
 ## [News update](news.md)
-### [December 2nd 2020](news.md#december-2nd-2020)
+### [February 2nd 2021](news.md#february-2nd-2021)
 
-The OSCI ranking has now been updated with the data for November 2020.
+The OSCI ranking has now been updated with the data for December 2020.
 
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.11 OSCI Ranking.xlsx](Archive/2020.11_OSCI_Ranking.xlsx).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2020.12 OSCI Ranking.xlsx](Archive/2020.12_OSCI_Ranking.xlsx).
 
-The top leading organisations remain the same once again this month. There’s steady growth in the total Active Contributors from Huawei, Tencent and Alibaba too.
+The leading organizations remain consistent once again this month, although the overall trend in a decrease of Active Contributor growth at year end is noticeable. Organizations such as Intel, GitHub and Apple are well above their closest neighbors in their growth figures this month.
 
 Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
 
