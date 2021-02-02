@@ -14,6 +14,22 @@
 | [May][2020.05] 	| [Jun][2020.06]    | [Jul][2020.07]  	| [Aug][2020.08]  |
 | [Sep][2020.09]    | [Oct][2020.10]	| [Nov][2020.11]    | [Dec][2020.12]   |
 
+| [2021][2021]      |     	            |     	            |     	          |
+|------	            |-----	            |-----	            |-----	          |
+| Jan   | [Feb][2021.02] 	| Mar   | Apr  |
+| May 	| Jun             | Jul 	| Aug  |
+| Sep   | Oct	            | Nov   | Dec  |
+
+## 2021 updates
+
+### February 2nd 2021
+The OSCI ranking has now been updated with the data for [**December 2020**][rank-2020.12]
+
+The leading organizations remain consistent once again this month, although the overall trend in a decrease of Active Contributor growth at year end is noticeable. Organizations such as Intel, GitHub and Apple are well above their closest neighbors in their growth figures this month.
+
+[Download rank][rank-2020.12]
+
+---
 ## 2020 updates
 ### December 2nd 2020
 The OSCI ranking has now been updated with the data for [**November 2020**][rank-2020.11]
@@ -166,7 +182,8 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2020.08]: Archive/2020.08_OSCI_Ranking.xlsx
 [rank-2020.09]: Archive/2020.09_OSCI_Ranking.xlsx 
 [rank-2020.10]: Archive/2020.10_OSCI_Ranking.xlsx 
-[rank-2020.11]: Archive/2020.11_OSCI_Ranking.xlsx 
+[rank-2020.11]: Archive/2020.11_OSCI_Ranking.xlsx
+[rank-2020.12]: Archive/2020.12_OSCI_Ranking.xlsx
 
 <!-- 2019 News -->
 [2019]: #2019-updates
@@ -191,6 +208,9 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [2020.11]: #november-16th-2020
 [2020.12]: #december-2nd-2020
 
+<!-- 2021 News -->
+[2021]: #2021-updates
 
+[2021.02]: #february-2nd-2021
 
 <!-- END Links section -->
