@@ -1,5 +1,8 @@
 meta:
   config_source: 'env'
-  file_system_type: 'blob'
 file_system:
   type: 'local'
+github:
+  token: ''
+company:
+  default: 'EPAM'

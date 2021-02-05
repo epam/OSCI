@@ -16,9 +16,11 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 from typing import Dict, Type, Iterable, Iterator
+from datetime import datetime
 
 from .base import Event
 from .push import PushEvent, PushEventCommit
+from __app__.match_company.match import match_company_by_email
 
 EVENT_TYPES: Dict[str, Type[Event]] = {
     "PushEvent": PushEvent
@@ -40,3 +42,11 @@ def get_push_events(events: Iterable[Event]) -> Iterator[PushEvent]:
 def get_push_events_commits(push_events: Iterable[PushEvent]) -> Iterator[PushEventCommit]:
     for push_event in push_events:
         yield from push_event.get_commits()
+
+
+def get_daily_events(events: Iterable[Event], date: datetime) -> Iterator[Event]:
+    yield from filter(lambda event: event.created_at is not None and event.created_at.date() == date.date(), events)
+
+
+def get_company_commits_by_email_domain(commits: Iterable[PushEventCommit], company: str) -> Iterator[PushEventCommit]:
+    return (commit for commit in commits if match_company_by_email(email=commit.author_email) == company)

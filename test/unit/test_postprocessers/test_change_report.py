@@ -8,10 +8,14 @@ from __app__.osci_change_report.change_report import get_osci_ranking_change_rep
 
 def test_get_osci_ranking_change_report():
     company_field = 'Company'
-    active_contributors_field = 'Active Contributors'
-    total_community_field = 'Total Community'
-    rank_field = '#'
     change_field = 'Change'
+    active_contributors_field = 'Active Contributors'
+    active_contributors_change_field = f'{active_contributors_field} {change_field}'
+    total_community_field = 'Total Community'
+    total_community_change_field = f'{total_community_field} {change_field}'
+    rank_field = '#'
+    rank_change_field = f'Position {change_field}'
+
 
     old_report = pd.DataFrame([
         {rank_field: 1, company_field: 'Google', active_contributors_field: 100, total_community_field: 200},
@@ -25,29 +29,40 @@ def test_get_osci_ranking_change_report():
     ])
 
     reference = pd.DataFrame([{rank_field: 1,
-                               f'Position {change_field}': -1.0,
+                               rank_change_field: -1.0,
                                company_field: 'Microsoft',
                                active_contributors_field: 100.0,
-                               f'{active_contributors_field} {change_field}': 20.0,
+                               active_contributors_change_field: 20.0,
                                total_community_field: 130.0,
-                               f'{total_community_field} {change_field}': -50.0},
+                               total_community_change_field: -50.0},
                               {rank_field: 2,
-                               f'Position {change_field}': 1.0,
+                               rank_change_field: 1.0,
                                company_field: 'Google',
                                active_contributors_field: 90.0,
-                               f'{active_contributors_field} {change_field}': -10.0,
+                               active_contributors_change_field: -10.0,
                                total_community_field: 250.0,
-                               f'{total_community_field} {change_field}': 50.0},
+                               total_community_change_field: 50.0},
                               {rank_field: 3,
-                               f'Position {change_field}': np.nan,
+                               rank_change_field: np.nan,
                                company_field: 'Tutanota',
                                active_contributors_field: 73.0,
-                               f'{active_contributors_field} {change_field}': np.nan,
+                               active_contributors_change_field: np.nan,
                                total_community_field: 80.0,
-                               f'{total_community_field} {change_field}': np.nan}])
+                               total_community_change_field: np.nan}])
 
-    df = get_osci_ranking_change_report(old_report, new_report, company_field, active_contributors_field,
-                                        total_community_field, rank_field, change_field)
+    df = get_osci_ranking_change_report(old_report=old_report,
+                                        new_report=new_report,
+
+                                        company_field=company_field,
+
+                                        active_contributors_field=active_contributors_field,
+                                        active_contributors_change_field=active_contributors_change_field,
+
+                                        total_community_field=total_community_field,
+                                        total_community_change_field=total_community_change_field,
+
+                                        rank_field=rank_field,
+                                        rank_change_field=rank_change_field)
 
     pd.testing.assert_frame_equal(reference.set_index(rank_field), df)
 

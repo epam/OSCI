@@ -18,8 +18,8 @@ from google.cloud import bigquery
 from .public import PublicSchemas
 
 
-class BigQueryOSCIRankingReport:
-    table_id = 'OSCI.OSCI_Ranking'
+class BaseBigQueryOSCIRankingReport:
+    table_id = ''
 
     class Columns:
         total = 'Total_community'
@@ -41,6 +41,44 @@ class BigQueryOSCIRankingReport:
         PublicSchemas.company_contributors_ranking.active: Columns.active,
         PublicSchemas.company_contributors_ranking.total: Columns.total,
     }
+
+
+class BigQueryOSCIRankingReport(BaseBigQueryOSCIRankingReport):
+    table_id = 'OSCI.OSCI_Ranking'
+
+
+class BigQueryOSCIRankingReportMTD(BaseBigQueryOSCIRankingReport):
+    table_id = 'OSCI.OSCI_Ranking_MTD'
+
+
+class BaseBigQueryOSCICommitsRankingReport:
+    table_id = ''
+
+    class Columns:
+        commits = 'Commits'
+        company = 'Company'
+        date = 'Date'
+        position = 'Position'
+
+    schema = [
+        bigquery.SchemaField(Columns.position, bigquery.enums.SqlTypeNames.INTEGER),
+        bigquery.SchemaField(Columns.company, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.commits, bigquery.enums.SqlTypeNames.INTEGER),
+        bigquery.SchemaField(Columns.date, bigquery.enums.SqlTypeNames.DATE),
+    ]
+
+    mapping = {
+        PublicSchemas.company_commits_ranking.company: Columns.company,
+        PublicSchemas.company_commits_ranking.commits: Columns.commits
+    }
+
+
+class BigQueryOSCICommitsRankingReport(BaseBigQueryOSCICommitsRankingReport):
+    table_id = 'OSCI.OSCI_Commits_Ranking'
+
+
+class BigQueryOSCICommitsRankingReportMTD(BaseBigQueryOSCICommitsRankingReport):
+    table_id = 'OSCI.OSCI_Commits_Ranking_MTD'
 
 
 class BigQueryPushEventsCommitsColumns:

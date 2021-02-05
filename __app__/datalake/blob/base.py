@@ -14,14 +14,14 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
+import yaml
 
 from __app__.utils import get_pandas_data_frame_info, get_azure_blob_connection_string
 from __app__.datalake.base import BaseDataLakeArea
 
-from azure.storage.blob import BlobServiceClient, ContainerClient
+from azure.storage.blob import BlobServiceClient, ContainerClient, ContentSettings
 from azure.core.exceptions import ResourceNotFoundError
 from io import BytesIO, StringIO
-from typing import Tuple, Optional
 
 import logging
 import pandas as pd
@@ -37,6 +37,12 @@ class BlobArea(BaseDataLakeArea):
     def _github_events_commits_base(self):
         return 'github/events/push'
 
+    @property
+    def _github_repositories_base(self):
+        return 'github/repository'
+
+    _github_raw_events_commits_base = 'github/raw-events/push'
+
     def __init__(self, storage_account_name: str, storage_account_key: str, *args,
                  area_container: str = AREA_CONTAINER, **kwargs):
         super().__init__(*args, **kwargs)
@@ -51,6 +57,9 @@ class BlobArea(BaseDataLakeArea):
 
     def add_fs_prefix(self, path: str) -> str:
         return f'wasbs://{self.AREA_CONTAINER}@{self.storage_account_name}.blob.core.windows.net/{path}'
+
+    def add_http_prefix(self, path: str) -> str:
+        return f'https://{self.storage_account_name}.blob.core.windows.net/{self.AREA_CONTAINER}/{path}'
 
     def write_pandas_dataframe_to_parquet(self, df: pd.DataFrame, path: str, index=False):
         """Writes pandas dataframe to parquet to blob
@@ -107,3 +116,18 @@ class BlobArea(BaseDataLakeArea):
     def write_bytes_to_file(self, path: str, buffer: BytesIO):
         container_client = self.blob_service.get_container_client(container=self.AREA_CONTAINER)
         container_client.upload_blob(name=path, data=buffer.getvalue(), overwrite=True)
+
+    def write_string_to_file(self, path: str, data: str, content_type: str = 'application/octet-stream'):
+        with StringIO(data) as buffer:
+            container_client = self.blob_service.get_container_client(container=self.AREA_CONTAINER)
+            container_client.upload_blob(name=path, data=buffer.getvalue(), overwrite=True,
+                                         content_settings=ContentSettings(content_type=content_type))
+
+    def read_yaml_file(self, path: str):
+        log.info(f'Read yml from path: {path}')
+        blob_client = self.blob_service.get_blob_client(container=self.AREA_CONTAINER, blob=path)
+        try:
+            with StringIO(blob_client.download_blob().readall().decode()) as buffer:
+                return yaml.load(buffer, Loader=yaml.FullLoader)
+        except ResourceNotFoundError as ex:
+            log.error(f"ResourceNotFound {ex}")

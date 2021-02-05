@@ -37,5 +37,17 @@ class PushEventsCommitsSchema(NamedTuple):
                 author_email, company]
 
 
+class RepositoriesSchema(NamedTuple):
+    name = 'name'
+
+    language = 'language'
+    license = 'license'
+
+    downloaded_at = 'downloaded_at'
+
+    required = [name, language, license, downloaded_at]
+
+
 class StagingSchemas:
     push_commits: PushEventsCommitsSchema = PushEventsCommitsSchema()
+    repositories: RepositoriesSchema = RepositoriesSchema()

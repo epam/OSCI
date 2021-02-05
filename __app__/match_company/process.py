@@ -33,4 +33,4 @@ def process_github_daily_push_events(day: datetime.datetime):
                                                 datetime_field=DataLake().landing.schemas.push_commits.event_created_at)
         for company, commits in companies_events:
             log.debug(f'Save company {company}')
-            DataLake().staging.save_push_events_commits(push_event_commits=commits, date=day, company_name=company)
+            DataLake().staging.save_raw_push_events_commits(push_event_commits=commits, date=day, company_name=company)

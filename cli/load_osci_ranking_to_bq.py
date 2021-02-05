@@ -20,6 +20,7 @@ import datetime
 import logging
 
 from __app__.load_osci_ranking_to_bq.loader import load_osci_ranking_to_bq
+from __app__.datalake import DatePeriodType
 from cli.consts import DEFAULT_DAY, DAY_FORMAT
 
 
@@ -32,8 +33,11 @@ def cli():
 @click.option('--day', '-d',
               default=DEFAULT_DAY, type=click.DateTime(formats=[DAY_FORMAT]),
               help=f'The date format "{DAY_FORMAT}", default: `{DEFAULT_DAY}`')
-def load_osci_ranking_to_big_query(day: datetime.datetime):
-    load_osci_ranking_to_bq(date=day)
+@click.option('--date_period', '-dp',
+              default=DatePeriodType.YTD,
+              type=click.Choice(DatePeriodType.all, case_sensitive=False))
+def load_osci_ranking_to_big_query(day: datetime.datetime, date_period: str):
+    load_osci_ranking_to_bq(date=day, date_period=date_period)
 
 
 if __name__ == '__main__':

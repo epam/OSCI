@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8"/>
+</head>
+<body>
+<style type="text/css">
+    body {
+        font-family: Calibri, Helvetica, Arial, sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    .main td h2 {
+        margin-top: 20px;
+    }
+
+    .dataframe, .reports-list {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .dataframe th, .dataframe td, .reports-list th, .reports-list td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    .reports-list td {
+        text-align: center;
+    }
+
+    .dataframe tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<table border="0" cellpadding="0" cellspacing="0" style="padding: 0; margin: 0;" width="100%">
+    <tr>
+        <td align="center">
+            <table border="0" cellpadding="0" cellspacing="0" style="padding: 0; margin: 0;" width="600px" class='main'>
+                <tr width="600px">
+                    <th>
+                        <table border="0" cellpadding="0" cellspacing="0" style="margin: 10 0 0 0; padding: 0;"
+                               width="100%">
+                            <tr>
+                                <td><img src="https://github.com/epam/OSCI/raw/master/images/OSCI_Logo.png"
+                                         alt="OSCI Reports" width="200" height="50"/></td>
+                                <td align="right">
+                                    <h2 style="margin-bottom: 0;">{{ date.strftime('%a, %B %d %Y') }}</h2>
+                                    <b>Difference compared to the {{ compared_date.strftime('%B %d %Y') }}</b>
+                                </td>
+                            </tr>
+                        </table>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <h2>OSCI reports</h2>
+                        <table border="1" class="reports-list" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <th>OSCI Ranking</th>
+                                <td><a href="{{ osci_ranking_ytd }}" target="_blank">YTD</a></td>
+                                <td><a href="{{ osci_ranking_mtd }}" target="_blank">MTD</a></td>
+                            </tr>
+                            <tr>
+                                <th>OSCI Change Ranking</th>
+                                <td><a href="{{ osci_change_ranking }}" target="_blank">Common</a></td>
+                                <td><a href="{{ solutionshub_osci_change_ranking }}" target="_blank">SH</a></td>
+                            </tr>
+                            <tr>
+                                <th>OSCI Commits Ranking</th>
+                                <td><a href="{{ osci_commits_ranking_ytd }}" target="_blank">YTD</a></td>
+                                <td><a href="{{ osci_commits_ranking_mtd }}" target="_blank">MTD</a></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>{{ company }} position</h2>
+                        {{ company_position }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Shift up (TOP 5)</h2>
+                        {{ shift_up }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Shift down (TOP 5)</h2>
+                        {{ shift_down }}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

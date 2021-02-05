@@ -4,18 +4,18 @@ from __app__.config.reader import BaseYmlConfigReader, BaseConfigReader
 
 def test_base_config_abstract___read():
     with pytest.raises(NotImplementedError):
-        BaseConfigReader().read(env='test')
+        BaseConfigReader(env='test').read()
 
 
 def test_abstract_base_config___check_exists():
     with pytest.raises(NotImplementedError):
-        BaseConfigReader().check_exists(env='test')
+        BaseConfigReader(env='test').exists()
 
 
 def test_base_yaml__check_exists():
-    assert BaseYmlConfigReader().check_exists(env='test')
+    assert BaseYmlConfigReader(env='test').exists()
 
 
 def test_base_yaml__read():
-    assert isinstance(BaseYmlConfigReader().read(env='test'), dict)
+    assert isinstance(BaseYmlConfigReader(env='test').read(), dict)
 

@@ -36,6 +36,8 @@ class CompanyContributorsRankingReportSchema:
     active = 'Active contributors'
     company = 'Company'
 
+    position = 'Position'
+
     required = [company, active, total]
 
 
@@ -43,11 +45,31 @@ class CompanyCommitsRankingReportSchema:
     commits = 'Commits'
     company = 'Company'
 
+    required = [company, commits]
+
 
 class ContributorsRankingReportSchema:
     commits = 'Commits'
     author = 'Contributor'
     author_email = 'Contributor\'s email'
+
+
+class ContributorsRankingMBMReportSchema:
+    contributor = 'Contributor'
+    total = 'Total'
+    jan = 'Jan'
+    feb = 'Feb'
+    march = 'Mar'
+    april = 'Apr'
+    may = 'May'
+    june = 'Jun'
+    july = 'Jul'
+    aug = 'Aug'
+    sep = 'Sep'
+    oct = 'Oct'
+    nov = 'Nov'
+    dec = 'Dec'
+    required = [contributor, jan, feb, march, april, may, june, july, aug, sep, oct, nov, dec, total]
 
 
 class ReposCommitsRankingReportSchema:
@@ -62,6 +84,41 @@ class ContributorsReposCommitsRankingReportSchema:
     author_email = 'Contributor\'s email'
 
 
+class NewContributorsSchema:
+    author = ContributorsReposCommitsRankingReportSchema.author
+
+
+class NewReposSchema:
+    repo = ContributorsReposCommitsRankingReportSchema.repo
+
+
+class OSCIChangeRankingSchema:
+    company = CompanyContributorsRankingReportSchema.company
+    total = CompanyContributorsRankingReportSchema.total
+    active = CompanyContributorsRankingReportSchema.active
+
+    change_suffix = 'Change'
+    position = CompanyContributorsRankingReportSchema.position
+
+    position_change = f'{position} {change_suffix}'
+    total_change = f'{total} {change_suffix}'
+    active_change = f'{active} {change_suffix}'
+
+
+class OSCIChangeRankingExcelSchema(OSCIChangeRankingSchema):
+    position = '#'
+
+    total_change = OSCIChangeRankingSchema.change_suffix
+    active_change = OSCIChangeRankingSchema.change_suffix
+
+
+class ProjectsActivitySchema:
+    project = 'Project'
+    description = 'Description'
+    commits = 'Commits'
+    total = 'Total_%'
+
+
 class PublicSchemas:
     employees_amount_monthly = MonthlyEmployeesAmountReportSchema
     company_employees_amount = CompanyEmployeesAmountReportSchema
@@ -71,3 +128,5 @@ class PublicSchemas:
     month_by_month_commits = MonthByMonthCommitsReportSchema
     repo_commits_ranking = ReposCommitsRankingReportSchema
     contributors_repo_commits_ranking = ContributorsReposCommitsRankingReportSchema
+    new_contributors = NewContributorsSchema
+    new_repos = NewReposSchema

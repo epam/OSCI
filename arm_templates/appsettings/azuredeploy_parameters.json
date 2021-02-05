@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "secretAppProperties": {
+      "value": [
+        {
+          "name": "osci_blob_account_key",
+          "keyName": "osci-blob-account-key"
+        },
+        {
+          "name": "osci_blob_account_name",
+          "keyName": "osci-blob-account-name"
+        },
+        {
+          "name": "osci_bq_project",
+          "keyName": "osci-bq-project"
+        },
+        {
+          "name": "osci_bq_secret",
+          "keyName": "osci-bq-client-secret"
+        },
+        {
+          "name": "osci_gh_token",
+          "keyName": "osci-gh-token"
+        }
+      ]
+    },
+    "appProperties": {
+      "value": {
+        "ENV": "prod",
+        "osci_landing_container": "landing",
+        "osci_public_container": "public",
+        "osci_staging_container": "staging",
+        "osci_fs_type": "blob",
+        "osci_company": "EPAM"
+      }
+    },
+    "imageVersion": {
+      "value": "latest"
+    }
+  }
+}

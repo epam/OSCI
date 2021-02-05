@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  osci:
+    image: ${REGISTRY_HOST}osci:latest
+    build: __app__
+    ports:
+      - "8080:80"
