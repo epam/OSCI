@@ -16,14 +16,15 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from pyspark.sql import DataFrame
 from __app__.transformers.rankers.repositories_ranking import get_employees_repos_commits_amount
-from .base import PushCommitsRankingJob
+from __app__.datalake.reports.company.contributors_repos import ContributorsReposFactory
+from .base import CompanyPushCommitsRankingJob
 
 
-class ContributorsReposRankingJob(PushCommitsRankingJob):
-    REPORT_NAME = 'contributors_repos_ranking'
+class ContributorsReposRankingJob(CompanyPushCommitsRankingJob):
+    REPORT_FACTORY = ContributorsReposFactory
 
     def transform(self, df: DataFrame, **kwargs) -> DataFrame:
-        report_schema = self.data_lake.public.schemas.contributors_repo_commits_ranking
+        report_schema = self.report_cls.schema
         return get_employees_repos_commits_amount(df=df,
                                                   repo_name_field=self.commits_schema.repo_name,
                                                   author_email_field=self.commits_schema.author_email,

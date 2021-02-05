@@ -21,23 +21,17 @@ from ..config import Config, FileSystemType
 
 
 class Session(metaclass=MetaSingleton):
-    def __init__(self):
-        self._ssc = None
+    def __init__(self, spark_session=None):
+        self._ssc = spark_session
 
-    def _build_session(self):
+    def build_session(self):
         builder = SparkSession.builder
-        if Config().file_system_type == FileSystemType.blob:
-            builder = builder.config(
-                f'fs.azure.sas.{Config().file_system.staging_props.get("account_name")}.blob.core.windows.net',
-                Config().file_system.staging_props.get('account_key')
-            )
-
         self._ssc = builder.getOrCreate()
 
     @property
     def spark_session(self) -> SparkSession:
         if self._ssc is None:
-            self._build_session()
+            self.build_session()
         return self._ssc
 
     def load_dataframe(self, paths: Union[List[str], str], **options) -> SparkDataFrame:

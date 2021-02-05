@@ -14,7 +14,7 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
-from typing import Union, List, Iterable, Tuple
+from typing import Union, List, Iterable, Tuple, Iterator
 from datetime import datetime
 from pathlib import Path
 from io import BytesIO
@@ -24,12 +24,14 @@ import re
 import pandas as pd
 
 from .schemas import LandingSchemas, StagingSchemas, PublicSchemas
+from __app__.utils import normalize_company
 
 
 class DatePeriodType:
     DTD = 'DTD'
     MTD = 'MTD'
     YTD = 'YTD'
+    MBM = 'MBM'
 
     all = frozenset({DTD, MTD, YTD})
 
@@ -59,6 +61,10 @@ class BaseDataLakeArea(metaclass=abc.ABCMeta):
 class BaseLandingArea(BaseDataLakeArea, abc.ABC):
     schemas = LandingSchemas
 
+    @property
+    def _github_repositories_base(self):
+        return 'github/repository'
+
     def save_push_events_commits(self, push_event_commits, date: datetime):
         raise NotImplementedError()
 
@@ -68,14 +74,25 @@ class BaseLandingArea(BaseDataLakeArea, abc.ABC):
     def get_daily_push_events_commits(self, date: datetime):
         raise NotImplementedError()
 
+    def save_repositories(self, df: pd.DataFrame, date: datetime):
+        raise NotImplementedError()
+
+    def get_repositories(self, date: datetime) -> pd.DataFrame:
+        raise NotImplementedError()
+
 
 class BaseStagingArea(BaseDataLakeArea, abc.ABC):
+    CONF_AREA_DIR = 'configuration'
     schemas = StagingSchemas
 
-    def get_push_events_commits(self, push_events_commits_path):
+    def get_push_events_commits(self, to_date: datetime, date_period_type: str = DatePeriodType.YTD,
+                                from_date: datetime = None, company=None):
         raise NotImplementedError()
 
     def save_push_events_commits(self, push_event_commits: pd.DataFrame, company_name: str, date: datetime):
+        raise NotImplementedError()
+
+    def save_private_push_events_commits(self, push_event_commits: pd.DataFrame, company_name: str, date: datetime):
         raise NotImplementedError()
 
     def get_push_events_commits_spark_paths(self, to_date: datetime, date_period_type: str = DatePeriodType.YTD,
@@ -128,6 +145,62 @@ class BaseStagingArea(BaseDataLakeArea, abc.ABC):
                                     company: str = None) -> Iterable[str]:
         raise NotImplementedError()
 
+    def _get_configuration_file_path(self, path: str) -> str:
+        raise NotImplementedError()
+
+    def load_projects_filter(self):
+        raise NotImplementedError()
+
+    _repositories_file_format = 'parquet'
+
+    def _get_repositories_file_name(self, date: datetime) -> str:
+        return f'repository-{date:%Y-%m-%d}.{self._repositories_file_format}'
+
+    def get_repositories_path(self, date: datetime) -> Union[Path, str]:
+        raise NotImplementedError()
+
+    def get_repositories_spark_path(self, date: datetime) -> Union[Path, str]:
+        return self.add_fs_prefix(path=self.get_repositories_path(date=date))
+
+    def get_repositories(self, date: datetime) -> pd.DataFrame:
+        raise NotImplementedError()
+
+    def save_repositories(self, df: pd.DataFrame, date: datetime):
+        raise NotImplementedError()
+
+    @staticmethod
+    def _get_raw_push_events_commits_file_name(date: datetime, company: str) -> str:
+        return f'{normalize_company(company)}-{date:%Y-%m-%d}.parquet'
+
+    def get_raw_push_events_commits_path(self, date: datetime, company: str) -> Union[Path, str]:
+        raise NotImplementedError()
+
+    def get_raw_push_events_commits(self, path: Union[str, Path]) -> pd.DataFrame:
+        raise NotImplementedError()
+
+    def save_raw_push_events_commits(self, push_event_commits: pd.DataFrame, company_name: str, date: datetime):
+        raise NotImplementedError()
+
+    def get_daily_raw_push_events_commits_paths(self, date: datetime) -> Iterator[Union[str, Path]]:
+        raise NotImplementedError()
+
+    def get_daily_raw_push_events_commits(self, date: datetime) -> Iterator[Tuple[str, pd.DataFrame]]:
+        for path in self.get_daily_raw_push_events_commits_paths(date=date):
+            match = re.match(self.push_commits_filename_pattern, self._get_file_name(path))
+            if match:
+                company = match.group('company')
+                df = self.get_raw_push_events_commits(path)
+                if not df.empty:
+                    yield company, df
+
+    def get_union_daily_raw_push_events_commits(self, date: datetime) -> pd.DataFrame:
+        result_df = pd.DataFrame()
+        for path in self.get_daily_raw_push_events_commits_paths(date=date):
+            df = self.get_raw_push_events_commits(path)
+            if not df.empty:
+                result_df = pd.concat([result_df, df])
+        return result_df
+
 
 class BasePublicArea(BaseDataLakeArea, abc.ABC):
     schemas = PublicSchemas
@@ -135,14 +208,27 @@ class BasePublicArea(BaseDataLakeArea, abc.ABC):
     def get_report_path(self, report_name: str, date: datetime, company: str = None) -> str:
         raise NotImplementedError()
 
-    def _get_osci_change_report_path(self, report_name: str, report_dir_name: str, date: datetime):
-        raise NotImplementedError()
-
     def save_report(self, report_df: pd.DataFrame, report_name: str, date: datetime, company: str = None):
         raise NotImplementedError()
 
     def get_report(self, report_name: str, date: datetime, company: str = None) -> pd.DataFrame:
         raise NotImplementedError()
+
+    def get_report_url(self, report_name: str, date: datetime, company: str = None):
+        raise NotImplementedError()
+
+    def get_reports_for_last_days_of_month(self, report_name: str, date: datetime, company: str = None):
+        raise NotImplementedError()
+
+    def get_osci_change_excel_report_path(self, base_report_name: str, report_dir_name: str, date: datetime):
+        raise NotImplementedError()
+
+    def get_osci_change_excel_report_url(self, base_report_name: str, date: datetime, report_dir_name: str):
+        raise NotImplementedError
+
+    @staticmethod
+    def get_osci_change_excel_report_name(base_report_name: str, date: datetime):
+        return f'{date:%Y-%m-%d}_{base_report_name}.xlsx'
 
     def save_solutions_hub_osci_change_report_view(self, change_report: pd.DataFrame, report_dir_name: str,
                                                    old_date: datetime, new_date: datetime):
@@ -161,11 +247,10 @@ class BasePublicArea(BaseDataLakeArea, abc.ABC):
                               'their relative positions are determined by Total Community')
         writer.save()
 
-        self.write_bytes_to_file(path=self._get_osci_change_report_path(report_name=sheet_name,
-                                                                        report_dir_name=report_dir_name,
-                                                                        date=new_date),
+        self.write_bytes_to_file(path=self.get_osci_change_excel_report_path(base_report_name=sheet_name,
+                                                                             report_dir_name=report_dir_name,
+                                                                             date=new_date),
                                  buffer=buffer)
 
-
-
-
+    def save_email(self, email_body: str, date: datetime):
+        raise NotImplementedError()

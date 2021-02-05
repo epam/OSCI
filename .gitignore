@@ -132,6 +132,7 @@ dmypy.json
 .idea/
 .idea
 .vscode/
+.vscode
 
 # Local config file
 __app__/config/files/local.yml
@@ -142,3 +143,8 @@ obj
 appsettings.json
 local.settings.json
 .python_packages
+
+# Local config file
+osci/config/files/local.yml
+
+.DS_Store

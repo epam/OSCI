@@ -16,15 +16,16 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from pyspark.sql import DataFrame
 from __app__.transformers.rankers.commits_ranking import get_commits_ranking
+from __app__.datalake.reports.general.commits_ranking import OSCICommitsRankingFactory
 from .base import PushCommitsRankingJob
 
 
 class OSCICommitsRankingJob(PushCommitsRankingJob):
     """Job that generates OSCI commits ranking report"""
-    REPORT_NAME = 'OSCI_commits_ranking'
+    REPORT_FACTORY = OSCICommitsRankingFactory
 
     def transform(self, df: DataFrame, **kwargs) -> DataFrame:
-        report_schema = self.data_lake.public.schemas.company_commits_ranking
+        report_schema = self.report_cls.schema
         return get_commits_ranking(df=df,
                                    commits_id_field=self.commits_schema.sha,
                                    company_field=self.commits_schema.company,

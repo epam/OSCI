@@ -1,7 +1,7 @@
 meta:
   config_source: 'yaml'
-  file_system_type: 'blob'
 file_system:
+  type: 'blob'
   account_name: ''
   account_key: ''
 areas:
@@ -14,3 +14,5 @@ areas:
 bq:
   project: ''
   secret: '{}'
+github:
+  token: ''

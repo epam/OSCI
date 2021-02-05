@@ -16,15 +16,16 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from pyspark.sql import DataFrame
 from __app__.transformers.rankers.commits_ranking import get_month_by_month_commits_amounts
-from .base import PushCommitsRankingJob
+from __app__.datalake.reports.company.month_by_month_commits import MBMCommitsFactory
+from .base import CompanyPushCommitsRankingJob
 
 
-class MonthByMonthCommitsJob(PushCommitsRankingJob):
+class MonthByMonthCommitsJob(CompanyPushCommitsRankingJob):
     """Job that generates month-by-month amount of commits report"""
-    REPORT_NAME = 'month_by_month_commits'
+    REPORT_FACTORY = MBMCommitsFactory
 
     def transform(self, df: DataFrame, **kwargs) -> DataFrame:
-        report_schema = self.data_lake.public.schemas.month_by_month_commits
+        report_schema = self.report_cls.schema
         return get_month_by_month_commits_amounts(df=df,
                                                   commits_id_field=self.commits_schema.sha,
                                                   datetime_field=self.commits_schema.event_created_at,

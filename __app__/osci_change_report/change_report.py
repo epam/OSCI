@@ -21,25 +21,27 @@ from datetime import datetime
 
 import pandas as pd
 
+SOLUTIONS_HUB_ROWS_LIMIT = 100
+
 
 def get_osci_ranking_change_report(old_report: pd.DataFrame, new_report: pd.DataFrame,
-                                   company_field: str, active_contributors_field: str,
-                                   total_community_field: str, rank_field: str, change_suffix: str) -> pd.DataFrame:
+                                   company_field: str,
+                                   active_contributors_field: str, active_contributors_change_field: str,
+                                   total_community_field: str, total_community_change_field: str,
+                                   rank_field: str, rank_change_field: str) -> pd.DataFrame:
     """Get difference between two OSCI Ranking (for two days or months or years, etc)
 
     :param old_report: OSCI ranking
     :param new_report: OSCI ranking
     :param company_field: company column name
     :param active_contributors_field: active contributors column name
+    :param active_contributors_change_field: active contributors change column name
     :param total_community_field: total community column name
+    :param total_community_change_field: total community change column name
     :param rank_field: ranking index column name
-    :param change_suffix: change suffix (appended to change columns)
+    :param rank_change_field: ranking index change column name
     :return: OSCI ranking change report
     """
-
-    def _get_change_col_name(column):
-        return f'{column if column != rank_field else "Position"} {change_suffix}'
-
     old_suffix = '_old'
 
     df = old_report.merge(new_report,
@@ -47,15 +49,19 @@ def get_osci_ranking_change_report(old_report: pd.DataFrame, new_report: pd.Data
                           how='outer',
                           suffixes=(old_suffix, '')
                           ).dropna(subset=[f'{rank_field}'])
-
-    for col in (rank_field, active_contributors_field, total_community_field):
-        df[_get_change_col_name(col)] = df[col] - df[f'{col}{old_suffix}']
+    col_pairs = (
+        (rank_field, rank_change_field),
+        (active_contributors_field, active_contributors_change_field),
+        (total_community_field, total_community_change_field),
+    )
+    for col, change_col in col_pairs:
+        df[change_col] = df[col] - df[f'{col}{old_suffix}']
 
     df = df[[
-        rank_field, _get_change_col_name(rank_field),
+        rank_field, rank_change_field,
         company_field,
-        active_contributors_field, _get_change_col_name(active_contributors_field),
-        total_community_field, _get_change_col_name(total_community_field),
+        active_contributors_field, active_contributors_change_field,
+        total_community_field, total_community_change_field,
     ]].sort_values(by=rank_field)
     df[rank_field] = df[rank_field].astype(int)
 
@@ -85,4 +91,3 @@ def get_contributors_ranking_mbm_change_report(reports: Iterable[Tuple[datetime,
     df.iloc[:, 1:] = df.iloc[:, 1:].astype(int)
     df['Total'] = df.sum(axis=1)
     return df
-

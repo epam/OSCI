@@ -67,6 +67,7 @@ def get_req_param(req: func.HttpRequest, param_name: str, default=None):
         return value
     try:
         req_body = req.get_json()
+        log.info(f'Request body: {req_body}')
         return req_body.get(param_name, default)
     except ValueError as ex:
         log.warning(f'Exception {ex}')
