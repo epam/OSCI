@@ -19,7 +19,6 @@ from typing import NamedTuple
 
 
 class PushEventsCommitsSchema(NamedTuple):
-
     event_id = 'event_id'
     event_created_at = 'event_created_at'
 
@@ -32,5 +31,10 @@ class PushEventsCommitsSchema(NamedTuple):
     author_email = 'author_email'
 
 
+class RepositoriesNamesSchema(NamedTuple):
+    name = PushEventsCommitsSchema().repo_name
+
+
 class LandingSchemas:
     push_commits: PushEventsCommitsSchema = PushEventsCommitsSchema()
+    repositories_names: RepositoriesNamesSchema = RepositoriesNamesSchema()

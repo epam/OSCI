@@ -113,19 +113,20 @@ def daily_company_rankings(company: str, to_day: datetime):
         company_contributors_repos_ranking_job = ContributorsReposRankingJob(date_period_type=date_period,
                                                                              company=company)
         company_repos_ranking_job = ReposRankingJob(date_period_type=date_period, company=company)
-        company_month_by_month_commits_amount_job = MonthByMonthCommitsJob(date_period_type=date_period,
-                                                                           company=company)
 
         commits = company_contributors_ranking_job.extract(to_date=to_day).cache()
 
         company_contributors_ranking_job.load(df=company_contributors_ranking_job.transform(commits), date=to_day)
-        company_contributors_repos_ranking_job.load(df=company_contributors_repos_ranking_job.transform(commits), date=to_day)
+        company_contributors_repos_ranking_job.load(df=company_contributors_repos_ranking_job.transform(commits),
+                                                    date=to_day)
         company_repos_ranking_job.load(df=company_repos_ranking_job.transform(commits), date=to_day)
-        if date_period == DatePeriodType.YTD:
-            company_month_by_month_commits_amount_job.load(
-                df=company_month_by_month_commits_amount_job.transform(commits),
-                date=to_day
-            )
+
+    company_month_by_month_commits_amount_job = MonthByMonthCommitsJob(date_period_type=DatePeriodType.YTD,
+                                                                       company=company)
+    company_month_by_month_commits_amount_job.load(
+        df=company_month_by_month_commits_amount_job.transform(commits),
+        date=to_day
+    )
 
 
 if __name__ == '__main__':

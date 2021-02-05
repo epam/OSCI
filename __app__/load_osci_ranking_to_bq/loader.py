@@ -14,22 +14,39 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
-from __app__.datalake import DataLake
-from __app__.datalake.schemas.bq import BigQueryOSCIRankingReport
+from __app__.datalake import DataLake, DatePeriodType
+from __app__.datalake.reports.general.osci_ranking import OSCIRankingFactory
+from __app__.datalake.schemas.bq import (BigQueryOSCIRankingReport,
+                                         BigQueryOSCIRankingReportMTD,
+                                         BaseBigQueryOSCIRankingReport)
 from __app__.datalake.schemas.public import PublicSchemas
+
+from typing import Dict
 
 import datetime
 import logging
 
 log = logging.getLogger(__name__)
 
+date_period_to_table_map: Dict[str, BaseBigQueryOSCIRankingReport.__class__] = {
+    DatePeriodType.YTD: BigQueryOSCIRankingReport,
+    DatePeriodType.MTD: BigQueryOSCIRankingReportMTD,
+}
 
-def load_osci_ranking_to_bq(date: datetime.datetime):
-    report = DataLake().public.get_report(report_name='OSCI_ranking_YTD', date=date)
-    report = report[PublicSchemas.company_contributors_ranking.required]
-    report = report.reset_index().rename(columns={'index': BigQueryOSCIRankingReport.Columns.position})
-    report = report.rename(columns=BigQueryOSCIRankingReport.mapping)
-    report[BigQueryOSCIRankingReport.Columns.date] = date.date()
 
-    return DataLake().big_query.load_dataframe(df=report, table_id=BigQueryOSCIRankingReport.table_id,
-                                               schema=BigQueryOSCIRankingReport.schema)
+def load_osci_ranking_to_bq(date: datetime.datetime, date_period: str = DatePeriodType.YTD):
+    if date_period not in (DatePeriodType.MTD, DatePeriodType.YTD):
+        raise ValueError(f'Unsupported {date_period}')
+    report = OSCIRankingFactory().get_cls(date_period=date_period)(date=date)
+    table = date_period_to_table_map[date_period]
+
+    log.debug(date.strftime(f'Load {report.name} for %Y-%m-%d to {table.table_id}'))
+
+    report_df = report.read()
+    report_df = report_df[PublicSchemas.company_contributors_ranking.required]
+    report_df = report_df.reset_index().rename(columns={'index': table.Columns.position})
+    report_df[table.Columns.position] += 1
+    report_df = report_df.rename(columns=table.mapping)
+    report_df[table.Columns.date] = date.date()
+
+    return DataLake().big_query.load_dataframe(df=report_df, table_id=table.table_id, schema=table.schema)

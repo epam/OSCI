@@ -128,17 +128,17 @@ class Config(BaseConfig):
         3. Using `default.yml` config
     """
 
-    def __init__(self, env: str = None):
+    def __init__(self, env: str = None, dbutils=None):
         """Init configuration
 
         :param env: environment on which the database configuration should be obtained
         """
         log.info(f'ENV: {os.environ.get("ENV")}')
         self.env = env or os.environ.get('ENV') or ('local'
-                                                    if BaseYmlConfigReader.check_exists(env='local')
+                                                    if BaseYmlConfigReader(env='local').exists()
                                                     else None) or 'default'
-        self.__cfg = BaseYmlConfigReader.read(self.env)
-        log.info(f'Configuration loaded for env:{self.env}')
+        self.__cfg = BaseYmlConfigReader(self.env, dbutils=dbutils).config
+        log.info(f'Configuration loaded for env: {self.env}')
 
         file_system_type_map: Mapping[str, type(FileSystemConfig)] = {
             FileSystemType.blob: AzureBlobFileSystemConfig,
@@ -159,7 +159,7 @@ class Config(BaseConfig):
 
     @property
     def file_system_type(self) -> str:
-        return self.__cfg.get('meta', dict()).get('file_system_type', '')
+        return self.__cfg.get('file_system', dict()).get('type', '')
 
     @property
     def bq(self) -> dict:
@@ -167,8 +167,19 @@ class Config(BaseConfig):
 
     @property
     def bq_secret(self) -> dict:
-        return json.loads(self.bq.get('secret', '{}'))
+        secret = self.bq.get('secret')
+        if secret:
+            return json.loads(secret)
+        return dict()
 
     @property
     def bq_project(self) -> str:
         return self.bq.get('project', '')
+
+    @property
+    def github_token(self) -> str:
+        return self.__cfg.get('github', dict()).get('token', '')
+
+    @property
+    def default_company(self) -> str:
+        return self.__cfg.get('company', dict()).get('default', '')

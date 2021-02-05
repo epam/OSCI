@@ -72,3 +72,22 @@ class LocalLandingArea(BaseLandingArea, LocalSystemArea):
     def _get_hourly_push_events_commits_path(self, date: datetime) -> Path:
         return self.get_push_events_commits_parent_dir(date=date, create_if_not_exists=True) / \
                self.get_push_events_commits_filename(date)
+
+    def _get_repository_file_path(self, date: datetime) -> Path:
+        path = self.BASE_PATH / self.BASE_AREA_DIR / self._github_repositories_base / date.strftime("%Y") / date.strftime("%m")
+        path.mkdir(parents=True, exist_ok=True)
+        return path / f'{date:%Y-%m-%d}.csv'
+
+    def save_repositories(self, df: pd.DataFrame, date: datetime):
+        df.to_csv(self._get_repository_file_path(date=date), index=False)
+
+    def get_repositories(self, date: datetime) -> pd.DataFrame:
+        file_path = self._get_repository_file_path(date=date)
+        log.debug(f'Read repositories names for {date:%Y-%m-%d} from file {file_path}')
+        if file_path.is_file():
+            df = pd.read_csv(file_path)
+            log.debug(f'Repositories names {date:%Y-%m-%d} df info {get_pandas_data_frame_info(df)}')
+            return df
+        else:
+            log.warning(f'Not such repositories names file for {date:%Y-%m-%d} in path {file_path}')
+            return pd.DataFrame()

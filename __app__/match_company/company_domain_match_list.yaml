@@ -215,10 +215,6 @@
   domains:
     - burohappold.com
   regex:
-- company: CERN
-  domains:
-    - cern.ch
-  regex:
 - company: CGI
   domains:
     - cgi.com

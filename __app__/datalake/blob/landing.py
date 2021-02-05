@@ -45,8 +45,9 @@ class BlobLandingArea(BaseLandingArea, BlobArea):
 
         log.info(f'Read push events commits for {date.strftime("%Y-%m-%d %H:00")} from file {file_path}')
         df = self.read_pandas_dataframe_from_parquet(path=file_path)
-        log.debug(f'Push events commits {date.strftime("%Y-%m-%d %H:00")} df info {get_pandas_data_frame_info(df)}')
-        return df
+        if df is not None:
+            log.debug(f'Push events commits {date.strftime("%Y-%m-%d %H:00")} df info {get_pandas_data_frame_info(df)}')
+            return df
 
     def get_daily_push_events_commits(self, date: datetime):
 
@@ -61,3 +62,12 @@ class BlobLandingArea(BaseLandingArea, BlobArea):
 
     def _get_hourly_push_events_commits_path(self, date: datetime) -> str:
         return date.strftime(f"{self._github_events_commits_base}/%Y/%m/%d/%Y-%m-%d-{date.hour}.parquet")
+
+    def _get_repository_file_path(self, date: datetime) -> str:
+        return f'{self._github_repositories_base}/{date:%Y/%m/%Y-%m-%d}.csv'
+
+    def save_repositories(self, df: pd.DataFrame, date: datetime):
+        self.write_pandas_dataframe_to_csv(df=df, path=self._get_repository_file_path(date=date))
+
+    def get_repositories(self, date: datetime) -> pd.DataFrame:
+        return self.read_pandas_dataframe_from_csv(path=self._get_repository_file_path(date=date))

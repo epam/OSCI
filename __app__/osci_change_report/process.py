@@ -14,37 +14,46 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
-from __app__.datalake import DataLake
+
 from datetime import datetime, timedelta
+
 from __app__.osci_change_report.change_report import get_osci_ranking_change_report
+from __app__.datalake.reports.general.change_ranking import OSCIChangeRanking
+from __app__.datalake.reports.general.osci_ranking import OSCIRankingYTD
+from __app__.datalake.reports.excel import OSCIChangeRankingExcel
 
 
-def __get_previous_date(date: datetime):
+def get_previous_date(date: datetime):
     if date.month == 1:
         return datetime(year=date.year, month=date.month, day=1)
     return datetime(year=date.year, month=date.month, day=1) - timedelta(days=1)
 
 
 def get_change_report(date: datetime):
-    report_name = 'OSCI_ranking_YTD'
-    rank_field = 'Position'
-    change_suffix = 'Change'
-    output_report_name = 'OSCI_change_ranking'
-    previous_date = __get_previous_date(date=date)
-    report_schema = DataLake().public.schemas.company_contributors_ranking
-    new_report = DataLake().public.get_report(report_name=report_name, date=date).reset_index().\
-        rename(columns={'index': rank_field})
-    old_report = DataLake().public.get_report(report_name=report_name, date=previous_date).reset_index().\
-        rename(columns={'index': rank_field})
-    change_report = get_osci_ranking_change_report(old_report=old_report,
-                                                   new_report=new_report,
-                                                   company_field=report_schema.company,
-                                                   active_contributors_field=report_schema.active,
-                                                   total_community_field=report_schema.total,
-                                                   rank_field=rank_field,
-                                                   change_suffix=change_suffix)
-    DataLake().public.save_report(report_df=change_report, report_name=output_report_name, date=date)
-    DataLake().public.save_solutions_hub_osci_change_report_view(change_report=change_report,
-                                                                 report_dir_name='SolutionsHub_' + output_report_name,
-                                                                 old_date=previous_date,
-                                                                 new_date=date)
+    previous_date = get_previous_date(date=date)
+
+    ranking = OSCIRankingYTD(date=date)
+    ranking_df = ranking.read().reset_index().rename(columns={'index': ranking.schema.position})
+
+    old_ranking = OSCIRankingYTD(date=previous_date)
+    old_ranking_df = old_ranking.read().reset_index().rename(columns={'index': old_ranking.schema.position})
+
+    report = OSCIChangeRanking(date=date)
+    change_report = get_osci_ranking_change_report(old_report=old_ranking_df,
+                                                   new_report=ranking_df,
+
+                                                   company_field=ranking.schema.company,
+
+                                                   active_contributors_field=ranking.schema.active,
+                                                   active_contributors_change_field=report.schema.active_change,
+
+                                                   total_community_field=ranking.schema.total,
+                                                   total_community_change_field=report.schema.total_change,
+
+                                                   rank_field=ranking.schema.position,
+                                                   rank_change_field=report.schema.position_change)
+
+    report.save(df=change_report)
+
+    excel_report = OSCIChangeRankingExcel(from_date=previous_date, to_date=date)
+    excel_report.save(df=change_report)

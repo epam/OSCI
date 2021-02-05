@@ -1,4 +1,4 @@
-﻿![OSCI Logo](images/OSCI_Logo.png)
+![OSCI Logo](images/OSCI_Logo.png)
 # OSCI, the Open Source Contributor Index
 
 ## What is OSCI?

@@ -14,14 +14,15 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
-from __app__.datalake.schemas.bq import BigQueryOSCIRankingReport
 from __app__.utils import get_req_param
+from __app__.datalake import DatePeriodType
 from .loader import load_osci_ranking_to_bq
 
 import datetime
 import logging
 import traceback as tb
 import azure.functions as func
+import json
 
 DAY_FORMAT = "%Y-%m-%d"
 DEFAULT_DAY = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime(DAY_FORMAT)
@@ -34,10 +35,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         log.info(f"Http trigger. req.params: {req.params}")
 
         date = datetime.datetime.strptime(get_req_param(req, 'date', default=DEFAULT_DAY), DAY_FORMAT)
-        table = load_osci_ranking_to_bq(date=date)
-
-        return func.HttpResponse(f"{table.num_rows} and {len(table.schema)} in "
-                                 f"table {BigQueryOSCIRankingReport.table_id}.")
+        date_period = get_req_param(req, 'date_period', default=DatePeriodType.YTD)
+        table = load_osci_ranking_to_bq(date=date, date_period=date_period)
+        return func.HttpResponse(json.dumps({'table': {'id': table.table_id, 'rows': table.num_rows}}))
     except Exception as ex:
         log.error(f'Exception {ex}')
         log.exception(ex)

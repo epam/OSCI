@@ -1,0 +1,243 @@
+
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "functionName": {
+            "type": "string"
+        },
+        "functionStorageName": {
+            "type": "string"
+        },
+        "functionInsightsName": {
+            "type": "string"
+        },
+        "keyVaultName": {
+            "type": "string"
+        },
+        "secretAppProperties": {
+            "type": "array"
+        },
+        "appProperties": {
+            "type": "object"
+        },
+        "acrName": {
+            "type": "string"
+        },
+        "acrPassword": {
+            "type": "string"
+        },
+        "imageVersion": {
+            "type": "string"
+        },
+        "allowedNetworks": {
+            "type": "array",
+            "defaultValue": []
+        }
+    },
+    "functions": [
+        {
+            "namespace": "custom",
+            "members": {
+                "addNetPrefixToIp": {
+                    "parameters": [
+                        {
+                            "name": "address",
+                            "type": "string"
+                        }
+                    ],
+                    "output": {
+                        "type": "string",
+                        "value": "[if(contains(parameters('address'), '/'), parameters('address'), concat(parameters('address'), '/32'))]"
+                    }
+                }
+            }
+        }
+    ],
+    "variables": {
+        "emptyObject": {},
+        "ipSecurityRestrictions": "[concat(variables('allowedIps'), variables('allowedServiceTags'))]",
+        "allowedServiceTags": [
+            {
+                "ipAddress": "AzureCloud",
+                "action": "Allow",
+                "tag": "ServiceTag",
+                "priority": 1000,
+                "name": "Azure",
+                "description": "Allow all from Azure Cloud (needed for ADF)"
+            }
+        ],
+        "copy": [
+            {
+                "name": "allowedIps",
+                "count": "[length(parameters('allowedNetworks'))]",
+                "input": {
+                    "ipAddress": "[custom.addNetPrefixToIp(parameters('allowedNetworks')[copyIndex('allowedIps')].address)]",
+                    "action": "Allow",
+                    "priority": 2000,
+                    "name": "[parameters('allowedNetworks')[copyIndex('allowedIps')].name]",
+                    "description": "Allowed external network"
+                }
+            }
+        ]
+    },
+    "resources": [
+        {
+            "name": "[concat('secretProperty-', copyIndex())]",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "copy": {
+                "name": "secretPropertyCopy",
+                "count": "[length(parameters('secretAppProperties'))]"
+            },
+            "properties": {
+                "expressionEvaluationOptions": {
+                    "scope": "outer"
+                },
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "variables": {},
+                    "resources": [],
+                    "outputs": {
+                        "property": {
+                            "type": "object",
+                            "value": "[createObject(parameters('secretAppProperties')[copyIndex()].name, concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyVaultName'), '.vault.azure.net/secrets/', parameters('secretAppProperties')[copyIndex()].keyName,'/)'))]"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "name": "[concat('objectMerger-', copyIndex('objectMergerCopy', 1))]",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "copy": {
+                "name": "objectMergerCopy",
+                "count": "[length(parameters('secretAppProperties'))]",
+                "mode": "Serial"
+            },
+            "dependsOn": [ "secretPropertyCopy" ],
+            "properties": {
+                "mode": "Incremental",
+                "expressionEvaluationOptions": {
+                    "scope": "inner"
+                },
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {
+                        "state": {
+                            "type": "object"
+                        },
+                        "value": {
+                            "type": "object"
+                        }
+                    },
+                    "resources": [],
+                    "outputs": {
+                        "state": {
+                            "type": "object",
+                            "value": "[union(parameters('state'), parameters('value'))]"
+                        }
+                    }
+                },
+                "parameters": {
+                    "state": {
+                        "value": "[if(equals(copyIndex('objectMergerCopy'), 0), variables('emptyObject'), reference(concat('objectMerger-', copyIndex('objectMergerCopy'))).outputs.state.value)]"
+                    },
+                    "value": {
+                        "value": "[reference(concat('secretProperty-', copyIndex('objectMergerCopy'))).outputs.property.value]"
+                    }
+                }
+            }
+        },
+        {
+            "name": "defaultProperies",
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2019-10-01",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "parameters": {},
+                    "resources": [],
+                    "outputs": {
+                        "properties": {
+                            "type": "object",
+                            "value": {
+                                "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('functionStorageName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('functionStorageName')),'2019-06-01').keys[0].value)]",
+                                "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('functionStorageName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('functionStorageName')),'2019-06-01').keys[0].value)]",
+                                //"WEBSITE_CONTENTAZUREFILECONNECTIONSTRING": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('functionStorageName'), ';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('functionStorageName')),'2019-06-01').keys[0].value)]",
+                                "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('microsoft.insights/components/', parameters('functionInsightsName')), '2020-02-02-preview').InstrumentationKey]",
+                                "FUNCTIONS_EXTENSION_VERSION": "~3",
+                                "FUNCTIONS_WORKER_RUNTIME": "python",
+                                //"WEBSITE_CONTENTSHARE": "[parameters('functionName')]",
+                                "DOCKER_ENABLE_CI": "true",
+                                "DOCKER_REGISTRY_SERVER_URL": "[concat(parameters('acrName'), '.azurecr.io')]",
+                                "DOCKER_REGISTRY_SERVER_USERNAME": "[parameters('acrName')]",
+                                "DOCKER_REGISTRY_SERVER_PASSWORD": "[parameters('acrPassword')]",
+                                "WEBSITES_ENABLE_APP_SERVICE_STORAGE": false
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('functionName'), '/appsettings')]",
+            "properties": "[union(reference('defaultProperies').outputs.properties.value, reference(concat('objectMerger-', length(parameters('secretAppProperties')))).outputs.state.value, parameters('appProperties'))]"
+        },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "apiVersion": "2018-11-01",
+            "name": "[concat(parameters('functionName'), '/web')]",
+            "properties": {
+                "numberOfWorkers": 1,
+                "linuxFxVersion": "[concat('DOCKER|', parameters('acrName'), '.azurecr.io/osci:', parameters('imageVersion'))]",
+                "pythonVersion": "3.7",
+                "requestTracingEnabled": false,
+                "remoteDebuggingEnabled": false,
+                "remoteDebuggingVersion": "VS2019",
+                "httpLoggingEnabled": false,
+                "logsDirectorySizeLimit": 35,
+                "detailedErrorLoggingEnabled": false,
+                "publishingUsername": "$oscifunction",
+                "scmType": "None",
+                "use32BitWorkerProcess": false,
+                "webSocketsEnabled": false,
+                "alwaysOn": true,
+                "cors": {
+                    "allowedOrigins": [
+                        "https://functions.azure.com",
+                        "https://functions-staging.azure.com",
+                        "https://functions-next.azure.com"
+                    ],
+                    "supportCredentials": false
+                },
+                "localMySqlEnabled": false,
+                "ipSecurityRestrictions": "[variables('ipSecurityRestrictions')]",
+                // "scmIpSecurityRestrictions": [
+                //     {
+                //         "ipAddress": "Any",
+                //         "action": "Allow",
+                //         "priority": 1,
+                //         "name": "Allow all",
+                //         "description": "Allow all access"
+                //     }
+                // ],
+                // "scmIpSecurityRestrictionsUseMain": false,
+                "http20Enabled": false,
+                "minTlsVersion": "1.2",
+                "ftpsState": "FtpsOnly",
+                "reservedInstanceCount": 0
+            }
+        }
+    ],
+    "outputs": {}
+}

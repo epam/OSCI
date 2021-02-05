@@ -35,6 +35,9 @@ class LocalSystemArea(BaseDataLakeArea):
     def add_fs_prefix(self, path: Union[Path, str]) -> str:
         return f'{self.FS_PREFIX}:///{path}'
 
+    def add_fs_absolute_prefix(self, path):
+        return f'{self.FS_PREFIX}:///{Path(path).absolute()}'
+
     @staticmethod
     def _get_paths(dir_path: Union[str, Path], file_pattern='*.parquet') -> Iterator[Path]:
         return Path(dir_path).rglob(file_pattern)
@@ -42,6 +45,14 @@ class LocalSystemArea(BaseDataLakeArea):
     @property
     def _github_events_commits_base(self) -> Union[str, Path]:
         return self.BASE_PATH / self.BASE_AREA_DIR / 'github' / 'events' / 'push'
+
+    @property
+    def _github_raw_events_commits_base(self) -> Union[str, Path]:
+        return self.BASE_PATH / self.BASE_AREA_DIR / 'github' / 'raw-events' / 'push'
+
+    @property
+    def _github_repositories_base(self) -> Path:
+        return self.BASE_PATH / self.BASE_AREA_DIR / 'github' / 'repository'
 
     def write_bytes_to_file(self, path: str, buffer: BytesIO):
         with open(path, 'wb') as file:
