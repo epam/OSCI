@@ -452,6 +452,12 @@
   domains:
     - flatironschool.com
   regex:
+  company: Flipkart
+  domains:
+    - Flipkart.com
+    -2gud.com
+    -Mynhra.com
+  regex:
 - company: Forestry.io
   domains:
     - forestry.io
