@@ -22,6 +22,13 @@
 
 ## 2021 updates
 
+### February 10th 2021
+The OSCI ranking has now been updated with the data for [**January 2021**][rank-2021.01]
+
+We’ve started the new year with an improved algorithm that considers Open Source licenses as a factor of measuring contributions. We’re looking forward to seeing which organisations continue their commitment to Open Source this year and which new comers climb the rankings.
+
+[Download rank][rank-2021.01]
+
 ### February 2nd 2021
 The OSCI ranking has now been updated with the data for [**December 2020**][rank-2020.12]
 
@@ -185,6 +192,8 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2020.11]: Archive/2020.11_OSCI_Ranking.xlsx
 [rank-2020.12]: Archive/2020.12_OSCI_Ranking.xlsx
 
+[rank-2021.01]: Archive/2021.01_OSCI_Ranking.xlsx
+
 <!-- 2019 News -->
 [2019]: #2019-updates
 
@@ -211,6 +220,6 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 <!-- 2021 News -->
 [2021]: #2021-updates
 
-[2021.02]: #february-2nd-2021
+[2021.02]: #february-10th-2021
 
 <!-- END Links section -->
