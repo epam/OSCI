@@ -15,7 +15,7 @@ The OSCI ranking has now been updated with the data for January 2021.
 The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
 Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.01 OSCI Ranking.xlsx](Archive/2021.01_OSCI_Ranking.xlsx).
 
-We’ve started the new year with an improved algorithm that considers Open Source licenses as a factor of measuring contributions – you can see this algorithm at our GitHub repo. We’re looking forward to seeing which organisations continue their commitment to Open Source this year and which new comers climb the rankings.
+We’ve started the new year with an improved algorithm that considers Open Source licenses as a factor of measuring contributions. We’re looking forward to seeing which organisations continue their commitment to Open Source this year and which new comers climb the rankings.
 
 Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
 
