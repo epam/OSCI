@@ -1,3 +1,4 @@
+pypandoc==1.5
 pyspark == 2.4.5
 pytest==6.0.1
 -r __app__/requirements.txt
