@@ -109,7 +109,7 @@ We will review your pull request and if it matches our requirements, we will mer
 # QuickStart
 ## Technical Note
 We built OSCI this an Azure cloud environment using Azure DataFactory, Azure Function and Azure HDInsight. 
-The code published here on GitHub does not require the Azure cloud. You can reproduce everything in the corresponding instruction with CLI (Command line interface).
+The code published here on GitHub does not require the Azure cloud. You can reproduce everything in the corresponding instruction with the CLI (command line interface).
 ## Installation
 1) Clone repository
     ```shell script
@@ -131,7 +131,7 @@ A sample file [`default.yml`](__app__/config/files/default.yml) is included, ple
 ## Sample run
 1) Run script to download data from archive (for example for 01 January 2020)
     ```shell script
-         python3 osci.py get_github_daily_push_events -d 2020-01-01
+         python3 osci.py get-github-daily-push-events -d 2020-01-01
     ```
 1) Run script to add company field (matched by domain) (for example for 01 January 2020)
     ```shell script
@@ -143,4 +143,4 @@ A sample file [`default.yml`](__app__/config/files/default.yml) is included, ple
     ```
   
 # License
-OSCI is [GNU General Public License v3.0](LICENSE).
+OSCI is licensed under the [GNU General Public License v3.0](LICENSE).
