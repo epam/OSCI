@@ -433,6 +433,14 @@
     - exoplatform.com
   regex:
     - ^.*\.exoplatform\.org$
+- company: Expedia Group
+  domains:
+    - egencia.com
+    - expedia.com
+    - expediagroup.com
+    - hotels.com
+    - vrbo.com
+  regex:
 - company: Facebook
   domains:
     - fb.com
