@@ -16,3 +16,4 @@ six==1.13.0
 XlsxWriter==1.2.3
 Jinja2==2.11.2
 deepmerge==0.1.1
+numpy==1.19.5
