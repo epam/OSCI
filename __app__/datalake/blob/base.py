@@ -100,16 +100,17 @@ class BlobArea(BaseDataLakeArea):
             container_client = self.blob_service.get_container_client(container=self.AREA_CONTAINER)
             container_client.upload_blob(name=path, data=buffer.getvalue(), overwrite=True)
 
-    def read_pandas_dataframe_from_csv(self, path: str) -> pd.DataFrame:
+    def read_pandas_dataframe_from_csv(self, path: str, dtype=None) -> pd.DataFrame:
         """Load parquet data from azure blob to pandas dataframe
 
         :param path: blob_name to load
+        :param dtype: Type name or dict of column -> type, optional
         :return: pandas dataframe from blob
         """
         blob_client = self.blob_service.get_blob_client(container=self.AREA_CONTAINER, blob=path)
         try:
             with StringIO(blob_client.download_blob().readall().decode()) as buffer:
-                return pd.read_csv(buffer)
+                return pd.read_csv(buffer, dtype=dtype)
         except ResourceNotFoundError as ex:
             log.error(f"ResourceNotFound {ex}")
 
