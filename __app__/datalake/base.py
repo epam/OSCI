@@ -254,3 +254,15 @@ class BasePublicArea(BaseDataLakeArea, abc.ABC):
 
     def save_email(self, email_body: str, date: datetime):
         raise NotImplementedError()
+
+    def get_companies_contributors_repository_commits_path(self, date: datetime) -> Union[str, Path]:
+        raise NotImplementedError()
+
+    def get_companies_contributors_repository_commits_spark_path(self, date) -> str:
+        return self.add_fs_prefix(path=self.get_companies_contributors_repository_commits_path(date=date))
+
+    def save_companies_contributors_repository_commits(self, df: pd.DataFrame, date: datetime):
+        raise NotImplementedError()
+
+    def get_companies_contributors_repository_commits(self, date: datetime) -> pd.DataFrame:
+        raise NotImplementedError()

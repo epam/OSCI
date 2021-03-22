@@ -14,6 +14,7 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
+from .staging import PushEventsCommitsSchema, RepositoriesSchema
 
 
 class MonthlyEmployeesAmountReportSchema:
@@ -119,6 +120,19 @@ class ProjectsActivitySchema:
     total = 'Total_%'
 
 
+class CompaniesContributorsRepositoryCommits:
+    author_name = PushEventsCommitsSchema().author_name
+    author_email = PushEventsCommitsSchema().author_email
+    company = PushEventsCommitsSchema().company
+    repository = PushEventsCommitsSchema().repo_name
+
+    language = PushEventsCommitsSchema().language
+    license = PushEventsCommitsSchema().license
+
+    commits = 'commits'
+    date = 'date'
+
+
 class PublicSchemas:
     employees_amount_monthly = MonthlyEmployeesAmountReportSchema
     company_employees_amount = CompanyEmployeesAmountReportSchema
@@ -130,3 +144,4 @@ class PublicSchemas:
     contributors_repo_commits_ranking = ContributorsReposCommitsRankingReportSchema
     new_contributors = NewContributorsSchema
     new_repos = NewReposSchema
+    company_contributors_repository_commits = CompaniesContributorsRepositoryCommits

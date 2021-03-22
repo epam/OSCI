@@ -22,6 +22,7 @@ import logging
 from __app__.datalake import DatePeriodType
 from __app__.jobs.osci_ranking import OSCIRankingJob
 from __app__.jobs.osci_commits_ranking import OSCICommitsRankingJob
+from __app__.jobs.company_contributors_repository_commits import CompanyContributorsRepositoryCommitsJob
 
 from cli.consts import DAY_FORMAT, DEFAULT_FROM_DAY, DEFAULT_TO_DAY
 
@@ -76,6 +77,10 @@ def daily_osci_rankings(to_day: datetime):
 
         osci_ranking_job.load(df=osci_ranking_job.transform(commits), date=to_day)
         osci_commits_ranking_job.load(df=osci_commits_ranking_job.transform(commits), date=to_day)
+
+        if date_period == DatePeriodType.YTD:
+            company_contributors_repos = CompanyContributorsRepositoryCommitsJob(date_period_type=date_period)
+            company_contributors_repos.load(company_contributors_repos.transform(commits, date=to_day), date=to_day)
 
 
 if __name__ == '__main__':
