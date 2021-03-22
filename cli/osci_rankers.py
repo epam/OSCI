@@ -23,6 +23,7 @@ from __app__.datalake import DatePeriodType
 from __app__.jobs.osci_ranking import OSCIRankingJob
 from __app__.jobs.osci_commits_ranking import OSCICommitsRankingJob
 from __app__.jobs.company_contributors_repository_commits import CompanyContributorsRepositoryCommitsJob
+from __app__.jobs.osci_contributors_ranking import OSCIContributorsRankingJob
 
 from cli.consts import DAY_FORMAT, DEFAULT_FROM_DAY, DEFAULT_TO_DAY
 
@@ -68,6 +69,14 @@ def osci_commits_ranking(to_day: datetime, date_period: str, from_day: datetime)
 @click.option('--to_day', '-td',
               default=DEFAULT_TO_DAY, type=click.DateTime(formats=[DAY_FORMAT]),
               help=f'The date format "{DAY_FORMAT}", default: `{DEFAULT_TO_DAY}`')
+def osci_contributors_ranking(to_day: datetime):
+    OSCIContributorsRankingJob(date_period_type=DatePeriodType.YTD).run(to_date=to_day)
+
+
+@cli.command()
+@click.option('--to_day', '-td',
+              default=DEFAULT_TO_DAY, type=click.DateTime(formats=[DAY_FORMAT]),
+              help=f'The date format "{DAY_FORMAT}", default: `{DEFAULT_TO_DAY}`')
 def daily_osci_rankings(to_day: datetime):
     for date_period in [DatePeriodType.YTD, DatePeriodType.MTD]:
         osci_ranking_job = OSCIRankingJob(date_period_type=date_period)
@@ -81,6 +90,9 @@ def daily_osci_rankings(to_day: datetime):
         if date_period == DatePeriodType.YTD:
             company_contributors_repos = CompanyContributorsRepositoryCommitsJob(date_period_type=date_period)
             company_contributors_repos.load(company_contributors_repos.transform(commits, date=to_day), date=to_day)
+
+            osci_contributors_ranking_job = OSCIContributorsRankingJob(date_period_type=date_period)
+            osci_contributors_ranking_job.load(osci_contributors_ranking_job.transform(commits), date=to_day)
 
 
 if __name__ == '__main__':
