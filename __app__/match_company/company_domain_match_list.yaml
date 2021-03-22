@@ -1061,6 +1061,11 @@
   domains:
     - stripe.com
   regex:
+- company: StreamNative
+  domains:
+    - streamnative.io
+    - streamnative.com
+  regex:
 - company: SuperSoftware
   domains:
     - supersoftware.co.jp
