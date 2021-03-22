@@ -133,6 +133,14 @@ class CompaniesContributorsRepositoryCommits:
     date = 'date'
 
 
+class OSCIContributorsRankingSchema:
+    company = 'Company'
+    author = 'Contributor'
+    author_email = 'Contributor\'s email'
+
+    commits = 'Commits'
+
+
 class PublicSchemas:
     employees_amount_monthly = MonthlyEmployeesAmountReportSchema
     company_employees_amount = CompanyEmployeesAmountReportSchema
@@ -145,3 +153,4 @@ class PublicSchemas:
     new_contributors = NewContributorsSchema
     new_repos = NewReposSchema
     company_contributors_repository_commits = CompaniesContributorsRepositoryCommits
+    osci_contributors_ranking = OSCIContributorsRankingSchema
