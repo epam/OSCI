@@ -68,4 +68,4 @@ def test_get_osci_contributors(commits):
         ('EPAM', 'varius', 'varius@epam.com', 4),
     ]
 
-    assert [(row.company, row.author, row.author_email, row.commits) for row in df.collect() == test_case]
+    assert [(row.company, row.author, row.author_email, row.commits) for row in df.collect()] == test_case
