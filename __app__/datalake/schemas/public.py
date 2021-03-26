@@ -27,7 +27,13 @@ class MonthByMonthCommitsReportSchema:
     month = 'Month'
 
 
-class YearToDateLicensedReportSchema:
+class OSCILanguagesReportSchema:
+    company = "Company"
+    language = "Language"
+    commits = "Commits"
+
+
+class OSCILicensesReportSchema:
     company = "Company"
     license = "License"
     commits = "Commits"

@@ -24,8 +24,8 @@ from __app__.jobs.osci_ranking import OSCIRankingJob
 from __app__.jobs.osci_licenses import OSCILicensesJob
 from __app__.jobs.osci_commits_ranking import OSCICommitsRankingJob
 from __app__.jobs.company_contributors_repository_commits import CompanyContributorsRepositoryCommitsJob
+from __app__.jobs.osci_languages import OSCILanguagesJob
 from __app__.jobs.osci_contributors_ranking import OSCIContributorsRankingJob
-
 from cli.consts import DAY_FORMAT, DEFAULT_FROM_DAY, DEFAULT_TO_DAY
 
 log = logging.getLogger(__name__)
@@ -94,6 +94,8 @@ def daily_osci_rankings(to_day: datetime):
 
             osci_contributors_ranking_job = OSCIContributorsRankingJob(date_period_type=date_period)
             osci_contributors_ranking_job.load(osci_contributors_ranking_job.transform(commits), date=to_day)
+            osci_language_job = OSCILanguagesJob(date_period_type=date_period)
+            osci_language_job.load(osci_language_job.transform(commits), date=to_day)
 
             osci_licenses_ytd = OSCILicensesJob(date_period_type=date_period)
             osci_licenses_ytd.load(osci_licenses_ytd.transform(df=commits), date=to_day)
@@ -105,6 +107,15 @@ def daily_osci_rankings(to_day: datetime):
               help=f'The date format "{DAY_FORMAT}", default: `{DEFAULT_TO_DAY}`')
 def osci_licenses(to_day: datetime):
     OSCILicensesJob(date_period_type=DatePeriodType.YTD).run(to_date=to_day)
+
+
+
+@cli.command()
+@click.option('--to_day', '-td',
+              default=DEFAULT_TO_DAY, type=click.DateTime(formats=[DAY_FORMAT]),
+              help=f'The date format "{DAY_FORMAT}", default: `{DEFAULT_TO_DAY}`')
+def osci_languages(to_day: datetime):
+    OSCILanguagesJob(date_period_type=DatePeriodType.YTD).run(to_date=to_day)
 
 
 if __name__ == '__main__':

@@ -19,14 +19,14 @@ from typing import Type
 from .base import Report, GeneralReportFactory
 
 from __app__.datalake import DatePeriodType
-from __app__.datalake.schemas.public import OSCILicensesReportSchema
+from __app__.datalake.schemas.public import OSCILanguagesReportSchema
 
 
-class OSCILicensesFactory(GeneralReportFactory):
+class OSCILanguagesFactory(GeneralReportFactory):
     report_base_cls: Type[Report] = type('_Report', (Report,),
-                                         dict(base_name='OSCI_Licenses',
-                                              schema=OSCILicensesReportSchema))
+                                         dict(base_name='OSCI_Languages',
+                                              schema=OSCILanguagesReportSchema))
 
 
-class OSCILicensesYTD(OSCILicensesFactory.report_base_cls):
+class OSCILanguagesYTD(OSCILanguagesFactory.report_base_cls):
     date_period = DatePeriodType.YTD
