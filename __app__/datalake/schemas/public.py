@@ -27,6 +27,12 @@ class MonthByMonthCommitsReportSchema:
     month = 'Month'
 
 
+class YearToDateLicensedReportSchema:
+    company = "Company"
+    license = "License"
+    commits = "Commits"
+
+
 class CompanyEmployeesAmountReportSchema:
     employees = 'Employees'
     company = 'Company'
