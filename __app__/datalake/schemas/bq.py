@@ -106,3 +106,39 @@ class BigQueryPushEventsCommitsColumns:
         bigquery.SchemaField(Columns.author_email, bigquery.enums.SqlTypeNames.STRING),
         bigquery.SchemaField(Columns.company, bigquery.enums.SqlTypeNames.STRING),
     ]
+
+
+class BigQueryCompaniesContributorsRepositoriesCommitsColumns:
+    table_id = 'OSCI.CompaniesContributorsRepositoriesCommits'
+
+    class Columns:
+        author_name = 'Author'
+        author_email = 'Email'
+        company = 'Company'
+        repository = 'Repository'
+        language = 'Language'
+        license = 'License'
+        commits = 'Commits'
+        date = 'Date'
+
+    schema = [
+        bigquery.SchemaField(Columns.author_name, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.author_email, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.company, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.repository, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.language, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.license, bigquery.enums.SqlTypeNames.STRING),
+        bigquery.SchemaField(Columns.commits, bigquery.enums.SqlTypeNames.INTEGER),
+        bigquery.SchemaField(Columns.date, bigquery.enums.SqlTypeNames.DATE),
+    ]
+
+    mapping = {
+        PublicSchemas.company_contributors_repository_commits.author_name: Columns.author_name,
+        PublicSchemas.company_contributors_repository_commits.author_email: Columns.author_email,
+        PublicSchemas.company_contributors_repository_commits.company: Columns.company,
+        PublicSchemas.company_contributors_repository_commits.repository: Columns.repository,
+        PublicSchemas.company_contributors_repository_commits.language: Columns.language,
+        PublicSchemas.company_contributors_repository_commits.license: Columns.license,
+        PublicSchemas.company_contributors_repository_commits.commits: Columns.commits,
+        PublicSchemas.company_contributors_repository_commits.date: Columns.date,
+    }
