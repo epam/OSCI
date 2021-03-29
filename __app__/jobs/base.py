@@ -60,7 +60,7 @@ class PushCommitsRankingJob:
     def run(self, to_date: datetime, from_date: datetime = None):
         df = self.extract(to_date, from_date)
         df = self.transform(df)
-        self.load(df.toPandas(), to_date)
+        self.load(df, to_date)
 
     def filter_out_duplicates_commits(self, df) -> DataFrame:
         return filter_out_duplicates(df, commits_id_field=self.commits_schema.sha,

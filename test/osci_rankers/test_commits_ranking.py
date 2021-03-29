@@ -2,7 +2,10 @@ import pytest
 import datetime
 
 from pyspark.sql import Row
-from __app__.transformers.rankers.commits_ranking import get_commits_ranking, get_month_by_month_commits_amounts
+from __app__.transformers.rankers.commits_ranking import (
+    get_commits_ranking,
+    get_month_by_month_commits_amounts,
+)
 
 
 @pytest.fixture()
