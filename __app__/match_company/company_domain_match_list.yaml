@@ -1277,6 +1277,10 @@
   domains:
     - t-matix.com
   regex:
+- company: T-Systems
+  domains:
+    - t-systems.com
+  regex:
 - company: tweag.io
   domains:
     - tweag.io
