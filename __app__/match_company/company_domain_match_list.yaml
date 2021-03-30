@@ -1293,8 +1293,13 @@
 - company: what.
   domains:
     - what.digital
-  regex: 
+  regex:
 - company: Bjerk
   domains:
     - bjerk.io
     - cobraz.no
+- company: Akvelon
+  domains:
+    - akvelon.com
+  regex:
+    - ^.*\.akvelon\.com$
