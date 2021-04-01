@@ -1303,3 +1303,9 @@
     - akvelon.com
   regex:
     - ^.*\.akvelon\.com$
+- company: Abilian
+  domains:
+    - abilian.com
+- company: Nexedi
+  domains:
+    - nexedi.com
