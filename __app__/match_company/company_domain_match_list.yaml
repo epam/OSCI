@@ -1061,6 +1061,11 @@
   domains:
     - stripe.com
   regex:
+- company: StreamNative
+  domains:
+    - streamnative.io
+    - streamnative.com
+  regex:
 - company: SuperSoftware
   domains:
     - supersoftware.co.jp
@@ -1277,6 +1282,10 @@
   domains:
     - t-matix.com
   regex:
+- company: T-Systems
+  domains:
+    - t-systems.com
+  regex:
 - company: tweag.io
   domains:
     - tweag.io
@@ -1284,8 +1293,13 @@
 - company: what.
   domains:
     - what.digital
-  regex: 
+  regex:
 - company: Bjerk
   domains:
     - bjerk.io
     - cobraz.no
+- company: Akvelon
+  domains:
+    - akvelon.com
+  regex:
+    - ^.*\.akvelon\.com$
