@@ -16,11 +16,19 @@
 
 | [2021][2021]      |     	            |     	            |     	          |
 |------	            |-----	            |-----	            |-----	          |
-| Jan   | [Feb][2021.02] 	| [Mar][2021.03]   | Apr  |
+| Jan   | [Feb][2021.02] 	| [Mar][2021.03]   | [Apr][2021.04]  |
 | May 	| Jun             | Jul 	| Aug  |
 | Sep   | Oct	            | Nov   | Dec  |
 
 ## 2021 updates
+
+### April 5th 2021
+The OSCI ranking has now been updated with the data for [**March 2021**][rank-2021.03]
+
+This month Microsoft has reached the top spot in the ranking. Huawei, Tencent and Alibaba climbed in to the Top 20 following a strong upwards trend in activity from the start of the year.
+
+[Download rank][rank-2021.03]
+
 
 ### March 3rd 2021
 The OSCI ranking has now been updated with the data for [**February 2021**][rank-2021.02]
@@ -201,6 +209,7 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 
 [rank-2021.01]: Archive/2021.01_OSCI_Ranking.xlsx
 [rank-2021.02]: Archive/2021.02_OSCI_Ranking.xlsx
+[rank-2021.03]: Archive/2021.03_OSCI_Ranking.xlsx
 
 <!-- 2019 News -->
 [2019]: #2019-updates
@@ -230,5 +239,6 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 
 [2021.02]: #february-10th-2021
 [2021.03]: #march-3rd-2021
+[2021.04]: #april-5th-2021
 
 <!-- END Links section -->
