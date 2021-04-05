@@ -6,7 +6,19 @@
 * OSCI ranks corporate contributions to open source based on the organization’s number of Active Contributors to GitHub
 * OSCI also tracks the Total Community of open source contributors for these companies
 * The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://solutionshub.epam.com/osci)
-* 
+
+## [News update](news.md)
+### [April 5th 2021](news.md#april-5th-2021)
+
+The OSCI ranking has now been updated with the data for March 2021.
+
+The latest ranking can be viewed on the [OSCI page](https://opensourceindex.io/).
+Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.03 OSCI Ranking.xlsx](Archive/2021.03_OSCI_Ranking.xlsx).
+
+This month Microsoft has reached the top spot in the ranking. Huawei, Tencent and Alibaba climbed in to the Top 20 following a strong upwards trend in activity from the start of the year.
+
+Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
+
 ## [News update](news.md)
 ### [March 3rd 2021](news.md#march-3rd-2021)
 
