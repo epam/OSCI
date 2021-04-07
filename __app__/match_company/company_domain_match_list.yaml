@@ -851,6 +851,10 @@
   domains:
     - pilz.de
   regex:
+- company: PingCAP
+  domains:
+    - pingcap.com
+  regex:
 - company: Pivotal
   domains:
     - pivotal.io
