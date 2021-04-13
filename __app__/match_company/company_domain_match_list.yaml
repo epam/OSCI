@@ -641,6 +641,10 @@
   domains:
     - linaro.org
   regex:
+- company: LINE Corporation
+  domains:
+    - linecorp.com
+  regex:
 - company: LinkedIn
   domains:
     - linkedin.com
