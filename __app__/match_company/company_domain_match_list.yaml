@@ -1041,6 +1041,11 @@
   domains:
     - sonarsource.com
   regex:
+- company: Sony
+  domains: 
+    - sony.com
+  regex:
+    - ^.*\.sony\.com$
 - company: Sonymobile
   domains:
     - sonymobile.com
