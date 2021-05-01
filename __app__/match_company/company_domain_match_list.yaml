@@ -641,6 +641,10 @@
   domains:
     - linaro.org
   regex:
+- company: LINE Corporation
+  domains:
+    - linecorp.com
+  regex:
 - company: LinkedIn
   domains:
     - linkedin.com
@@ -851,6 +855,10 @@
   domains:
     - pilz.de
   regex:
+- company: PingCAP
+  domains:
+    - pingcap.com
+  regex:
 - company: Pivotal
   domains:
     - pivotal.io
@@ -1041,6 +1049,11 @@
   domains:
     - sonarsource.com
   regex:
+- company: Sony
+  domains: 
+    - sony.com
+  regex:
+    - ^.*\.sony\.com$
 - company: Sonymobile
   domains:
     - sonymobile.com
@@ -1309,3 +1322,6 @@
 - company: Nexedi
   domains:
     - nexedi.com
+- company: Linagora
+  domains:
+    - linagora.com
