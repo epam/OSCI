@@ -339,6 +339,10 @@
   domains:
     - decred.org
   regex:
+- company: Devexperts
+  domains:
+    - devexperts.com
+  regex:  
 - company: Devox Software
   domains:
     - devoxsoftware.com
