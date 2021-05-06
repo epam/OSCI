@@ -1037,6 +1037,10 @@
   domains:
     - snyk.io
   regex:
+- company: Société Générale
+  domains:
+    - socgen.com
+  regex:
 - company: Softwire
   domains:
     - softwire.com
