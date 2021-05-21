@@ -17,10 +17,17 @@
 | [2021][2021]      |     	            |     	            |     	          |
 |------	            |-----	            |-----	            |-----	          |
 | Jan   | [Feb][2021.02] 	| [Mar][2021.03]   | [Apr][2021.04]  |
-| May 	| Jun             | Jul 	| Aug  |
+| [May][2021.05] 	| Jun             | Jul 	| Aug  |
 | Sep   | Oct	            | Nov   | Dec  |
 
 ## 2021 updates
+
+### May 21st 2021
+The OSCI ranking has now been updated with the data for [**April 2021**][rank-2021.04]
+
+he leading organizations remain consistent once again this month, although a slight decrease in growth of Active Contributor is noticeable this month. In addition Amazon, NVidia and Huawei are all progressing well above their closest neighbours in growth figures this month.
+
+[Download rank][rank-2021.04]
 
 ### April 5th 2021
 The OSCI ranking has now been updated with the data for [**March 2021**][rank-2021.03]
@@ -210,6 +217,7 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2021.01]: Archive/2021.01_OSCI_Ranking.xlsx
 [rank-2021.02]: Archive/2021.02_OSCI_Ranking.xlsx
 [rank-2021.03]: Archive/2021.03_OSCI_Ranking.xlsx
+[rank-2021.04]: Archive/2021.04_OSCI_Ranking.xlsx
 
 <!-- 2019 News -->
 [2019]: #2019-updates
@@ -240,5 +248,6 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [2021.02]: #february-10th-2021
 [2021.03]: #march-3rd-2021
 [2021.04]: #april-5th-2021
+[2021.05]: #may-21st-2021
 
 <!-- END Links section -->
