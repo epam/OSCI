@@ -102,8 +102,7 @@ This project is created by EPAM Systems and the latest results are visible on th
 If you would like to contribute to OSCI, please take a look at our guidelines [here.](CONTRIBUTING.md)
 
 ## What if your think your organization is missing or you believe there is an error in our logic
-This is a new project. We are more than happy to listen to any feedback which will help us improve.
-Contact us at [OSCI@epam.com](mailto:OSCI@epam.com) or modify the companies filter yourself.
+If your organization is missing from our ranking then simply follow the instructions below to modify the companies filter and add your own organisation. We're also more than happy to listen to any feedback you have that may help us to improve. Contact us at [OSCI@epam.com](mailto:OSCI@epam.com) to share your feedback and raise any questions.
 
 ## How can I add a company which is missing from the OSCI ranking
 The goal of the OSCI is to rank the GitHub contributions by companies (commercial organizations).
