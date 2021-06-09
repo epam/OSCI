@@ -22,10 +22,16 @@
 
 ## 2021 updates
 
+### June 9th, 2021
+The OSCI ranking has now been updated with the data for [**May 2021**][opensourceindex.io]
+
+The table below shows the OSCI ranking for GitHub activity in May 2021. Microsoft shows the biggest growth in Active Contributors this month and remains the top organization. In addition, Unity Technologies, HashiCorp and Linkedin each climbed 2 or 3 positions, demonstrating a consistent upward trend in their growth.
+
+
 ### May 21st 2021
 The OSCI ranking has now been updated with the data for [**April 2021**][rank-2021.04]
 
-he leading organizations remain consistent once again this month, although a slight decrease in growth of Active Contributor is noticeable this month. In addition Amazon, NVidia and Huawei are all progressing well above their closest neighbours in growth figures this month.
+The leading organizations remain consistent once again this month, although a slight decrease in growth of Active Contributor is noticeable this month. In addition Amazon, NVidia and Huawei are all progressing well above their closest neighbours in growth figures this month.
 
 [Download rank][rank-2021.04]
 
@@ -218,6 +224,7 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2021.02]: Archive/2021.02_OSCI_Ranking.xlsx
 [rank-2021.03]: Archive/2021.03_OSCI_Ranking.xlsx
 [rank-2021.04]: Archive/2021.04_OSCI_Ranking.xlsx
+[opensourceindex.io]: https://opensourceindex.io/
 
 <!-- 2019 News -->
 [2019]: #2019-updates
