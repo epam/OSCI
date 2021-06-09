@@ -8,52 +8,11 @@
 * The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://opensourceindex.io/)
 
 ## [News update](news.md)
-### [May 21st 2021](news.md#may-21st-2021)
+### [June 9th, 2021](news.md#june-9th-2021)
 
-The OSCI ranking has now been updated with the data for April 2021.
+The OSCI ranking has now been updated with the data for [**May 2021**][opensourceindex.io]
 
-The latest ranking can be viewed on the [OSCI page](https://opensourceindex.io/).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.04 OSCI Ranking.xlsx](Archive/2021.04_OSCI_Ranking.xlsx).
-
-The leading organizations remain consistent once again this month, although a slight decrease in growth of Active Contributor is noticeable this month. In addition Amazon, NVidia and Huawei are all progressing well above their closest neighbours in growth figures this month.
-
-
-## [News update](news.md)
-### [April 5th 2021](news.md#april-5th-2021)
-
-The OSCI ranking has now been updated with the data for March 2021.
-
-The latest ranking can be viewed on the [OSCI page](https://opensourceindex.io/).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.03 OSCI Ranking.xlsx](Archive/2021.03_OSCI_Ranking.xlsx).
-
-This month Microsoft has reached the top spot in the ranking. Huawei, Tencent and Alibaba climbed in to the Top 20 following a strong upwards trend in activity from the start of the year.
-
-Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
-
-## [News update](news.md)
-### [March 3rd 2021](news.md#march-3rd-2021)
-
-The OSCI ranking has now been updated with the data for February 2021.
-
-The latest ranking can be viewed on the [OSCI page](https://opensourceindex.io/).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.02 OSCI Ranking.xlsx](Archive/2021.02_OSCI_Ranking.xlsx).
-
-A significant observation this month is the overall increase in the level of engagement compared to February 2020; suggesting a long-term upward trend in the growth of corporate Open Source activity.
-
-Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
-
-[Previous updates](news.md)
-## [News update](news.md)
-### [February 10th 2021](news.md#february-10th-2021)
-
-The OSCI ranking has now been updated with the data for January 2021.
-
-The latest ranking can be viewed on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci).
-Alternatively the updated ranking can be downloaded (Excel format) from our [Archive folder](Archive): [2021.01 OSCI Ranking.xlsx](Archive/2021.01_OSCI_Ranking.xlsx).
-
-We’ve started the new year with an improved algorithm that considers Open Source licenses as a factor of measuring contributions. We’re looking forward to seeing which organisations continue their commitment to Open Source this year and which new comers climb the rankings.
-
-Take a look at our latest article: [Programming Language Popularity on GitHub](https://solutionshub.epam.com/blog/post/programming-language-popularity-on-github).
+The table below shows the OSCI ranking for GitHub activity in May 2021. Microsoft shows the biggest growth in Active Contributors this month and remains the top organization. In addition, Unity Technologies, HashiCorp and Linkedin each climbed 2 or 3 positions, demonstrating a consistent upward trend in their growth.
 
 [Previous updates](news.md)
 
