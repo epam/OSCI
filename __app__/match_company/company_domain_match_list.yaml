@@ -339,6 +339,10 @@
   domains:
     - decred.org
   regex:
+- company: Devexperts
+  domains:
+    - devexperts.com
+  regex:  
 - company: Devox Software
   domains:
     - devoxsoftware.com
@@ -1036,6 +1040,10 @@
 - company: Snyk
   domains:
     - snyk.io
+  regex:
+- company: Société Générale
+  domains:
+    - socgen.com
   regex:
 - company: Softwire
   domains:
