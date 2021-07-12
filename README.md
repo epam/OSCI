@@ -8,13 +8,14 @@
 * The OSCI rankings are published monthly to dynamically track corporate contributions to GitHub. The latest result can be found at EPAM SolutionsHub website's [OSCI page](https://opensourceindex.io/)
 
 ## [News update](news.md)
-### [June 9th, 2021](news.md#june-9th-2021)
+### [July 12th, 2021](news.md#july-12th-2021)
 
-The OSCI ranking has now been updated with the data for [**May 2021**](https://opensourceindex.io/)
+The OSCI ranking has now been updated with the data for [**June 2021**](https://opensourceindex.io/)
 
-The table below shows the OSCI ranking for GitHub activity in May 2021. Microsoft shows the biggest growth in Active Contributors this month and remains the top organization. In addition, Unity Technologies, HashiCorp and Linkedin each climbed 2 or 3 positions, demonstrating a consistent upward trend in their growth.
+The table shows the OSCI ranking for GitHub activity in June 2021. The leading organisations remain consistent once again this month and the overall level of activity has stabilised approaching second half of the year. In addition Amazon and IBM are progressing well above their closest neighbours in growth figures this month.
 
 [Previous updates](news.md)
+
 
 ## How does OSCI work?
 

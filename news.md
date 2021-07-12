@@ -17,8 +17,15 @@
 | [2021][2021]      |     	            |     	            |     	          |
 |------	            |-----	            |-----	            |-----	          |
 | Jan   | [Feb][2021.02] 	| [Mar][2021.03]   | [Apr][2021.04]  |
-| [May][2021.05] 	| Jun             | Jul 	| Aug  |
+| [May][2021.05] 	| [Jun][2021.06]         | [Jul][2021.07] 	| Aug  |
 | Sep   | Oct	            | Nov   | Dec  |
+
+## 2021 updates
+
+### July 12th, 2021
+The OSCI ranking has now been updated with the data for [**June 2021**][opensourceindex.io]
+
+The table shows the OSCI ranking for GitHub activity in June 2021. The leading organisations remain consistent once again this month and the overall level of activity has stabilised approaching second half of the year. In addition Amazon and IBM are progressing well above their closest neighbours in growth figures this month.
 
 ## 2021 updates
 
@@ -256,5 +263,7 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [2021.03]: #march-3rd-2021
 [2021.04]: #april-5th-2021
 [2021.05]: #may-21st-2021
+[2021.06]: #june-9th-2021
+[2021.07]: #july-12th-2021
 
 <!-- END Links section -->
