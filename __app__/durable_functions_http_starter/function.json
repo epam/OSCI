@@ -6,7 +6,7 @@
       "name": "req",
       "type": "httpTrigger",
       "direction": "in",
-      "route": "orchestrators/{orchestrator}/{function}",
+      "route": "orchestrators/{orchestrator}/actions/{function}",
       "methods": [
         "post",
         "get"

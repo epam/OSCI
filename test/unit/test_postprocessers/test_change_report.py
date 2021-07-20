@@ -3,7 +3,8 @@ from datetime import datetime
 import pandas as pd
 import numpy as np
 
-from __app__.osci_change_report.change_report import get_osci_ranking_change_report, get_contributors_ranking_mbm_change_report
+from osci.postprocess.osci_change_report import get_osci_ranking_change_report, \
+    get_contributors_ranking_mbm_change_report
 
 
 def test_get_osci_ranking_change_report():
@@ -15,7 +16,6 @@ def test_get_osci_ranking_change_report():
     total_community_change_field = f'{total_community_field} {change_field}'
     rank_field = '#'
     rank_change_field = f'Position {change_field}'
-
 
     old_report = pd.DataFrame([
         {rank_field: 1, company_field: 'Google', active_contributors_field: 100, total_community_field: 200},

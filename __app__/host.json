@@ -12,5 +12,5 @@
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
     "version": "[2.*, 3.0.0)"
   },
-  "functionTimeout": "00:10:00"
+  "functionTimeout": "12:00:00"
 }

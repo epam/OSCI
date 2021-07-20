@@ -2,8 +2,8 @@ import pytest
 import datetime
 
 from pyspark.sql import Row
-from __app__.datalake.schemas.staging import PushEventsCommitsSchema
-from __app__.transformers.languages import get_languages_commits
+from osci.datalake.schemas.staging import PushEventsCommitsSchema
+from osci.transformers.languages import get_languages_commits
 
 
 @pytest.fixture()

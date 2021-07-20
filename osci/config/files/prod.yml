@@ -1,0 +1,26 @@
+meta:
+  config_source: 'env'
+file_system:
+  type: 'osci_fs_type'
+  account_name: 'osci_blob_account_name'
+  account_key: 'osci_blob_account_key'
+areas:
+  landing:
+    container: 'osci_landing_container'
+  staging:
+    container: 'osci_staging_container'
+  public:
+    container: 'osci_public_container'
+web:
+  fs: 'osci_web_fs_type'
+  base_path: 'osci_web_base_path'             # ignored when web.fs is blob
+  account_name: 'osci_web_blob_account_name'  # ignored when web.fs is local
+  account_key: 'osci_web_blob_account_key'    # ignored when web.fs is local
+  container: 'osci_web_container'
+bq:
+  project: 'osci_bq_project'
+  secret: 'osci_bq_secret'
+github:
+  token: 'osci_gh_token'
+company:
+  default: 'osci_company'

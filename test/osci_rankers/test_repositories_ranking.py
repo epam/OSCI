@@ -2,7 +2,7 @@ import pytest
 import datetime
 
 from pyspark.sql import Row
-from __app__.transformers.rankers.repositories_ranking import get_repos_commits_amount, get_employees_repos_commits_amount
+from osci.transformers.rankers.repositories_ranking import get_repos_commits_amount, get_employees_repos_commits_amount
 
 
 @pytest.fixture()

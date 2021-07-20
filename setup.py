@@ -16,7 +16,7 @@
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
 from setuptools import find_packages, setup
-from __app__ import __version__
+from osci import __version__
 
 
 def readme():
@@ -25,22 +25,22 @@ def readme():
 
 
 def requires():
-    with open('__app__/requirements.txt') as f:
+    with open('osci/requirements.txt') as f:
         return f.read().splitlines()
 
 
 setup(
     name='osci',
-    packages=find_packages(exclude=['test', 'test.*']),
+    packages=find_packages(exclude=['test', 'test.*', '__app__*']),
     setup_requires=['wheel'],
-    package_dir={'__app__': '__app__'},
-    package_data={'__app__': ['config/files/*.yml']},
+    package_dir={'osci': 'osci'},
+    package_data={'osci': ['config/files/*.yml']},
     install_requires=requires(),
     version=__version__,
     description='OSCI, the Open Source Contributor Index',
     long_description=readme(),
-    author='Vladislav Isayko, Aleksei Gavrilov, Ruslan Salikhov',
-    author_email='Vladislav_Isaiko@epam.com, Aleksei_Gavrilov1@epam.com, Ruslan_Salikhov@epam.com',
+    author='Vladislav Isayko, Aleksei Gavrilov, Ruslan Salikhov, Karim Safiullin',
+    author_email='Vladislav_Isaiko@epam.com, Aleksei_Gavrilov1@epam.com, Ruslan_Salikhov@epam.com, Karim_Safiullin@epam.com',
     python_requires='>=3',
     zip_safe=True,
     classifiers=[
