@@ -124,7 +124,6 @@ class WebConfig(NamedTuple):
 
 
 def parse_web_config(web_cfg) -> WebConfig:
-    log.debug(web_cfg)
     fs = web_cfg['fs']
     attrs_map = {
         FileSystemType.local: dict(base_path=web_cfg['base_path'],
@@ -161,7 +160,6 @@ class Config(BaseConfig):
                                                     if BaseYmlConfigReader(env='local').exists()
                                                     else None) or 'default'
         self.__cfg = BaseYmlConfigReader(self.env, dbutils=dbutils).config
-        log.info(f"Full config: {self.__cfg}")
         log.info(f'Configuration loaded for env: {self.env}')
 
         file_system_type_map: Mapping[str, type(FileSystemConfig)] = {

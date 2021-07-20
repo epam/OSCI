@@ -3,7 +3,11 @@ from .base import Action, ActionParam
 from .filter import FilterUnlicensedAction, FilterListCompanyProjectsAction
 from .load import LoadCompanyCommitsAction
 from .notify import GenerateEmailAction, ContributorsRankingMbmReportAction
-from .postprocess import FindContributorsRepositoriesChangeAction, OSCIChangeReportAction
+from .postprocess import (
+    FindContributorsRepositoriesChangeAction,
+    OSCIChangeReportAction,
+    GetNumberOfRepositoriesPerCompanyAction,
+)
 from .preprocess import (
     MatchCompanyAction,
     LoadRepositoriesAction,

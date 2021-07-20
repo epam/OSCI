@@ -2,6 +2,8 @@ import pyspark
 import pytest
 import pandas as pd
 
+from datetime import datetime
+
 from osci.datalake import DataLake
 
 
@@ -60,3 +62,8 @@ def staging_push_event_commit_df():
          DataLake().staging.schemas.push_commits.language: "Python",
          DataLake().staging.schemas.push_commits.license: "gpl-3.0"
          }])
+
+
+@pytest.fixture(scope='session')
+def load_date():
+    return datetime(year=2021, month=1, day=1)

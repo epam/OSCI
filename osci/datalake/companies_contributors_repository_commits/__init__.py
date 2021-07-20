@@ -15,7 +15,6 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from osci.datalake import DataLake
-
 import datetime
 import pandas as pd
 
@@ -25,6 +24,11 @@ class CompaniesContributorsRepository:
 
     def __init__(self, date: datetime.datetime):
         self.date = date
+
+    @property
+    def name(self) -> str:
+        """Name of report"""
+        return 'Company-contributors-repository-commits_YTD'
 
     @property
     def path(self) -> str:
@@ -51,4 +55,4 @@ class CompaniesContributorsRepository:
         """
         Read company contributors repository commits to pandas DataFrame from file
         """
-        return DataLake().public.get_companies_contributors_repository_commits(self.date)
+        return DataLake().public.get_companies_contributors_repository_commits(name=self.name, date=self.date)

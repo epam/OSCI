@@ -95,7 +95,6 @@ def read_config_from_environ(config: dict, *args, **kwargs) -> dict:
             }
         if isinstance(variable, list):
             return [_load_variables_from_env(v) for v in variable]
-        print('key', variable, 'value', os.environ.get(str(variable)))
         return os.environ.get(str(variable))
 
     return {k: _load_variables_from_env(v) for k, v in config.items() if k != META_CONFIG_FIELD}
@@ -140,7 +139,6 @@ class BaseYmlConfigReader(BaseConfigReader):
             log.debug(f'Read config from {self.file_path}')
             with open(self.file_path) as config_file:
                 self.__cfg = yaml.load(config_file, Loader=yaml.FullLoader)
-                log.debug(f"Prod yml load: {self.__cfg}")
                 meta = self.__cfg[META_CONFIG_FIELD].copy()
                 if meta[CONFIG_SOURCE_TYPE_FIELD] in readers_types_map:
                     self.__cfg = readers_types_map[meta[CONFIG_SOURCE_TYPE_FIELD]](self.__cfg, self.dbutils)
@@ -151,7 +149,6 @@ class BaseYmlConfigReader(BaseConfigReader):
                                             file_format=self.file_format).config,
                         self.__cfg
                     )
-                log.debug(f"Prod yml res: {self.__cfg}")
                 return self.__cfg
         except FileNotFoundError as ex:
             log.error(ex)

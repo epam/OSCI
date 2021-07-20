@@ -102,3 +102,10 @@ class LocalPublicArea(BasePublicArea, LocalSystemArea):
     def save_email(self, email_body: str, date: datetime):
         with open(str(self._get_email_path(date=date)), 'w', encoding='utf-8') as f:
             f.write(email_body)
+
+    def get_companies_contributors_repository_commits(self, name: str, date: datetime) -> pd.DataFrame:
+        path = self._report_base_path / name
+        path.mkdir(parents=True, exist_ok=True)
+        filename = f'{name}_{date.strftime("%Y-%m-%d")}.csv'
+        full_path = path / filename
+        return pd.read_csv(full_path)

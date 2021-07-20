@@ -6,11 +6,6 @@ from osci.publishing import load_companies_contrib_repos_to_bq
 
 
 @pytest.fixture()
-def load_date():
-    return datetime(year=2021, month=1, day=1)
-
-
-@pytest.fixture()
 def comp_contrib_repos_df():
     return pd.DataFrame([
         {CompaniesContributorsRepository.schema.author_name: "Author Name",

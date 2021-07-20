@@ -145,6 +145,17 @@ class CompaniesContributorsRepositoryCommits:
     date = 'date'
 
 
+class NumberRepositoryPerCompaniesSchema:
+    company = 'Company'
+    repository = 'Repositories'
+
+
+class NumberOfCompaniesCommitsInRepositories:
+    company = 'Company'
+    repository = 'Repositories'
+    commits = 'Commits'
+
+
 class OSCIContributorsRankingSchema:
     company = 'Company'
     author = 'Contributor'
@@ -165,3 +176,4 @@ class PublicSchemas:
     new_repos = NewReposSchema
     company_contributors_repository_commits = CompaniesContributorsRepositoryCommits
     osci_contributors_ranking = OSCIContributorsRankingSchema
+    num_rep_per_company = NumberRepositoryPerCompaniesSchema

@@ -1,2 +1,4 @@
 from .find_new_repos_and_commiters import FindContributorsRepositoriesChangeAction
 from .osci_change_report import OSCIChangeReportAction
+from .get_num_repos_for_companies import GetNumberOfRepositoriesPerCompanyAction
+from .get_num_companies_commit_per_repo import GetNumberOfCompaniesCommitsPerRepositoryAction

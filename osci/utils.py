@@ -80,3 +80,9 @@ def get_compared_date(day: datetime):
     if day.month == 1:
         return datetime(year=day.year, month=day.month, day=1)
     return datetime(year=day.year, month=day.month, day=1) - timedelta(days=1)
+
+
+def days_range(start: datetime, end: datetime, delta=timedelta(days=1)):
+    while start < end:
+        yield start
+        start += delta

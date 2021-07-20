@@ -265,12 +265,11 @@ class BasePublicArea(BaseDataLakeArea, abc.ABC):
     def save_companies_contributors_repository_commits(self, df: pd.DataFrame, date: datetime):
         raise NotImplementedError()
 
-    def get_companies_contributors_repository_commits(self, date: datetime) -> pd.DataFrame:
+    def get_companies_contributors_repository_commits(self, name: str, date: datetime) -> pd.DataFrame:
         raise NotImplementedError()
 
 
 class BaseWebArea(abc.ABC):
-
     _osci_ranking_dir_name = 'osci-ranking'
     _osci_ranking_monthly_dir_name = 'monthly'
 

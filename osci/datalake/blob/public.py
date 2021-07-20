@@ -103,3 +103,9 @@ class BlobPublicArea(BasePublicArea, BlobArea):
 
     def save_email(self, email_body: str, date: datetime):
         self.write_string_to_file(path=self._get_email_path(date=date), data=email_body, content_type='text/html')
+
+    def get_companies_contributors_repository_commits(self, name: str, date: datetime) -> pd.DataFrame:
+        path = self._report_base_path
+        full_path = date.strftime(
+            f'{path}/{name}/{name}_%Y-%m-%d.csv')
+        return self.read_pandas_dataframe_from_csv(path=full_path)

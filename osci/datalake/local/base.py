@@ -31,7 +31,6 @@ class LocalSystemArea(BaseDataLakeArea):
         super().__init__()
         self.BASE_PATH = Path(base_path)
         self.BASE_AREA_DIR = base_area_dir
-        print(self, base_path, base_area_dir)
 
     def add_fs_prefix(self, path: Union[Path, str]) -> str:
         return f'{self.FS_PREFIX}:///{path}'

@@ -90,8 +90,10 @@ def test_get_contributors_ranking_mbm_change_report():
         {contributor_field: 'User4', jan.strftime('%b'): 0, feb.strftime('%b'): 0, dec.strftime('%b'): 1, 'Total': 1},
     ])
 
+    for date in (jan, feb, dec):
+        reference[date.strftime('%b')] = reference[date.strftime('%b')].astype('int32')
+
     df = get_contributors_ranking_mbm_change_report(reports,
                                                     contributor_field=contributor_field,
                                                     commits_amount_field=commits_amount_field)
-
     pd.testing.assert_frame_equal(reference, df)
