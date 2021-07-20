@@ -152,7 +152,7 @@ class NumberRepositoryPerCompaniesSchema:
 
 class NumberOfCompaniesCommitsInRepositories:
     company = 'Company'
-    repository = 'Repositories'
+    repository = 'Repository'
     commits = 'Commits'
 
 
