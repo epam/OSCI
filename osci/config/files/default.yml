@@ -1,0 +1,25 @@
+meta:
+  config_source: 'yaml'
+file_system:
+  type: 'local'
+  base_path: '/data'
+areas:
+  landing:
+    container: 'landing'
+  staging:
+    container: 'staging'
+  public:
+    container: 'public'
+bq:
+  project: ''
+  secret: '{}'
+web:
+  fs: 'local'
+  base_path: '/web' # ignored when web.fs is blob
+  account_name: ''  # ignored when web.fs is local
+  account_key: ''   # ignored when web.fs is local
+  container: 'data'
+github:
+  token: ''
+company:
+  default: 'EPAM'

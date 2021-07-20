@@ -23,6 +23,14 @@
         {
           "name": "osci_gh_token",
           "keyName": "osci-gh-token"
+        },
+        {
+          "name": "osci_web_blob_account_key",
+          "keyName": "osci-web-blob-account-key"
+        },
+        {
+          "name": "osci_web_blob_account_name",
+          "keyName": "osci-web-blob-account-name"
         }
       ]
     },
@@ -33,7 +41,11 @@
         "osci_public_container": "public",
         "osci_staging_container": "staging",
         "osci_fs_type": "blob",
-        "osci_company": "EPAM"
+        "osci_company": "EPAM",
+
+        "osci_web_fs_type": "blob",
+        "osci_web_base_path": null,
+        "osci_web_container": "data"
       }
     },
     "imageVersion": {

@@ -12,13 +12,13 @@
 |------	            |-----	            |-----	            |-----	          |
 | [Jan][2020.01]    | [Feb][2020.02] 	| [Mar][2020.03]    | [Apr][2020.04]  |
 | [May][2020.05] 	| [Jun][2020.06]    | [Jul][2020.07]  	| [Aug][2020.08]  |
-| [Sep][2020.09]    | [Oct][2020.10]	| [Nov][2020.11]    | [Dec][2020.12]   |
+| [Sep][2020.09]    | [Oct][2020.10]	| [Nov][2020.11]    | [Dec][2020.12]  |
 
 | [2021][2021]      |     	            |     	            |     	          |
 |------	            |-----	            |-----	            |-----	          |
-| Jan   | [Feb][2021.02] 	| [Mar][2021.03]   | [Apr][2021.04]  |
-| [May][2021.05] 	| [Jun][2021.06]         | [Jul][2021.07] 	| Aug  |
-| Sep   | Oct	            | Nov   | Dec  |
+| Jan               | [Feb][2021.02] 	| [Mar][2021.03]    | [Apr][2021.04]  |
+| [May][2021.05] 	| [Jun][2021.06]    | [Jul][2021.07] 	| Aug             |
+| Sep               | Oct	            | Nov               | Dec             |
 
 ## 2021 updates
 
@@ -227,10 +227,10 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [rank-2020.11]: Archive/2020.11_OSCI_Ranking.xlsx
 [rank-2020.12]: Archive/2020.12_OSCI_Ranking.xlsx
 
-[rank-2021.01]: Archive/2021.01_OSCI_Ranking.xlsx
-[rank-2021.02]: Archive/2021.02_OSCI_Ranking.xlsx
-[rank-2021.03]: Archive/2021.03_OSCI_Ranking.xlsx
-[rank-2021.04]: Archive/2021.04_OSCI_Ranking.xlsx
+[rank-2021.01]: archive/2021.01_OSCI_Ranking.xlsx
+[rank-2021.02]: archive/2021.02_OSCI_Ranking.xlsx
+[rank-2021.03]: archive/2021.03_OSCI_Ranking.xlsx
+[rank-2021.04]: archive/2021.04_OSCI_Ranking.xlsx
 [opensourceindex.io]: https://opensourceindex.io/
 
 <!-- 2019 News -->
@@ -255,6 +255,9 @@ The OSCI ranking has now been updated with the data for  [**September 2019**][ra
 [2020.10]: #october-6th-2020
 [2020.11]: #november-16th-2020
 [2020.12]: #december-2nd-2020
+
+<!-- 2021 News -->
+[2021]: #2021-updates
 
 <!-- 2021 News -->
 [2021]: #2021-updates

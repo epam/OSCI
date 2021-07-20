@@ -3,7 +3,7 @@ import datetime
 
 from pyspark.sql import Row
 from pyspark.sql import functions as f
-from __app__.transformers.rankers.employees_ranking import get_companies_employees_activity_rank_combined, \
+from osci.transformers.rankers.employees_ranking import get_companies_employees_activity_rank_combined, \
     CommitsThresholds, get_amount_employees_monthly, get_companies_rank_by_employees_amount
 
 

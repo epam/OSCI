@@ -3,6 +3,23 @@ version: "3"
 services:
   osci:
     image: ${REGISTRY_HOST}osci:latest
-    build: __app__
+    build: .
     ports:
-      - "8080:80"
+      - 8080:80
+    env_file:
+      - osci/config/files/.env
+    depends_on:
+      - blob_storage
+    volumes:
+    - ${OSCI_BASE_PATH}:/data
+
+  blob_storage:
+    container_name: epm_foss.blob_storage
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+      - 10000:10000
+      - 10001:10001
+    env_file:
+      - osci/config/files/.env
+
+

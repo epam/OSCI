@@ -3,7 +3,7 @@ import datetime
 
 from pyspark.sql import Row
 
-from __app__.transformers.contributors import get_osci_contributors
+from osci.transformers.contributors import get_osci_contributors
 
 
 @pytest.fixture()

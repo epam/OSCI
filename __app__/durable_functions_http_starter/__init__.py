@@ -11,11 +11,11 @@ DEFAULT_DAY = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime(DA
 
 async def main(req: func.HttpRequest, starter: str) -> func.HttpResponse:
     client = DurableOrchestrationClient(starter)
-
+    logging.info(f"Request url: {req.url}")
     base_url = re.search("(?P<url>https?://[^\s]+api)", req.url).group("url")
     function_name = req.route_params["function"]
     url_params = '&'.join(f'{k}={v}' for k, v in req.params.items())
-    uri = f'{base_url}/{function_name}?{url_params}'
+    uri = f'{base_url}/actions/{function_name}?{url_params}'
 
     instance_id = await client.start_new(orchestration_function_name=req.route_params["orchestrator"],
                                          instance_id=None, client_input=uri)

@@ -28,6 +28,15 @@ The table shows the OSCI ranking for GitHub activity in June 2021. The leading o
 
 ![GitHub OSCI Schematic Diagram](images/OSCI_Schematic_Architecture.png)
 
+## OSCI Versioning :newspaper:
+We decided to use special versioning `(<year>.<month>.<number of patch >)` e.g. `2021.05.0`. This will provide us with a
+clearer understanding of the relevance of the product.  
+Also, date of 
+[adding a new company](#how-can-i-add-a-company-which-is-missing-from-the-osci-ranking) is very important and versioning 
+releases depending on the date looks more logical.  
+This is supposed to be a monthly update of the release.
+
+
 ## How did we decide on the ranking logic?
 
 We realize that there are many approaches which could be used to develop this ranking. We experimented extensively with these before arriving at the logic now used.
@@ -77,7 +86,7 @@ In order to add a company to the OSCI ranking, do the following:
 
 1) Create a new pull request.
 
-1) Go to company domain match list ([company_domain_match_list.yaml](__app__/match_company/company_domain_match_list.yaml))
+1) Go to company domain match list ([company_domain_match_list.yaml](osci/preprocess/match_company/company_domain_match_list.yaml))
 
 1) Confirm that the company you wish to add is not listed.
 
@@ -99,7 +108,10 @@ In order to add a company to the OSCI ranking, do the following:
         - ^.*\.facebook\.com$
     ```
 
-We will review your pull request and if it matches our requirements, we will merge it. 
+We will review your pull request and if it matches our requirements, we will merge it.  
+It's important to add at **the start
+of the month** a new company, because the rating depends on previous data, i.e. data for the beginning of the month.
+Furthermore, this will lead to OSCI release consistency.
 
 # QuickStart
 ## Technical Note
@@ -120,21 +132,21 @@ The code published here on GitHub does not require the Azure cloud. You can repr
    ```
 
 ## Configuration
-Create a file `local.yml` (by default this file added to .gitignore) in the directory [`__app__/config/files`](__app__/config/files). 
-A sample file [`default.yml`](__app__/config/files/default.yml) is included, please don't change values in this file
+Create a file `local.yml` (by default this file added to .gitignore) in the directory [`osci/config/files`](osci/config/files). 
+A sample file [`default.yml`](osci/config/files/default.yml) is included, please don't change values in this file
 
 ## Sample run
 1) Run script to download data from archive (for example for 01 January 2020)
     ```shell script
-         python3 osci.py get-github-daily-push-events -d 2020-01-01
+         python3 osci-cli.py get-github-daily-push-events -d 2020-01-01
     ```
 1) Run script to add company field (matched by domain) (for example for 01 January 2020)
     ```shell script
-         python3 osci.py process-github-daily-push-events -d 2020-01-01
+         python3 osci-cli.py process-github-daily-push-events -d 2020-01-01
     ```
 1) Run script to add company field (matched by domain) (for example for 01 January 2020)
     ```shell script
-         python3 osci.py daily-osci-rankings -td 2020-01-02
+         python3 osci-cli.py daily-osci-rankings -td 2020-01-02
     ```
   
 # License

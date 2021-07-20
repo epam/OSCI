@@ -1,4 +1,4 @@
-from __app__.config import Config
+from osci.config import Config
 
 
 def test_config_singleton():
