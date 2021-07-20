@@ -953,6 +953,10 @@
     - percona.com
   regex:
     - ^.*\.percona\.com$
+- company: Philips
+  domains:
+    - philips.com
+  regex:
 - company: Pilz
   domains:
     - pilz.de
