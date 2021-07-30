@@ -15,36 +15,23 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from osci.actions import Action
-from osci.postprocess.osci_change_report.process import get_change_report
-from osci.postprocess.osci_change_report.process import generate_growth_speed_report
+from osci.postprocess.osci_general_report import generate_general_report
+from osci.datalake.reports.general.osci_general_ranking import OSCIGeneralRanking
 from datetime import datetime
 
 
-class OSCIChangeReportAction(Action):
+class OSCIGeneralReportAction(Action):
     """Create report"""
 
     @classmethod
     def help_text(cls) -> str:
-        return "Create final ranking report"
+        return "Generate general ranking report that included most reports"
 
     @classmethod
     def name(cls):
-        return 'get-change-report'
+        return 'generate-general-report'
 
     def _execute(self, day: datetime):
-        return get_change_report(date=day)
-
-
-class OSCIGrowthSpeedReportAction(Action):
-    """Create report"""
-
-    @classmethod
-    def help_text(cls) -> str:
-        return "Generate growth speed report"
-
-    @classmethod
-    def name(cls):
-        return 'generate-growth-speed-report'
-
-    def _execute(self, day: datetime):
-        return generate_growth_speed_report(date=day)
+        report_df = generate_general_report(date=day)
+        report = OSCIGeneralRanking(date=day)
+        report.save(df=report_df)

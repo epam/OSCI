@@ -15,7 +15,8 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-from osci.datalake.schemas.public import OSCIChangeRankingSchema
+from osci.datalake.schemas.public import OSCIChangeRankingSchema, OSCIGrowthSpeedSchema
+from osci.datalake import DatePeriodType
 
 from .base import Report
 
@@ -23,3 +24,21 @@ from .base import Report
 class OSCIChangeRanking(Report):
     base_name = 'OSCI_change_ranking'
     schema = OSCIChangeRankingSchema
+    date_period = DatePeriodType.YTD
+
+    @property
+    def name(self) -> str:
+        """Return the only base name"""
+        return self.base_name
+
+
+class OSCIChangeRankingDTD(Report):
+    """Daily change report"""
+    base_name = 'OSCI_Change_ranking'
+    schema = OSCIChangeRankingSchema
+    date_period = DatePeriodType.DTD
+
+
+class OSCIGrowthSpeed(Report):
+    base_name = 'OSCI_growth_speed'
+    schema = OSCIGrowthSpeedSchema
