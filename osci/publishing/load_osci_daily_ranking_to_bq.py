@@ -1,4 +1,4 @@
-"""Copyright since 2020, EPAM Systems
+"""Copyright since 2021, EPAM Systems
 
    This file is part of OSCI.
 
@@ -15,36 +15,26 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from osci.datalake import DataLake, DatePeriodType
-from osci.datalake.schemas.bq import (BigQueryOSCICommitsRankingReport,
-                                         BigQueryOSCICommitsRankingReportMTD,
-                                         BaseBigQueryOSCICommitsRankingReport)
+from osci.datalake.reports.general import OSCIChangeRankingDTD
+from osci.datalake.schemas.bq import BigQueryOSCIDailyChangeRankingReport
 from osci.datalake.schemas.public import PublicSchemas
-from osci.datalake.reports.general.commits_ranking import OSCICommitsRankingFactory
-
-from typing import Dict
 
 import datetime
 import logging
 
 log = logging.getLogger(__name__)
 
-date_period_to_table_map: Dict[str, BaseBigQueryOSCICommitsRankingReport.__class__] = {
-    DatePeriodType.YTD: BigQueryOSCICommitsRankingReport,
-    DatePeriodType.MTD: BigQueryOSCICommitsRankingReportMTD,
-}
 
-
-def load_osci_commits_ranking_to_bq(date: datetime.datetime, date_period: str = DatePeriodType.YTD):
-    if date_period not in (DatePeriodType.MTD, DatePeriodType.YTD):
-        raise ValueError(f'Unsupported {date_period}')
-    report = OSCICommitsRankingFactory().get_cls(date_period=date_period)(date=date)
-    table = date_period_to_table_map[date_period]
+def load_osci_daily_ranking_to_bq(date: datetime.datetime):
+    """Load Daily Change ranking to Big Query"""
+    report = OSCIChangeRankingDTD(date=date)
+    table = BigQueryOSCIDailyChangeRankingReport
 
     log.debug(f'Load {report.name} for {date:%Y-%m-%d} to {table.table_id}')
 
     report_df = report.read()
-    report_df = report_df[PublicSchemas.company_commits_ranking.required]
     report_df = report_df.reset_index().rename(columns={'index': table.Columns.position})
+    report_df = report_df[PublicSchemas.osci_ranking_schema.required]
     report_df[table.Columns.position] += 1
     report_df = report_df.rename(columns=table.mapping)
     report_df[table.Columns.date] = date.date()
