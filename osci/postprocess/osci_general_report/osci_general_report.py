@@ -53,11 +53,8 @@ class ReportTransformation:
             df = self._rename_columns(df, general_fields=general_fields)
         return df
 
-    def select(self, df:pd.DataFrame):
-        return df[self.report.schema.required]
-
     def load(self, general_report_fields: FrozenSet[str]):
-        df = self.select(self.extract())
+        df = self.extract()
         return self.transform(df, general_report_fields)
 
 
