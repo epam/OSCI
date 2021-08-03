@@ -1,4 +1,4 @@
-"""Copyright since 2020, EPAM Systems
+"""Copyright since 2021, EPAM Systems
 
    This file is part of OSCI.
 
@@ -15,11 +15,12 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 
-from .base import Report, GeneralReportFactory
-from .change_ranking import OSCIChangeRanking, OSCIGrowthSpeed, OSCIChangeRankingDTD
-from .commits_ranking import OSCICommitsRankingYTD, OSCICommitsRankingMTD, OSCICommitsRankingFactory
-from .osci_ranking import OSCIRankingYTD, OSCIRankingMTD, OSCIRankingFactory
-from .language_commits_ranking import OSCILanguagesYTD
-from .licensed_commits_ranking import OSCILicensesYTD
-from .osci_contributors_ranking import OSCIContributorsRankingYTD
-from .osci_general_ranking import OSCIGeneralRanking
+from osci.datalake.schemas.public import OSCIGeneralRankingSchema
+
+from .base import Report
+
+
+class OSCIGeneralRanking(Report):
+    base_name = 'OSCI_General_ranking'
+    schema = OSCIGeneralRankingSchema
+

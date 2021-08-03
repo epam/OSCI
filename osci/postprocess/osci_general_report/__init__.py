@@ -1,0 +1,1 @@
+from .osci_general_report import generate_general_report

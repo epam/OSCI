@@ -40,7 +40,7 @@ def load_osci_ranking_to_bq(date: datetime.datetime, date_period: str = DatePeri
     report = OSCIRankingFactory().get_cls(date_period=date_period)(date=date)
     table = date_period_to_table_map[date_period]
 
-    log.debug(date.strftime(f'Load {report.name} for %Y-%m-%d to {table.table_id}'))
+    log.debug(f'Load {report.name} for {date:%Y-%m-%d} to {table.table_id}')
 
     report_df = report.read()
     report_df = report_df[PublicSchemas.company_contributors_ranking.required]

@@ -1,4 +1,4 @@
-"""Copyright since 2020, EPAM Systems
+"""Copyright since 2021, EPAM Systems
 
    This file is part of OSCI.
 
@@ -14,12 +14,22 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
+from osci.actions import Action
+from osci.postprocess.osci_change_report.process import get_daily_ranking_change
 
-from .base import Report, GeneralReportFactory
-from .change_ranking import OSCIChangeRanking, OSCIGrowthSpeed, OSCIChangeRankingDTD
-from .commits_ranking import OSCICommitsRankingYTD, OSCICommitsRankingMTD, OSCICommitsRankingFactory
-from .osci_ranking import OSCIRankingYTD, OSCIRankingMTD, OSCIRankingFactory
-from .language_commits_ranking import OSCILanguagesYTD
-from .licensed_commits_ranking import OSCILicensesYTD
-from .osci_contributors_ranking import OSCIContributorsRankingYTD
-from .osci_general_ranking import OSCIGeneralRanking
+from datetime import datetime
+
+
+class OSCIChangeRankingDTDAction(Action):
+    """Create report"""
+
+    @classmethod
+    def help_text(cls) -> str:
+        return "Generate Active Contributors and Total Community month-to-date"
+
+    @classmethod
+    def name(cls):
+        return 'daily-change-ranking'
+
+    def _execute(self, day: datetime):
+        return get_daily_ranking_change(date=day)
