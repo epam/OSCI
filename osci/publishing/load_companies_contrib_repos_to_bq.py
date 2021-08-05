@@ -14,10 +14,10 @@
 
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
-from osci.datalake import DataLake, CompaniesContributorsRepository
+from osci.datalake.reports.general.company_contributors_repository_commits import CompaniesContributorsRepository
 from osci.datalake.schemas.bq import BigQueryCompaniesContributorsRepositoriesCommitsColumns
 from google.cloud import bigquery
-
+from osci.datalake import DataLake
 import datetime
 import logging
 
@@ -28,6 +28,7 @@ def load_companies_contrib_repos_to_bq(date: datetime.datetime) -> bigquery.tabl
     """Load companies contributors repositories to BigQuery for a given day"""
     df = CompaniesContributorsRepository(date).read().rename(
         columns=BigQueryCompaniesContributorsRepositoriesCommitsColumns.mapping)
+    df[BigQueryCompaniesContributorsRepositoriesCommitsColumns.Columns.date] = date.date()
     return DataLake().big_query.load_dataframe(df=df,
                                                table_id=BigQueryCompaniesContributorsRepositoriesCommitsColumns.table_id,
                                                schema=BigQueryCompaniesContributorsRepositoriesCommitsColumns.schema)
