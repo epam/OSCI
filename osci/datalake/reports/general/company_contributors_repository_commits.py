@@ -28,5 +28,5 @@ class CompanyContributorsRepositoryCommitsFactory(GeneralReportFactory):
                                               schema=CompaniesContributorsRepositoryCommits))
 
 
-class OSCICommitsRankingYTD(CompanyContributorsRepositoryCommitsFactory.report_base_cls):
+class CompaniesContributorsRepository(CompanyContributorsRepositoryCommitsFactory.report_base_cls):
     date_period = DatePeriodType.YTD

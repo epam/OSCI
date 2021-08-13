@@ -23,3 +23,5 @@ from .language_commits_ranking import OSCILanguagesYTD
 from .licensed_commits_ranking import OSCILicensesYTD
 from .osci_contributors_ranking import OSCIContributorsRankingYTD
 from .osci_general_ranking import OSCIGeneralRanking
+from .company_contributors_repository_commits import CompaniesContributorsRepository, \
+    CompanyContributorsRepositoryCommitsFactory

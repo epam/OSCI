@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 from datetime import datetime
-from osci.datalake import CompaniesContributorsRepository
+from osci.datalake.reports.general import CompaniesContributorsRepository
 from osci.publishing import load_companies_contrib_repos_to_bq
 
 
