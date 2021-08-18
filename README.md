@@ -65,7 +65,7 @@ Our inspiration for OSCI is the work done earlier in the Open Source community, 
 
 
 ## Where can I see the latest rankings
-This project is created by EPAM Systems and the latest results are visible on the EPAM SolutionsHub [OSCI page](https://solutionshub.epam.com/osci). The results will be updated and published each month.
+This project is created by EPAM Systems and the latest results are visible on the [OSCI page](https://opensourceindex.io/). The results will be updated and published each month.
 
 ## How I can contribute to OSCI
 If you would like to contribute to OSCI, please take a look at our guidelines [here.](CONTRIBUTING.md)
@@ -79,10 +79,10 @@ The goal of the OSCI is to rank the GitHub contributions by companies (commercia
 In order to add a company to the OSCI ranking, do the following:
 
 1) Check whether the organization you propose to add matches our definition of a company:
-- is not an educational, governmental, non-profit or research institution;
-- is not a free-mail, like gmail.com, yahoo.com, hotmail.com, etc;
-- is a registered, commercial company;
-- a simple "rule of thumb" - does the organization's website sell a product or service?  If not, it is probably not a company by our definition.
+   - is not an educational, governmental, non-profit or research institution;
+   - is not a free-mail, like gmail.com, yahoo.com, hotmail.com, etc;
+   - is a registered, commercial company;
+   - a simple "rule of thumb" - does the organization's website sell a product or service? If not, it is probably not a company by our definition.
 
 1) Create a new pull request.
 
@@ -107,6 +107,26 @@ In order to add a company to the OSCI ranking, do the following:
         - ^.*\.fb\.com$
         - ^.*\.facebook\.com$
     ```
+1) Select the industry to which your company belongs from the following list:
+   - Banking & Financial Services;
+   - Government, Public Sector & Non-Profits;
+   - Energy & Utilities;
+   - Healthcare;
+   - Technology;
+   - Media & Telecoms;
+   - Other (please specify);
+
+   For example:
+   ```yaml
+   - company: Facebook
+     domains:
+       - fb.com
+       - facebook.com
+     regex:
+       - ^.*\.fb\.com$
+       - ^.*\.facebook\.com$
+     industry: Media & Telecoms
+   ```
 
 We will review your pull request and if it matches our requirements, we will merge it.  
 It's important to add at **the start
