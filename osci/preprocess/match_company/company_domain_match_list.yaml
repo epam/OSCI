@@ -1347,8 +1347,10 @@
 - company: Yandex
   domains:
     - yandex-team.ru
+    - yandex-team.com
   regex:
     - ^.*\.yandex-team\.ru$
+    - ^.*\.yandex-team\.com
 - company: Yoast
   domains:
     - yoast.com
