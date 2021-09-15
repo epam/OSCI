@@ -708,6 +708,10 @@
   domains:
     - kainos.com
   regex:
+- company: Kakao
+  domains:
+    - kakaocorp.com
+  regex:
 - company: Kaltura
   domains:
     - kaltura.com
