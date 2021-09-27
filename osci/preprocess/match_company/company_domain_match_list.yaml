@@ -712,6 +712,7 @@
   domains:
     - kakaocorp.com
   regex:
+  industry: Media & Telecoms
 - company: Kaltura
   domains:
     - kaltura.com
