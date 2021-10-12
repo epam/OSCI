@@ -1097,6 +1097,11 @@
   domains:
     - scality.com
   regex:
+- company: Scania
+  domains:
+    - scania.com
+  regex:
+  industry: Technology
 - company: ScyllaDB
   domains:
     - scylladb.com
