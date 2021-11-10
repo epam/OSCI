@@ -77,11 +77,12 @@ class GithubRest(requests.Session):
 
         resp = self.__make_request(method=method, url=url, **kwargs)
 
-        if self.wait_til_limits and resp.status_code == 403 and self.limits.limit_reset_time is not None:
+        if resp.status_code == 403 and self.wait_til_limits and not self.limits.requests_remaining:
+            assert self.limits.limit_reset_time
             wait: datetime.timedelta = self.limits.limit_reset_time - datetime.datetime.now()
-            log.warning(f'{method} response [{resp.status_code}]'
+            log.warning(f'{method} response [{resp.status_code}] '
                         f'remaining_retries={self.limits.requests_remaining} '
-                        f'Wait til {self.limits.limit_reset_time} ({wait})'
+                        f'Wait til {self.limits.limit_reset_time} ({wait}) '
                         f'url=`{url}`')
 
             time.sleep(wait.total_seconds())
