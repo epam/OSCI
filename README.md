@@ -108,12 +108,18 @@ In order to add a company to the OSCI ranking, do the following:
         - ^.*\.facebook\.com$
     ```
 1) Select the industry to which your company belongs from the following list:
-   - Banking & Financial Services;
-   - Government, Public Sector & Non-Profits;
+   - Automotive;
+   - Banking, Insurance & Financial Services;
+   - Education;
    - Energy & Utilities;
-   - Healthcare;
+   - Entertainment;
+   - Healthcare and Pharma;
+   - Professional Services;
+   - Public Sector;
+   - Retail & Hospitality;
    - Technology;
    - Media & Telecoms;
+   - Travel & Transport;
    - Other (please specify);
 
    For example:
