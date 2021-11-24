@@ -849,6 +849,11 @@
     - nxp.com
   regex:
     - ^.*\.nxp\.com$
+- company: Navigine
+  domains:
+    - navigine.com
+  regex:
+  industry: Technology
 - company: Netflix
   domains:
     - netflix.com
