@@ -1,386 +1,474 @@
 - company: 4teamwork
   domains:
     - 4teamwork.ch
+  industry: Technology
   regex:
 - company: 5minds
   domains:
     - 5minds.de
+  industry: Technology
   regex:
     - ^.*\.5minds\.de$
 - company: AMD
   domains:
     - amd.com
+  industry: Technology
   regex:
 - company: ARM
   domains:
     - arm.com
+  industry: Technology
   regex:
     - ^.*\.arm\.com\..*$
     - ^.*\.arm\.com$
 - company: ATHiNA
   domains:
     - athina.co.nz
+  industry: Technology
   regex:
 - company: Accenture
   domains:
     - accenture.com
+  industry: Professional Services
   regex:
 - company: Acsone
   domains:
     - acsone.eu
+  industry: Technology
   regex:
 - company: Ad Hoc
   domains:
     - adhocteam.us
+  industry: Technology
   regex:
 - company: Adguard
   domains:
     - adguard.com
+  industry: Technology
   regex:
 - company: Adobe
   domains:
     - adobe.com
     - magento.com
+  industry: Technology
   regex:
     - ^.*\.adobe\.com$
 - company: Agaric
   domains:
     - agaric.com
+  industry: Technology
   regex:
 - company: Alfresco
   domains:
     - alfresco.com
     - contractor.alfresco.com
     - internal.alfresco.com
+  industry: Technology
   regex:
     - ^.*\.alfresco\.com$
 - company: Algolia
   domains:
     - algolia.com
+  industry: Technology
   regex:
 - company: Alibaba
   domains:
     - alibaba-inc.com
     - aliun.com
     - service.aliyun.com
+  industry: Technology
   regex:
     - ^.*\.aliyun\.com$
     - ^.*\.alibaba-inc\.com$
 - company: Amazon
   domains:
     - amazon.com
+  industry: Technology
   regex:
     - ^.*\.amazon\.com$
 - company: Analog Devices
   domains:
     - analog.com
+  industry: Technology
   regex:
 - company: Andela
   domains:
     - andela.com
+  industry: Technology
   regex:
     - ^.*\.andela\.com$
 - company: Ant Financial
   domains:
     - antfin.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Antmicro
   domains:
     - antmicro.com
+  industry: Technology
   regex:
 - company: Apple
   domains:
     - apple.com
+  industry: Technology
   regex:
     - ^.*\.apple\.com$
 - company: ArangoDB
   domains:
     - arangodb.com
+  industry: Technology
   regex:
 - company: Arbisoft
   domains:
     - arbisoft.com
+  industry: Technology
   regex:
 - company: Arisan
   domains:
     - arisan.io
+  industry: Technology
   regex:
 - company: Art Deco
   domains:
     - adc.sh
+  industry: Retail & Hospitality
   regex:
 - company: Asian Tech
   domains:
     - asiantech.vn
+  industry: Technology
   regex:
 - company: Atlassian
   domains:
     - atlassian.com
+  industry: Technology
   regex:
 - company: Atomist
   domains:
     - atomist.com
+  industry: Technology
   regex:
 - company: Atypon
   domains:
     - atypon.com
+  industry: Technology
   regex:
 - company: Autodesk
   domains:
     - autodesk.com
+  industry: Technology
   regex:
 - company: Automattic
   domains:
     - automattic.com
+  industry: Technology
   regex:
 - company: Autonomous
   domains:
     - autonomous.nyc
+  industry: Technology
   regex:
 - company: Azavea
   domains:
     - azavea.com
+  industry: Technology
   regex:
 - company: B2CK
   domains:
     - b2ck.com
+  industry: Technology
   regex:
 - company: BBC
   domains:
     - bbc.co.uk
+  industry: Media & Telecoms
   regex:
 - company: BJISS
   domains:
     - bjss.com
+  industry: Professional Services
   regex:
 - company: Baidu
   domains:
     - baidu.com
+  industry: Technology
   regex:
     - ^.*\.baidu\.com$
 - company: Balena
   domains:
     - balena.io
+  industry: Technology
   regex:
 - company: Belledonne Communications
   domains:
     - belledonne-communications.com
+  industry: Media & Telecoms
   regex:
 - company: Binary Group
   domains:
     - binary.com
+  industry: Professional Services
   regex:
 - company: Bitnami
   domains:
     - bitnami.com
+  industry: Technology
   regex:
 - company: Bitrise
   domains:
     - bitrise.io
+  industry: Technology
   regex:
 - company: Block.one
   domains:
     - block.one
+  industry: Technology
   regex:
 - company: Blockchain Foundry
   domains:
     - blockchainfoundry.co
+  industry: Technology
   regex:
 - company: Bloomberg
   domains:
     - bloomberg.net
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Bootlin
   domains:
     - bootlin.com
+  industry: Technology
   regex:
 - company: Bosch
   domains:
     - bosch.com
     - bosch-si.com
     - bosch.io
+  industry: Technology
   regex:
     - ^.*\.bosch\.com$
 - company: Brave
   domains:
     - brave.com
+  industry: Technology
   regex:
 - company: Broadcom
   domains:
     - broadcom.com
+  industry: Technology
   regex:
 - company: Buoyant
   domains:
     - buoyant.io
+  industry: Technology
   regex:
 - company: Buro Happold
   domains:
     - burohappold.com
+  industry: Professional Services
   regex:
 - company: CGI
   domains:
     - cgi.com
+  industry: Technology
   regex:
 - company: CKSource
   domains:
     - cksource.com
+  industry: Technology
   regex:
 - company: CS Group
   domains:
     - c-s.fr
+  industry: Technology
   regex:
 - company: Camptocamp
   domains:
     - camptocamp.com
+  industry: Technology
   regex:
 - company: Camunda
   domains:
     - camunda.com
+  industry: Technology
   regex:
 - company: Canonical
   domains:
     - canonical.com
+  industry: Technology
   regex:
 - company: Capgemini
   domains:
     - capgemini.com
+  industry: Professional Services
   regex:
     - ^.*\.capgemini\.com$
 - company: Centreon
   domains:
     - centreon.com
+  industry: Technology
   regex:
 - company: Chef
   domains:
     - chef.io
+  industry: Technology
   regex:
 - company: CircleCI
   domains:
     - circleci.com
+  industry: Technology
   regex:
 - company: Cisco Systems
   domains:
     - cisco.com
+  industry: Media & Telecoms
   regex:
     - ^.*\.cisco\.com$
 - company: Citrix
   domains:
     - citrix.com
+  industry: Technology
   regex:
 - company: CloudCannon
   domains:
     - cloudcannon.com
+  industry: Technology
   regex:
 - company: Cloudbees
   domains:
     - cloudbees.com
+  industry: Technology
   regex:
 - company: Cloudera
   domains:
     - hortonworks.com
     - cloudera.com
+  industry: Technology
   regex:
     - ^.*\.hortonworks\.com$
 - company: Cloudfare
   domains:
     - cloudflare.com
+  industry: Technology
   regex:
 - company: Cockroachlabs
   domains:
     - cockroachlabs.com
+  industry: Technology
   regex:
 - company: Collabora
   domains:
     - collabora.com
     - collabora.co.uk
+  industry: Technology
   regex:
 - company: Com3elles
   domains:
     - com3elles.com
+  industry: Technology
   regex:
 - company: Confluent
   domains:
     - confluent.io
     - confluent.com
+  industry: Technology
   regex:
 - company: ConsenSys
   domains:
     - consensys.net
+  industry: Technology
   regex:
 - company: Couchbase
   domains:
     - couchbase.com
+  industry: Technology
   regex:
     - ^.*\.couchbase\.com$
 - company: Cozy
   domains:
     - cozycloud.cc
+  industry: Technology
   regex:
 - company: Ctrl
   domains:
     - ctrl.nl
+  industry: Technology
   regex:
 - company: D2L
   domains:
     - d2l.com
+  industry: Technology
   regex:
 - company: D2iQ
   domains:
     - mesosphere.com
     - mesosphere.io
+  industry: Technology
   regex:
 - company: DOSarrest
   domains:
     - dosarrest.com
+  industry: Technology
   regex:
 - company: Datadoghq
   domains:
     - datadoghq.com
+  industry: Technology
   regex:
 - company: Decred
   domains:
     - decred.org
+  industry: Technology
   regex:
 - company: Devexperts
   domains:
     - devexperts.com
-  regex:  
+  industry: Technology
+  regex:
 - company: Devox Software
   domains:
     - devoxsoftware.com
+  industry: Technology
   regex:
 - company: Digital Asset
   domains:
     - digitalasset.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Digital Bazaar
   domains:
     - digitalbazaar.com
+  industry: Technology
   regex:
 - company: Dimagi
   domains:
     - dimagi.com
+  industry: Technology
   regex:
 - company: Docker
   domains:
     - docker.com
     - docker.org
+  industry: Technology
   regex:
     - ^docker\..*$
 - company: Dynamo
   domains:
     - dynamo.com.uy
+  industry: Technology
   regex:
 - company: Dynatrace
   domains:
     - dynatrace.com
     - dynatrace.org
+  industry: Technology
   regex:
     - ^.*\.dynatrace\.org$
     - ^.*\.dynatrace\.com$
 - company: EPAM
   domains:
     - epam.com
+  industry: Technology
   regex:
     - ^.*\.epam\.com$
 - company: ESRI
@@ -400,58 +488,71 @@
     - esri.pl
     - esri.ro
     - esri.se
+  industry: Technology
   regex:
     - ^.*\.esri\..*$
     - ^esri\..*$
 - company: East Agile
   domains:
     - eastagile.com
+  industry: Technology
   regex:
 - company: Eficent
   domains:
     - eficent.com
+  industry: Professional Services
   regex:
 - company: Elastic
   domains:
     - elastic.co
     - elasticsearch-ci.elastic.co
+  industry: Technology
   regex:
     - ^.*\.elastic\.co$
 - company: Enalean
   domains:
     - enalean.com
+  industry: Technology
   regex:
 - company: Endlessm
   domains:
     - endlessm.com
+  industry: Technology
   regex:
 - company: Enigio Time
   domains:
     - enigio.com
+  industry: Technology
   regex:
 - company: Enjin
   domains:
     - enjin.com
+  industry: Technology
   regex:
 - company: Equinor
   domains:
     - equinor.com
+  industry: Energy & Utilities
   regex:
 - company: Ericsson
   domains:
     - ericsson.com
+  industry: Media & Telecoms
   regex:
 - company: Espressif
   domains:
     - espressif.com
+  industry: Technology
   regex:
 - company: EuroLinux
   domains:
     - euro-linux.com
+  industry: Technology
   regex:
 - company: Exoplatform
   domains:
     - exoplatform.com
+  industry: Technology
   regex:
     - ^.*\.exoplatform\.org$
 - company: Expedia Group
@@ -461,103 +562,126 @@
     - expediagroup.com
     - hotels.com
     - vrbo.com
+  industry: Travel & Transport
   regex:
 - company: Facebook
   domains:
     - fb.com
     - facebook.com
+  industry: Technology
   regex:
     - ^.*\.fb\.com$
     - ^.*\.facebook\.com$
 - company: Financial Times
   domains:
     - ft.com
+  industry: Media & Telecoms
   regex:
 - company: Finbourne
   domains:
     - finbourne.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Flatiron school
   domains:
     - flatironschool.com
+  industry: Education
   regex:
 - company: Forestry.io
   domains:
     - forestry.io
+  industry: Technology
   regex:
 - company: GVEMPIRE
   domains:
     - gvempire.com
+  industry: Technology
   regex:
 - company: Galera Cluster
   domains:
     - galeracluster.com
+  industry: Technology
   regex:
 - company: GatsbyJS
   domains:
     - gatsbyjs.com
+  industry: Technology
   regex:
 - company: Giant Swarm
   domains:
     - giantswarm.io
+  industry: Technology
   regex:
 - company: GitHub
   domains:
     - github.com
     - dependabot.com
+  industry: Technology
   regex:
 - company: GitLab
   domains:
     - gitlab.com
+  industry: Technology
   regex:
 - company: Gofore
   domains:
     - gofore.com
+  industry: Technology
   regex:
 - company: Golden Dimension
   domains:
     - adorsys.com.ua
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Google
   domains:
     - google.com
+  industry: Technology
   regex:
     - ^.*\.google\.com$
 - company: Gradle
   domains:
     - gradle.com
     - gradle.org
+  industry: Technology
   regex:
 - company: Grafana
   domains:
     - grafana.com
+  industry: Technology
   regex:
 - company: Graylog
   domains:
     - graylog.com
+  industry: Technology
   regex:
 - company: H2O.ai
   domains:
     - h2o.ai
     - h2oai.com
+  industry: Technology
   regex:
 - company: HERE
   domains:
     - here.com
+  industry: Technology
   regex:
 - company: HashiCorp
   domains:
     - hashicorp.com
     - hashicorp.co
     - hashicorp.io
+  industry: Technology
   regex:
 - company: Hewlett Packard Enterprise
   domains:
     - hpe.com
+  industry: Technology
   regex:
 - company: Huawei
   domains:
     - huawei.com
+  industry: Media & Telecoms
   regex:
 - company: IBM
   domains:
@@ -643,503 +767,617 @@
     - linux.ibm.com
     - lk.ibm.com
     - lt.ibm.com
+  industry: Technology
   regex:
     - ^.*\.ibm\..*$
     - ^ibm\..*$
 - company: ITsyndicate
   domains:
     - itsyndicate.org
+  industry: Technology
   regex:
 - company: Igalia
   domains:
     - igalia.com
+  industry: Professional Services
   regex:
 - company: Improbable
   domains:
     - improbable.io
+  industry: Technology
   regex:
 - company: Indexdata
   domains:
     - indexdata.com
     - indexdata.dk
+  industry: Technology
   regex:
 - company: Infosiftr
   domains:
     - infosiftr.com
+  industry: Technology
   regex:
 - company: Infragistics
   domains:
     - infragistics.com
+  industry: Technology
   regex:
 - company: Insolar Technologies
   domains:
     - insolar.io
+  industry: Other
   regex:
 - company: Instructure
   domains:
     - instructure.com
+  industry: Technology
   regex:
 - company: Intel
   domains:
     - intel.com
+  industry: Technology
   regex:
     - ^.*\.intel\.com$
 - company: Iohk
   domains:
     - iohk.io
+  industry: Technology
   regex:
 - company: JankariTech
   domains:
     - jankaritech.com
+  industry: Technology
   regex:
 - company: JetBrains
   domains:
     - jetbrains.com
+  industry: Technology
   regex:
 - company: Joyent
   domains:
     - joyent.com
+  industry: Technology
   regex:
 - company: Julia Computing
   domains:
     - juliacomputing.com
+  industry: Technology
   regex:
 - company: Kainos
   domains:
     - kainos.com
+  industry: Technology
   regex:
 - company: Kakao
   domains:
     - kakaocorp.com
-  regex:
   industry: Media & Telecoms
+  regex:
 - company: Kaltura
   domains:
     - kaltura.com
     - kaltura.org
+  industry: Technology
   regex:
 - company: Kinvolk
   domains:
     - kinvolk.io
+  industry: Technology
   regex:
 - company: Kitware
   domains:
     - kitware.com
+  industry: Technology
   regex:
     - ^.*\.kitware\..*$
     - ^.*\.kitware\.com$
 - company: LG Electronics
   domains:
     - lge.com
+  industry: Technology
   regex:
 - company: LabKey
   domains:
     - labkey.com
+  industry: Technology
   regex:
 - company: Liferay
   domains:
     - liferay.com
+  industry: Technology
   regex:
 - company: Lightcurve
   domains:
     - lightcurve.io
+  industry: Technology
   regex:
 - company: Linaro
   domains:
     - linaro.org
+  industry: Other
   regex:
 - company: LINE Corporation
   domains:
     - linecorp.com
+  industry: Media & Telecoms
   regex:
 - company: LinkedIn
   domains:
     - linkedin.com
+  industry: Technology
   regex:
     - ^.*\.linkedin\.com$
 - company: Linutronix
   domains:
     - linutronix.de
+  industry: Technology
   regex:
 - company: Loodos Tech
   domains:
     - loodos.com
+  industry: Technology
   regex:
 - company: LunarG
   domains:
     - lunarg.com
+  industry: Technology
   regex:
 - company: Luxoft
   domains:
     - luxoft.com
+  industry: Technology
   regex:
 - company: Lyft
   domains:
     - lyft.com
+  industry: Travel & Transport
   regex:
 - company: Lynx
   domains:
     - lynxspa.com
+  industry: Technology
   regex:
 - company: Made Tech
   domains:
     - madetech.com
+  industry: Technology
   regex:
 - company: ManpowerGroup
   domains:
     - experis.com
+  industry: Technology
   regex:
 - company: Mapbox
   domains:
     - mapbox.com
+  industry: Technology
   regex:
     - ^.*\.mapbox\.com$
 - company: MariaDB
   domains:
     - mariadb.com
     - mariadb.org
+  industry: Technology
   regex:
 - company: Maykin Media
   domains:
     - maykinmedia.nl
+  industry: Technology
   regex:
 - company: MediaTek
   domains:
     - mediatek.com
+  industry: Technology
   regex:
 - company: Mellanox Technologies
   domains:
     - mellanox.com
+  industry: Media & Telecoms
   regex:
 - company: Mendix
   domains:
     - mendix.com
+  industry: Technology
   regex:
 - company: Microchip Technology
   domains:
     - microchip.com
+  industry: Technology
   regex:
 - company: Microsoft
   domains:
     - microsoft.com
+  industry: Technology
   regex:
     - ^.*\.microsoft\.com$
 - company: Motion Picture
   domains:
     - motionpicture.jp
+  industry: Media & Telecoms
   regex:
 - company: Mozilla
   domains:
     - mozilla.com
+  industry: Technology
   regex:
     - ^mozilla\..*$
     - ^.*\.mozilla\..*$
 - company: MuleSoft
   domains:
     - mulesoft.com
+  industry: Technology
   regex:
 - company: NVidia
   domains:
     - nvidia.com
+  industry: Technology
   regex:
     - ^.*\.nvidia\.com\..*$
     - ^.*\.nvidia\.com$
 - company: NXP
   domains:
     - nxp.com
+  industry: Technology
   regex:
     - ^.*\.nxp\.com$
 - company: Netflix
   domains:
     - netflix.com
+  industry: Media & Telecoms
   regex:
     - ^.*\.netflix\.com$
 - company: Nevion
   domains:
     - nevion.com
+  industry: Media & Telecoms
   regex:
 - company: New Relic
   domains:
     - newrelic.com
+  industry: Technology
   regex:
 - company: Nextcloud
   domains:
     - nextcloud.com
+  industry: Technology
   regex:
 - company: Nexylan
   domains:
     - nexylan.com
+  industry: Technology
   regex:
 - company: Nordic Semiconductor
   domains:
     - nordicsemi.no
+  industry: Technology
   regex:
 - company: Nuxeo
   domains:
     - nuxeo.com
+  industry: Technology
   regex:
 - company: Nymea
   domains:
     - nymea.io
+  industry: Technology
   regex:
 - company: OCTO Technology
   domains:
     - octo.com
+  industry: Professional Services
   regex:
 - company: ONLYOFFICE
   domains:
     - onlyoffice.com
+  industry: Technology
   regex:
 - company: Obvious
   domains:
     - obvious.in
+  industry: Professional Services
   regex:
 - company: Odoo
   domains:
     - odoo.com
+  industry: Technology
   regex:
     - ^.*\.odoo\.com$
 - company: Okta
   domains:
     - okta.com
+  industry: Technology
   regex:
 - company: OnGres
   domains:
     - ongres.com
+  industry: Technology
   regex:
 - company: Open Robotics
   domains:
     - osrfoundation.org
     - openrobotics.org
+  industry: Technology
   regex:
 - company: OpenLattice
   domains:
     - openlattice.com
+  industry: Technology
   regex:
 - company: Optum
   domains:
     - optum.com
+  industry: Healthcare and Pharma
   regex:
 - company: Oracle
   domains:
     - oracle.com
+  industry: Technology
   regex:
     - ^.*\.oracle\.com$
 - company: Orange
   domains:
     - orange.com
+  industry: Media & Telecoms
   regex:
 - company: Origin
   domains:
     - originprotocol.com
+  industry: Technology
   regex:
 - company: PTFS Europe
   domains:
     - ptfs-europe.com
+  industry: Technology
   regex:
 - company: PTV Group
   domains:
     - ptvgroup.com
+  industry: Technology
   regex:
 - company: Palantir
   domains:
     - palantir.com
+  industry: Technology
   regex:
 - company: Palo Alto Networks
   domains:
     - paloaltonetworks.com
+  industry: Technology
   regex:
 - company: Pantheon
   domains:
     - pantheon.io
+  industry: Technology
   regex:
 - company: Percona
   domains:
     - percona.com
+  industry: Technology
   regex:
     - ^.*\.percona\.com$
 - company: Philips
   domains:
     - philips.com
+  industry: Technology
   regex:
 - company: Pilz
   domains:
     - pilz.de
+  industry: Technology
   regex:
 - company: PingCAP
   domains:
     - pingcap.com
+  industry: Technology
   regex:
 - company: Pivotal
   domains:
     - pivotal.io
     - springframework.org
+  industry: Technology
   regex:
     - ^.*\.pivotal\.io$
 - company: Pixel & Tonic
   domains:
     - pixelandtonic.com
+  industry: Technology
   regex:
 - company: Plotly
   domains:
     - plot.ly
+  industry: Technology
   regex:
 - company: Polidea
   domains:
     - polidea.com
+  industry: Technology
   regex:
 - company: Polyapp
   domains:
     - polyapp.tech
+  industry: Technology
   regex:
 - company: Povio
   domains:
     - poviolabs.com
+  industry: Technology
   regex:
 - company: Prisme.ai
   domains:
     - prism.ai
     - gogowego.com
+  industry: Technology
   regex:
 - company: Privacy1
   domains:
     - privacyone.co
+  industry: Technology
   regex:
 - company: Progresssoft
   domains:
     - progressoft.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Puppet
   domains:
     - puppet.com
+  industry: Technology
   regex:
     - ^.*\.puppet\.com$
 - company: Pyup
   domains:
     - pyup.io
+  industry: Technology
   regex:
 - company: Qt
   domains:
     - qt.io
+  industry: Technology
   regex:
 - company: QualityKiosk
   domains:
     - qualitykiosk.com
+  industry: Technology
   regex:
 - company: RStudio
   domains:
     - rstudio.com
+  industry: Technology
   regex:
 - company: RTE
   domains:
     - rte-france.com
+  industry: Energy & Utilities
   regex:
 - company: Rackspace
   domains:
     - rackspace.com
+  industry: Technology
   regex:
 - company: ReTest
   domains:
     - retest.de
+  industry: Technology
   regex:
 - company: Reaktor
   domains:
     - reaktor.com
+  industry: Technology
   regex:
 - company: Red Hat
   domains:
     - redhat.com
+  industry: Technology
   regex:
     - ^.*\.redhat\..*$
     - ^redhat\..*$
 - company: Renovateapp
   domains:
     - renovateapp.com
+  industry: Technology
   regex:
 - company: Robotis
   domains:
     - robotis.com
+  industry: Technology
   regex:
 - company: SAP
   domains:
     - sap.com
+  industry: Technology
   regex:
     - ^.*\.sap\..*$
 - company: SBK Kontur
   domains:
     - skbkontur.ru
+  industry: Technology
   regex:
 - company: STMicroelectronics
   domains:
     - st.com
+  industry: Technology
   regex:
 - company: SUSE
   domains:
     - suse.com
+  industry: Technology
   regex:
     - ^.*\.suse\..*$
     - ^suse\..*$
 - company: SYSOP
   domains:
     - sysop.cz
+  industry: Technology
   regex:
 - company: Salesforce
   domains:
     - salesforce.com
+  industry: Technology
   regex:
     - ^.*\.salesforce\.com$
 - company: Samsung
   domains:
     - samsung.com
+  industry: Technology
   regex:
     - ^.*\.samsung\.com$
 - company: Scality
   domains:
     - scality.com
+  industry: Technology
   regex:
 - company: Scania
   domains:
     - scania.com
-  regex:
   industry: Technology
+  regex:
 - company: ScyllaDB
   domains:
     - scylladb.com
+  industry: Technology
   regex:
 - company: SecOps Solutions
   domains:
     - secops.in
+  industry: Technology
   regex:
 - company: Sentry
   domains:
     - sentry.io
+  industry: Technology
   regex:
 - company: Shopify
   domains:
     - shopify.com
+  industry: Technology
   regex:
     - ^.*\.shopify\.com$
 - company: Shopkeep
   domains:
     - shopkeep.com
+  industry: Technology
   regex:
 - company: Shopsys
   domains:
     - shopsys.com
     - shopsys.cz
+  industry: Technology
   regex:
 - company: Shopware
   domains:
     - shopware.com
     - shopware.de
+  industry: Technology
   regex:
 - company: SiFive
   domains:
     - sifive.com
+  industry: Technology
   regex:
 - company: SignalFx
   domains:
     - signalfx.com
+  industry: Technology
   regex:
 - company: Silicus
   domains:
@@ -1148,171 +1386,211 @@
 - company: Silverstripe
   domains:
     - silverstripe.com
+  industry: Technology
   regex:
 - company: Snyk
   domains:
     - snyk.io
+  industry: Technology
   regex:
 - company: Société Générale
   domains:
     - socgen.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Softwire
   domains:
     - softwire.com
+  industry: Technology
   regex:
 - company: Solita
   domains:
     - solita.fi
+  industry: Technology
   regex:
 - company: Sonarsource
   domains:
     - sonarsource.com
+  industry: Technology
   regex:
 - company: Sony
-  domains: 
+  domains:
     - sony.com
+  industry: Technology
   regex:
     - ^.*\.sony\.com$
 - company: Sonymobile
   domains:
     - sonymobile.com
+  industry: Media & Telecoms
   regex:
 - company: Splunk
   domains:
     - splunk.com
+  industry: Technology
   regex:
 - company: Spryker
   domains:
     - spryker.com
+  industry: Technology
   regex:
 - company: Square
   domains:
     - squareup.com
+  industry: Technology
   regex:
 - company: Stripe
   domains:
     - stripe.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: StreamNative
   domains:
     - streamnative.io
     - streamnative.com
+  industry: Technology
   regex:
 - company: SuperSoftware
   domains:
     - supersoftware.co.jp
+  industry: Technology
   regex:
 - company: Switch Software
   domains:
     - switch.com.uy
+  industry: Technology
   regex:
 - company: Syndicode
   domains:
     - syndicode.com
+  industry: Technology
   regex:
 - company: Synopsys
   domains:
     - synopsys.com
+  industry: Technology
   regex:
 - company: TI
   domains:
     - ti.com
+  industry: Technology
   regex:
 - company: Talan
   domains:
     - talan.com
+  industry: Professional Services
   regex:
 - company: Talend
   domains:
     - talend.com
+  industry: Technology
   regex:
 - company: TeamDev
   domains:
     - teamdev.com
+  industry: Technology
   regex:
 - company: Tencent
   domains:
     - tencent.com
+  industry: Media & Telecoms
   regex:
     - ^.*\.tencent\.com$
 - company: Tensor
   domains:
     - tensor.ru
+  industry: Technology
   regex:
 - company: Test.com
   domains:
     - test.com
     - gaugeonline.com
+  industry: Technology
   regex:
 - company: The Dextrous Web
   domains:
     - dxw.com
+  industry: Public sector
   regex:
 - company: The guardian
   domains:
     - guardian.co.uk
+  industry: Media & Telecoms
   regex:
 - company: ThoughtWorks
   domains:
     - thoughtworks.com
+  industry: Technology
   regex:
     - ^.*\.thoughtworks\.com$
 - company: Toucan Toco
   domains:
     - toucantoco.com
+  industry: Technology
   regex:
 - company: Travis CI
   domains:
     - travis-ci.org
+  industry: Technology
   regex:
     - ^travis-ci\..*$
 - company: Truss Works
   domains:
     - truss.works
+  industry: Technology
   regex:
 - company: Twilio
   domains:
     - twilio.com
+  industry: Technology
   regex:
 - company: Twitter
   domains:
     - twitter.com
+  industry: Technology
   regex:
 - company: Tyro
   domains:
     - tyro.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Uber
   domains:
     - uber.com
+  industry: Travel & Transport
   regex:
     - ^.*\.uber\.com$
 - company: Uninvention
   domains:
     - univention.de
+  industry: Technology
   regex:
 - company: United Healthcare
   domains:
     - uhc.com
+  industry: Healthcare and Pharma
   regex:
 - company: Unity Technologies
   domains:
     - unity3d.com
+  industry: Technology
   regex:
     - ^.*\.unity3d\.com$F
 - company: VMware
   domains:
     - vmware.com
+  industry: Technology
   regex:
     - ^.*\.vmware\.com$
 - company: VTEX
   domains:
     - vtex.com.br
+  industry: Technology
   regex:
 - company: Vaadin
   domains:
     - vaadin.com
+  industry: Technology
   regex:
     - ^.*\.vaadin\.com$
 - company: Verizon Media
@@ -1323,128 +1601,162 @@
     - verizondigitalmedia.com
     - flurry.com
     - vdms.com
+  industry: Media & Telecoms
   regex:
 - company: WIX
   domains:
     - wix.com
+  industry: Technology
   regex:
     - ^.*\.wix\.com$
 - company: WSO2
   domains:
     - wso2.com
     - wso2.org
+  industry: Technology
   regex:
 - company: WarnerMedia
   domains:
     - turner.com
+  industry: Media & Telecoms
   regex:
 - company: Wind River
   domains:
     - windriver.com
+  industry: Technology
   regex:
 - company: Wire
   domains:
     - wire.com
+  industry: Technology
   regex:
 - company: WolfVision
   domains:
     - wolfvision.net
+  industry: Technology
   regex:
 - company: Yahoo
   domains:
     - yahoo-inc.com
+  industry: Technology
   regex:
 - company: Yandex
   domains:
     - yandex-team.ru
     - yandex-team.com
+  industry: Technology
   regex:
     - ^.*\.yandex-team\.ru$
     - ^.*\.yandex-team\.com
-  industry: Technology
 - company: Yoast
   domains:
     - yoast.com
+  industry: Technology
   regex:
 - company: Yunion
   domains:
     - yunionyun.com
+  industry: Technology
   regex:
 - company: Zalando
   domains:
     - zalando.de
+  industry: Technology
   regex:
 - company: commercetools
   domains:
     - commercetools.de
+  industry: Technology
   regex:
 - company: datavisyn
   domains:
     - datavisyn.io
+  industry: Healthcare and Pharma
   regex:
 - company: eyeo
   domains:
     - eyeo.com
+  industry: Technology
   regex:
 - company: feenk
   domains:
     - feenk.com
+  industry: Technology
   regex:
 - company: iXsystems
   domains:
     - ixsystems.com
+  industry: Technology
   regex:
 - company: itemis
   domains:
     - itemis.de
+  industry: Technology
   regex:
 - company: metas
   domains:
     - metasfresh.com
+  industry: Technology
   regex:
 - company: mongoDB
   domains:
     - mongodb.com
+  industry: Technology
   regex:
 - company: mySociety
   domains:
     - mysociety.org
+  industry: Other
   regex:
 - company: plentymarkets
   domains:
     - plentymarkets.com
+  industry: Technology
   regex:
 - company: t-matix
   domains:
     - t-matix.com
+  industry: Technology
   regex:
 - company: T-Systems
   domains:
     - t-systems.com
+  industry: Professional Services
   regex:
 - company: tweag.io
   domains:
     - tweag.io
+  industry: Technology
   regex:
 - company: what.
   domains:
     - what.digital
+  industry: Technology
   regex:
 - company: Bjerk
   domains:
     - bjerk.io
     - cobraz.no
+  industry: Technology
+  regex:
 - company: Akvelon
   domains:
     - akvelon.com
+  industry: Technology
   regex:
     - ^.*\.akvelon\.com$
 - company: Abilian
   domains:
     - abilian.com
+  industry: Technology
+  regex:
 - company: Nexedi
   domains:
     - nexedi.com
+  industry: Technology
+  regex:
 - company: Linagora
   domains:
     - linagora.com
+  industry: Technology
+  regex:
