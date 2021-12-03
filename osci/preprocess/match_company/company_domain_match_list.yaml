@@ -1158,7 +1158,7 @@
 - company: Philips
   domains:
     - philips.com
-  industry: Technology
+  industry: Healthcare
   regex:
 - company: Pilz
   domains:
