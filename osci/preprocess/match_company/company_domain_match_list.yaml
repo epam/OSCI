@@ -1110,7 +1110,7 @@
 - company: Optum
   domains:
     - optum.com
-  industry: Healthcare and Pharma
+  industry: Healthcare & Pharma
   regex:
 - company: Oracle
   domains:
@@ -1162,7 +1162,7 @@
 - company: Philips
   domains:
     - philips.com
-  industry: Healthcare
+  industry: Healthcare & Pharma
   regex:
 - company: Pilz
   domains:
@@ -1572,7 +1572,7 @@
 - company: United Healthcare
   domains:
     - uhc.com
-  industry: Healthcare and Pharma
+  industry: Healthcare & Pharma
   regex:
 - company: Unity Technologies
   domains:
@@ -1675,7 +1675,7 @@
 - company: datavisyn
   domains:
     - datavisyn.io
-  industry: Healthcare and Pharma
+  industry: Healthcare & Pharma
   regex:
 - company: eyeo
   domains:
