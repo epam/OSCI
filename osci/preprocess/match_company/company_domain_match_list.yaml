@@ -1102,6 +1102,11 @@
     - openrobotics.org
   industry: Technology
   regex:
+- company: Opencast Software
+  domains:
+    - opencastsoftware.com
+  industry: Technology
+  regex:
 - company: OpenLattice
   domains:
     - openlattice.com
