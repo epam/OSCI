@@ -1399,6 +1399,7 @@
     - bugsnag.com
     - bitbar.com
     - swagger.io
+    - hiptest.com
   industry: Technology
   regex:
 - company: Snyk
