@@ -1392,6 +1392,15 @@
     - silverstripe.com
   industry: Technology
   regex:
+- company: SmartBear
+  domains:
+    - smartbear.com
+    - cucumber.io
+    - bugsnag.com
+    - bitbar.com
+    - swagger.io
+  industry: Technology
+  regex:
 - company: Snyk
   domains:
     - snyk.io
