@@ -1764,3 +1764,10 @@
     - linagora.com
   industry: Technology
   regex:
+  company: XWiki SAS
+  domains:
+    - xwiki.com
+    - xwiki.org
+    - cryptpad.fr
+  industry: Technology
+  regex:
