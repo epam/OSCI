@@ -627,6 +627,11 @@
     - gofore.com
   industry: Technology
   regex:
+- company: Goldman Sachs
+  domains:
+    - gs.com
+  industry: Banking, Insurance & Financial Services
+  regex:
 - company: Golden Dimension
   domains:
     - adorsys.com.ua
