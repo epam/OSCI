@@ -1621,7 +1621,9 @@
   regex:
 - company: WarnerMedia
   domains:
+    - hbo.com
     - turner.com
+    - warnermedia.com
   industry: Media & Telecoms
   regex:
 - company: Wind River
