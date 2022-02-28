@@ -1148,6 +1148,11 @@
     - ptvgroup.com
   industry: Technology
   regex:
+- company: Siemens
+  domains:
+    - siemens.com
+  industry: Technology
+  regex:
 - company: Palantir
   domains:
     - palantir.com
