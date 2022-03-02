@@ -816,6 +816,14 @@
     - instructure.com
   industry: Technology
   regex:
+- company: Instituto Superior Técnico
+  domains:
+    - tecnico.ulisboa.pt
+    - ist.utl.pt
+  industry: Education
+  regex:
+    - ^.*\.tecnico\.ulisboa\.pt$
+    - ^.*\.ist\.utl\.pt$
 - company: Intel
   domains:
     - intel.com
