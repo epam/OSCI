@@ -627,6 +627,11 @@
     - gofore.com
   industry: Technology
   regex:
+- company: Goldman Sachs
+  domains:
+    - gs.com
+  industry: Banking, Insurance & Financial Services
+  regex:
 - company: Golden Dimension
   domains:
     - adorsys.com.ua
@@ -1102,6 +1107,11 @@
     - openrobotics.org
   industry: Technology
   regex:
+- company: Opencast Software
+  domains:
+    - opencastsoftware.com
+  industry: Technology
+  regex:
 - company: OpenLattice
   domains:
     - openlattice.com
@@ -1136,6 +1146,11 @@
 - company: PTV Group
   domains:
     - ptvgroup.com
+  industry: Technology
+  regex:
+- company: Siemens
+  domains:
+    - siemens.com
   industry: Technology
   regex:
 - company: Palantir
@@ -1392,6 +1407,16 @@
     - silverstripe.com
   industry: Technology
   regex:
+- company: SmartBear
+  domains:
+    - smartbear.com
+    - cucumber.io
+    - bugsnag.com
+    - bitbar.com
+    - swagger.io
+    - hiptest.com
+  industry: Technology
+  regex:
 - company: Snyk
   domains:
     - snyk.io
@@ -1621,7 +1646,9 @@
   regex:
 - company: WarnerMedia
   domains:
+    - hbo.com
     - turner.com
+    - warnermedia.com
   industry: Media & Telecoms
   regex:
 - company: Wind River
@@ -1762,5 +1789,12 @@
 - company: Linagora
   domains:
     - linagora.com
+  industry: Technology
+  regex:
+  company: XWiki SAS
+  domains:
+    - xwiki.com
+    - xwiki.org
+    - cryptpad.fr
   industry: Technology
   regex:
