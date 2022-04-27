@@ -1791,10 +1791,15 @@
     - linagora.com
   industry: Technology
   regex:
-  company: XWiki SAS
+- company: XWiki SAS
   domains:
     - xwiki.com
     - xwiki.org
     - cryptpad.fr
   industry: Technology
   regex:
+- company: Wipro, Ltd.
+  domains: 
+    - wipro.com
+  industry: Professional Services
+  regex: 
