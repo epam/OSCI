@@ -1803,3 +1803,8 @@
     - wipro.com
   industry: Professional Services
   regex: 
+- company: DigitalOcean
+  domains:
+    - digitalocean.com
+  regex:
+  industry: Technology
