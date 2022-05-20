@@ -1319,10 +1319,12 @@
 - company: SUSE
   domains:
     - suse.com
+    - rancher.com
+    - neuvector.com
   industry: Technology
   regex:
-    - ^.*\.suse\..*$
-    - ^suse\..*$
+    - ^.*\.(rancher|neuvector|suse)\..*$
+    - ^(rancher|neuvector|suse)\..*$
 - company: SYSOP
   domains:
     - sysop.cz
