@@ -1798,3 +1798,8 @@
     - cryptpad.fr
   industry: Technology
   regex:
+- company: DigitalOcean
+  domains:
+    - digitalocean.com
+  regex:
+  industry: Technology
