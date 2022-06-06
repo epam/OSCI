@@ -1319,10 +1319,12 @@
 - company: SUSE
   domains:
     - suse.com
+    - rancher.com
+    - neuvector.com
   industry: Technology
   regex:
-    - ^.*\.suse\..*$
-    - ^suse\..*$
+    - ^.*\.(rancher|neuvector|suse)\..*$
+    - ^(rancher|neuvector|suse)\..*$
 - company: SYSOP
   domains:
     - sysop.cz
@@ -1415,6 +1417,7 @@
     - bitbar.com
     - swagger.io
     - hiptest.com
+    - pactflow.io
   industry: Technology
   regex:
 - company: Snyk
@@ -1791,10 +1794,20 @@
     - linagora.com
   industry: Technology
   regex:
-  company: XWiki SAS
+- company: XWiki SAS
   domains:
     - xwiki.com
     - xwiki.org
     - cryptpad.fr
   industry: Technology
   regex:
+- company: Wipro, Ltd.
+  domains: 
+    - wipro.com
+  industry: Professional Services
+  regex: 
+- company: DigitalOcean
+  domains:
+    - digitalocean.com
+  regex:
+  industry: Technology
