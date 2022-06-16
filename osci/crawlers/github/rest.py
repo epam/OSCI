@@ -84,7 +84,6 @@ class GithubRest(requests.Session):
                         f'Wait til {self.limits.limit_reset_time} ({wait})'
                         f'url=`{url}`')
 
-            time.sleep(wait.total_seconds())
 
             log.debug(f"Retry making request to Github API method={method}, url={url}, kwargs={kwargs} "
                       f"after reset limits")
