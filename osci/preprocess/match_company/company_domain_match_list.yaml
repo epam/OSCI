@@ -875,6 +875,11 @@
   regex:
     - ^.*\.kitware\..*$
     - ^.*\.kitware\.com$
+- company: Lablup Inc.
+  domains:
+    - lablup.com
+  industry: Technology
+  regex:
 - company: LG Electronics
   domains:
     - lge.com
