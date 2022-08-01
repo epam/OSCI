@@ -58,6 +58,11 @@
     - agaric.com
   industry: Technology
   regex:
+- company: Aiven
+  domains:
+    - aiven.io
+  industry: Technology
+  regex: 
 - company: Alfresco
   domains:
     - alfresco.com
