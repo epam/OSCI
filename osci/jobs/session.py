@@ -26,7 +26,9 @@ class Session(metaclass=MetaSingleton):
 
     def build_session(self):
         builder = SparkSession.builder
-        self._ssc = builder.config("spark.driver.memory", "6g").getOrCreate()
+        for param, value in Config().spark_conf.items():
+            builder = builder.config(param, value)
+        self._ssc = builder.getOrCreate()
 
     @property
     def spark_session(self) -> SparkSession:
