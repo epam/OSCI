@@ -1,5 +1,7 @@
 meta:
   config_source: 'yaml'
+spark:
+  spark.driver.memory: 6g
 file_system:
   type: 'local'
   base_path: '/data'

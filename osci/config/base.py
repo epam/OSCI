@@ -208,3 +208,7 @@ class Config(BaseConfig):
     @property
     def default_company(self) -> str:
         return self.__cfg.get('company', dict()).get('default', '')
+
+    @property
+    def spark_conf(self) -> Dict[str, str]:
+        return self.__cfg.get('spark', dict())
