@@ -470,6 +470,12 @@
   regex:
     - ^.*\.dynatrace\.org$
     - ^.*\.dynatrace\.com$
+- company: eBay
+  domains:
+    - ebay.com
+  industry: eCommerce
+  regex:
+    - ^.*\.ebay\.com$
 - company: EPAM
   domains:
     - epam.com
