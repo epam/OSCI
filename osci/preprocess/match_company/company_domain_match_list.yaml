@@ -1821,3 +1821,8 @@
     - digitalocean.com
   regex:
   industry: Technology
+- company: FARFETCH
+  domains:
+    - farfetch.com
+  regex:  
+  industry: Technology
