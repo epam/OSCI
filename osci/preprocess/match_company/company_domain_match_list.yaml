@@ -1827,6 +1827,10 @@
     - digitalocean.com
   regex:
   industry: Technology
+- company: FARFETCH
+  domains:
+    - farfetch.com
+  regex:  
 - company: Infosys Ltd
   domains:
     - infosys.com
