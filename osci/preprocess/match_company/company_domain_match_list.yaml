@@ -394,6 +394,12 @@
     - cozycloud.cc
   industry: Technology
   regex:
+- company: Credera
+  domains:
+    - credera.com
+    - credera.co.uk
+  industry: Professional Services
+  regex:
 - company: Ctrl
   domains:
     - ctrl.nl
