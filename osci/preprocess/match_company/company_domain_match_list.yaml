@@ -394,6 +394,12 @@
     - cozycloud.cc
   industry: Technology
   regex:
+- company: Credera
+  domains:
+    - credera.com
+    - credera.co.uk
+  industry: Professional Services
+  regex:
 - company: Ctrl
   domains:
     - ctrl.nl
@@ -470,6 +476,12 @@
   regex:
     - ^.*\.dynatrace\.org$
     - ^.*\.dynatrace\.com$
+- company: eBay
+  domains:
+    - ebay.com
+  industry: eCommerce
+  regex:
+    - ^.*\.ebay\.com$
 - company: EPAM
   domains:
     - epam.com
@@ -1820,4 +1832,15 @@
   domains:
     - digitalocean.com
   regex:
+  industry: Technology
+- company: FARFETCH
+  domains:
+    - farfetch.com
+  regex:  
+- company: Infosys Ltd
+  domains:
+    - infosys.com
+    - edgeverve.com
+  regex:
+    - ^.*\.infosys\.com$
   industry: Technology
