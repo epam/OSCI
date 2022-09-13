@@ -2,6 +2,8 @@
 # Open Source Contributor Index (OSCI)
 OSCI, an open source project, aiming to track and measure open source activity on GitHub by commercial organizations. It allows organizations, communities, analysts and individuals involved in Open Source to get insights about contribution trends among commercial organizations by providing access to up-to-date data through an intuitive interface.
 
+[![OSCI Working_Group](images/OSCI_Working_Group.png)](https://github.com/epam/osci-working-group)
+
 ### Table of contents
 - [How does OSCI work?](#how-does-osci-work)
 - [How are commit authors linked to commercial organizations?](#how-are-commit-authors-linked-to-commercial-organizations)
