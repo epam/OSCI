@@ -1280,6 +1280,11 @@
     - qualitykiosk.com
   industry: Technology
   regex:
+- company: QuantCo
+  domains:
+    - qauntco.com
+  industry: Technology
+  regex:
 - company: RStudio
   domains:
     - rstudio.com
