@@ -1,5 +1,5 @@
 pypandoc==1.5
-pyspark == 3.0.1
+pyspark == 3.2.2
 pytest==6.0.1
 -r __app__/requirements.txt
 -r osci/requirements.txt
