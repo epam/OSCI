@@ -839,6 +839,11 @@
   industry: Technology
   regex:
     - ^.*\.intel\.com$
+- company: Intesys
+  domains:
+    - intesys.it
+  industry: Technology
+  regex:
 - company: Iohk
   domains:
     - iohk.io
