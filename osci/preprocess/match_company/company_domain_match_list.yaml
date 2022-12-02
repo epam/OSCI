@@ -1844,3 +1844,8 @@
   regex:
     - ^.*\.infosys\.com$
   industry: Technology
+- company: ZTE
+  domains:
+    - zte.com.cn
+  industry: Technology
+  regex:
