@@ -85,6 +85,16 @@
   regex:
     - ^.*\.aliyun\.com$
     - ^.*\.alibaba-inc\.com$
+- company: Alliander
+  domains:
+    - alliander.com
+    - alliander.de
+    - entrnce.com
+    - exe.energy
+    - firan.nl
+    - kenter.nu
+    - qirion.nl
+  industry: Energy & Utilities
 - company: Amazon
   domains:
     - amazon.com
