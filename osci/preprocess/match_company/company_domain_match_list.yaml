@@ -61,8 +61,11 @@
 - company: Aiven
   domains:
     - aiven.io
+    - klaw-project.io
   industry: Technology
   regex: 
+    - ^.*\.aiven\.io$
+    - ^.*\.klaw-project\.io$
 - company: Alfresco
   domains:
     - alfresco.com
