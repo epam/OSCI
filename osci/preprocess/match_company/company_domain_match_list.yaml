@@ -112,11 +112,18 @@
   industry: Technology
   regex:
     - ^.*\.andela\.com$
-- company: Ant Financial
+- company: Ant Group
   domains:
+    - antgroup.com
     - antfin.com
+    - alipay.com
+    - hyper.sh
   industry: Banking, Insurance & Financial Services
   regex:
+    - ^.*\.antgroup\.com$
+    - ^.*\.antfin\.com$
+    - ^.*\.alipay\.com$
+    - ^.*\.hyper\.sh$
 - company: Antmicro
   domains:
     - antmicro.com
