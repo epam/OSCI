@@ -699,6 +699,14 @@
     - hpe.com
   industry: Technology
   regex:
+- company: HotWax
+  domains:
+    - hotwax.co
+    - hotwaxsystems.com
+  regex:
+    - ^.*\.hotwax\.co$
+    - ^.*\.hotwaxsystems\.com$
+  industry: Supply Chain Integrator
 - company: Huawei
   domains:
     - huawei.com
