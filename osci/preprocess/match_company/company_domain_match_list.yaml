@@ -1844,3 +1844,9 @@
   regex:
     - ^.*\.infosys\.com$
   industry: Technology
+- company: Fujitsu
+  domains:
+    - fujitsu.com
+  industry: Technology
+  regex:
+    - ^.*\.fujitsu\.com$
