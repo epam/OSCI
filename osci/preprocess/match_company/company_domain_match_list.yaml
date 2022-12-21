@@ -1838,3 +1838,10 @@
     - layer5.io
   regex:
   industry: Technology
+- company: Renesas
+  domains:
+    - renesas.com
+    - bp.renesas.com
+  industry: Technology
+  regex:
+    - ^.*\.renesas\.com$
