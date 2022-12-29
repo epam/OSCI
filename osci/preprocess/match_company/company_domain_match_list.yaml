@@ -133,11 +133,6 @@
     - arisan.io
   industry: Technology
   regex:
-- company: Art Deco
-  domains:
-    - adc.sh
-  industry: Retail & Hospitality
-  regex:
 - company: Asian Tech
   domains:
     - asiantech.vn
@@ -463,11 +458,6 @@
   industry: Technology
   regex:
     - ^docker\..*$
-- company: Dynamo
-  domains:
-    - dynamo.com.uy
-  industry: Technology
-  regex:
 - company: Dynatrace
   domains:
     - dynatrace.com
@@ -482,7 +472,7 @@
   industry: Technology
   regex:
     - ^.*\.ebay\.com$
-- company: EPAM
+- company: EPAM Systems
   domains:
     - epam.com
   industry: Technology
@@ -513,11 +503,6 @@
   domains:
     - eastagile.com
   industry: Technology
-  regex:
-- company: Eficent
-  domains:
-    - eficent.com
-  industry: Professional Services
   regex:
 - company: Elastic
   domains:
@@ -606,11 +591,6 @@
 - company: Forestry.io
   domains:
     - forestry.io
-  industry: Technology
-  regex:
-- company: GVEMPIRE
-  domains:
-    - gvempire.com
   industry: Technology
   regex:
 - company: Galera Cluster
@@ -1707,11 +1687,6 @@
 - company: Yoast
   domains:
     - yoast.com
-  industry: Technology
-  regex:
-- company: Yunion
-  domains:
-    - yunionyun.com
   industry: Technology
   regex:
 - company: Zalando
