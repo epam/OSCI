@@ -1315,7 +1315,7 @@
   regex:
 - company: QuantCo
   domains:
-    - qauntco.com
+    - quantco.com
   industry: Technology
   regex:
 - company: RStudio
