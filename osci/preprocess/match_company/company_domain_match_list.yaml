@@ -1478,6 +1478,11 @@
     - sonymobile.com
   industry: Media & Telecoms
   regex:
+- company: Spotify
+  domains:
+    - spotify.com
+  industry: Technology
+  regex:
 - company: Splunk
   domains:
     - splunk.com
