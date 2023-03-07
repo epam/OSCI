@@ -102,7 +102,7 @@
   industry: Technology
   regex:
     - ^.*\.andela\.com$
-- company: Ant Financial
+- company: Ant Group
   domains:
     - antfin.com
   industry: Banking, Insurance & Financial Services
@@ -132,11 +132,6 @@
   domains:
     - arisan.io
   industry: Technology
-  regex:
-- company: Art Deco
-  domains:
-    - adc.sh
-  industry: Retail & Hospitality
   regex:
 - company: Asian Tech
   domains:
@@ -329,7 +324,7 @@
   industry: Media & Telecoms
   regex:
     - ^.*\.cisco\.com$
-- company: Citrix
+- company: Citrix Systems
   domains:
     - citrix.com
   industry: Technology
@@ -339,7 +334,7 @@
     - cloudcannon.com
   industry: Technology
   regex:
-- company: Cloudbees
+- company: CloudBees
   domains:
     - cloudbees.com
   industry: Technology
@@ -351,12 +346,12 @@
   industry: Technology
   regex:
     - ^.*\.hortonworks\.com$
-- company: Cloudfare
+- company: Cloudflare
   domains:
     - cloudflare.com
   industry: Technology
   regex:
-- company: Cockroachlabs
+- company: Cockroach Labs
   domains:
     - cockroachlabs.com
   industry: Technology
@@ -389,7 +384,7 @@
   industry: Technology
   regex:
     - ^.*\.couchbase\.com$
-- company: Cozy
+- company: Cozy Cloud
   domains:
     - cozycloud.cc
   industry: Technology
@@ -421,7 +416,7 @@
     - dosarrest.com
   industry: Technology
   regex:
-- company: Datadoghq
+- company: Datadog
   domains:
     - datadoghq.com
   industry: Technology
@@ -463,11 +458,6 @@
   industry: Technology
   regex:
     - ^docker\..*$
-- company: Dynamo
-  domains:
-    - dynamo.com.uy
-  industry: Technology
-  regex:
 - company: Dynatrace
   domains:
     - dynatrace.com
@@ -479,10 +469,10 @@
 - company: eBay
   domains:
     - ebay.com
-  industry: eCommerce
+  industry: Technology
   regex:
     - ^.*\.ebay\.com$
-- company: EPAM
+- company: EPAM Systems
   domains:
     - epam.com
   industry: Technology
@@ -514,11 +504,6 @@
     - eastagile.com
   industry: Technology
   regex:
-- company: Eficent
-  domains:
-    - eficent.com
-  industry: Professional Services
-  regex:
 - company: Elastic
   domains:
     - elastic.co
@@ -531,7 +516,7 @@
     - enalean.com
   industry: Technology
   regex:
-- company: Endlessm
+- company: Endless OS
   domains:
     - endlessm.com
   industry: Technology
@@ -566,7 +551,7 @@
     - euro-linux.com
   industry: Technology
   regex:
-- company: Exoplatform
+- company: eXo Platform
   domains:
     - exoplatform.com
   industry: Technology
@@ -580,7 +565,7 @@
     - vrbo.com
   industry: Travel & Transport
   regex:
-- company: Facebook
+- company: Meta
   domains:
     - fb.com
     - facebook.com
@@ -598,7 +583,7 @@
     - finbourne.com
   industry: Banking, Insurance & Financial Services
   regex:
-- company: Flatiron school
+- company: Flatiron School
   domains:
     - flatironschool.com
   industry: Education
@@ -608,17 +593,12 @@
     - forestry.io
   industry: Technology
   regex:
-- company: GVEMPIRE
-  domains:
-    - gvempire.com
-  industry: Technology
-  regex:
 - company: Galera Cluster
   domains:
     - galeracluster.com
   industry: Technology
   regex:
-- company: GatsbyJS
+- company: Gatsby
   domains:
     - gatsbyjs.com
   industry: Technology
@@ -666,7 +646,7 @@
     - gradle.org
   industry: Technology
   regex:
-- company: Grafana
+- company: Grafana Labs
   domains:
     - grafana.com
   industry: Technology
@@ -682,7 +662,7 @@
     - h2oai.com
   industry: Technology
   regex:
-- company: HERE
+- company: HERE Technologies
   domains:
     - here.com
   industry: Technology
@@ -807,7 +787,7 @@
     - improbable.io
   industry: Technology
   regex:
-- company: Indexdata
+- company: Index Data
   domains:
     - indexdata.com
     - indexdata.dk
@@ -839,7 +819,7 @@
   industry: Technology
   regex:
     - ^.*\.intel\.com$
-- company: Iohk
+- company: IOHK
   domains:
     - iohk.io
   industry: Technology
@@ -859,12 +839,12 @@
     - joyent.com
   industry: Technology
   regex:
-- company: Julia Computing
+- company: JuliaHub
   domains:
     - juliacomputing.com
   industry: Technology
   regex:
-- company: Kainos
+- company: Kainos Group
   domains:
     - kainos.com
   industry: Technology
@@ -920,7 +900,7 @@
 - company: Linaro
   domains:
     - linaro.org
-  industry: Other
+  industry: Technology
   regex:
 - company: LINE Corporation
   domains:
@@ -1016,7 +996,7 @@
   industry: Technology
   regex:
     - ^.*\.microsoft\.com$
-- company: Motion Picture
+- company: Motion Picture Association
   domains:
     - motionpicture.jp
   industry: Media & Telecoms
@@ -1040,7 +1020,7 @@
   regex:
     - ^.*\.nvidia\.com\..*$
     - ^.*\.nvidia\.com$
-- company: NXP
+- company: NXP Semiconductors
   domains:
     - nxp.com
   industry: Technology
@@ -1102,7 +1082,7 @@
     - onlyoffice.com
   industry: Technology
   regex:
-- company: Obvious
+- company: Obvious Ventures
   domains:
     - obvious.in
   industry: Professional Services
@@ -1155,7 +1135,7 @@
     - orange.com
   industry: Media & Telecoms
   regex:
-- company: Origin
+- company: Origin Energy
   domains:
     - originprotocol.com
   industry: Technology
@@ -1175,7 +1155,7 @@
     - siemens.com
   industry: Technology
   regex:
-- company: Palantir
+- company: Palantir Technologies
   domains:
     - palantir.com
   industry: Technology
@@ -1185,7 +1165,7 @@
     - paloaltonetworks.com
   industry: Technology
   regex:
-- company: Pantheon
+- company: Pantheon Ventures
   domains:
     - pantheon.io
   industry: Technology
@@ -1211,7 +1191,7 @@
     - pingcap.com
   industry: Technology
   regex:
-- company: Pivotal
+- company: Pivotal Software
   domains:
     - pivotal.io
     - springframework.org
@@ -1233,7 +1213,7 @@
     - polidea.com
   industry: Technology
   regex:
-- company: Polyapp
+- company: Poly
   domains:
     - polyapp.tech
   industry: Technology
@@ -1254,7 +1234,7 @@
     - privacyone.co
   industry: Technology
   regex:
-- company: Progresssoft
+- company: ProgressSoft
   domains:
     - progressoft.com
   industry: Banking, Insurance & Financial Services
@@ -1265,12 +1245,12 @@
   industry: Technology
   regex:
     - ^.*\.puppet\.com$
-- company: Pyup
+- company: PyUp
   domains:
     - pyup.io
   industry: Technology
   regex:
-- company: Qt
+- company: QuickTrip
   domains:
     - qt.io
   industry: Technology
@@ -1290,7 +1270,7 @@
     - rte-france.com
   industry: Energy & Utilities
   regex:
-- company: Rackspace
+- company: Rackspace Technology
   domains:
     - rackspace.com
   industry: Technology
@@ -1462,7 +1442,7 @@
     - solita.fi
   industry: Technology
   regex:
-- company: Sonarsource
+- company: SonarSource
   domains:
     - sonarsource.com
   industry: Technology
@@ -1473,10 +1453,15 @@
   industry: Technology
   regex:
     - ^.*\.sony\.com$
-- company: Sonymobile
+- company: Sony Mobile
   domains:
     - sonymobile.com
   industry: Media & Telecoms
+  regex:
+- company: Spotify
+  domains:
+    - spotify.com
+  industry: Technology
   regex:
 - company: Splunk
   domains:
@@ -1524,7 +1509,7 @@
     - synopsys.com
   industry: Technology
   regex:
-- company: TI
+- company: Texas Instruments
   domains:
     - ti.com
   industry: Technology
@@ -1566,12 +1551,12 @@
     - dxw.com
   industry: Public sector
   regex:
-- company: The guardian
+- company: The Guardian
   domains:
     - guardian.co.uk
   industry: Media & Telecoms
   regex:
-- company: ThoughtWorks
+- company: Thoughtworks
   domains:
     - thoughtworks.com
   industry: Technology
@@ -1614,12 +1599,12 @@
   industry: Travel & Transport
   regex:
     - ^.*\.uber\.com$
-- company: Uninvention
+- company: Univention
   domains:
     - univention.de
   industry: Technology
   regex:
-- company: United Healthcare
+- company: UnitedHealth Group
   domains:
     - uhc.com
   industry: Healthcare & Pharma
@@ -1676,7 +1661,7 @@
     - warnermedia.com
   industry: Media & Telecoms
   regex:
-- company: Wind River
+- company: Wind River Systems
   domains:
     - windriver.com
   industry: Technology
@@ -1697,21 +1682,14 @@
   industry: Technology
   regex:
 - company: Yandex
+  industry: Technology
   domains:
     - yandex-team.ru
     - yandex-team.com
-  industry: Technology
-  regex:
-    - ^.*\.yandex-team\.ru$
-    - ^.*\.yandex-team\.com
+    - ytsaurus.tech
 - company: Yoast
   domains:
     - yoast.com
-  industry: Technology
-  regex:
-- company: Yunion
-  domains:
-    - yunionyun.com
   industry: Technology
   regex:
 - company: Zalando
@@ -1762,7 +1740,7 @@
 - company: mySociety
   domains:
     - mysociety.org
-  industry: Other
+  industry: Technology
   regex:
 - company: plentymarkets
   domains:
@@ -1779,7 +1757,7 @@
     - t-systems.com
   industry: Professional Services
   regex:
-- company: tweag.io
+- company: Tweag
   domains:
     - tweag.io
   industry: Technology
@@ -1823,7 +1801,7 @@
     - cryptpad.fr
   industry: Technology
   regex:
-- company: Wipro, Ltd.
+- company: Wipro
   domains: 
     - wipro.com
   industry: Professional Services
@@ -1837,10 +1815,26 @@
   domains:
     - farfetch.com
   regex:  
-- company: Infosys Ltd
+- company: Infosys
   domains:
     - infosys.com
     - edgeverve.com
   regex:
     - ^.*\.infosys\.com$
+  industry: Technology
+- company: Fujitsu
+  domains:
+    - fujitsu.com
+  industry: Technology
+  regex:
+    - ^.*\.fujitsu\.com$
+- company: AE Studio
+  domains:
+    - ae.studio
+  industry: Technology
+  regex:
+- company: Layer5
+  domains:
+    - layer5.io
+  regex:
   industry: Technology
