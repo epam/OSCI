@@ -1478,6 +1478,11 @@
     - sonymobile.com
   industry: Media & Telecoms
   regex:
+- company: Spotify
+  domains:
+    - spotify.com
+  industry: Technology
+  regex:
 - company: Splunk
   domains:
     - splunk.com
@@ -1697,13 +1702,11 @@
   industry: Technology
   regex:
 - company: Yandex
+  industry: Technology
   domains:
     - yandex-team.ru
     - yandex-team.com
-  industry: Technology
-  regex:
-    - ^.*\.yandex-team\.ru$
-    - ^.*\.yandex-team\.com
+    - ytsaurus.tech
 - company: Yoast
   domains:
     - yoast.com
@@ -1849,3 +1852,8 @@
     - ae.studio
   industry: Technology
   regex:
+- company: Layer5
+  domains:
+    - layer5.io
+  regex:
+  industry: Technology
