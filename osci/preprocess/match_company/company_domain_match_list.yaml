@@ -1847,6 +1847,11 @@
   regex:
     - ^.*\.infosys\.com$
   industry: Technology
+- company: AE Studio
+  domains:
+    - ae.studio
+  industry: Technology
+  regex:
 - company: Layer5
   domains:
     - layer5.io
