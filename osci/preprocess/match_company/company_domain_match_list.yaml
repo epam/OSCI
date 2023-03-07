@@ -1684,6 +1684,7 @@
 - company: Yandex
   industry: Technology
   domains:
+    - userver.tech
     - yandex-team.ru
     - yandex-team.com
     - ytsaurus.tech
