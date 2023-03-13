@@ -1838,3 +1838,8 @@
     - layer5.io
   regex:
   industry: Technology
+- company: Shell
+  domains:
+    - shell.com
+  regex:
+  industry: Energy & Utilities
