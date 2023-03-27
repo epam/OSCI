@@ -15,7 +15,7 @@
    You should have received a copy of the GNU General Public License
    along with OSCI.  If not, see <http://www.gnu.org/licenses/>."""
 from osci.actions import Action, ActionParam
-from osci.postprocess.find_new_repos_and_commiters import get_contributors_repositories_change
+from osci.postprocess.find_new_repos_and_committers import get_contributors_repositories_change
 from datetime import datetime
 
 
