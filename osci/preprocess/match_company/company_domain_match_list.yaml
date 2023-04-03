@@ -395,6 +395,11 @@
     - credera.co.uk
   industry: Professional Services
   regex:
+- company: Croesus
+  domains:
+    - croesus.com
+  industry: Financial Services
+  regex:
 - company: Ctrl
   domains:
     - ctrl.nl
