@@ -1122,6 +1122,9 @@
 - company: Optum
   domains:
     - optum.com
+    - rallyhealth.com
+    - uhg.com
+    - uhc.com
   industry: Healthcare & Pharma
   regex:
 - company: Oracle
