@@ -1140,6 +1140,11 @@
     - originprotocol.com
   industry: Technology
   regex:
+- company: PlanetScale
+  domains:
+    - planetscale.com
+  industry: Technology
+  regex:
 - company: PTFS Europe
   domains:
     - ptfs-europe.com
