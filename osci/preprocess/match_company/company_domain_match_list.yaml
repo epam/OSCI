@@ -62,7 +62,7 @@
   domains:
     - aiven.io
   industry: Technology
-  regex: 
+  regex:
 - company: Alfresco
   domains:
     - alfresco.com
@@ -242,11 +242,39 @@
 - company: Bosch
   domains:
     - bosch.com
-    - bosch-si.com
+    - aig-mbh.com
+    - aresi.it
     - bosch.io
+    - bosch-connectivity.com
+    - boschrexroth-us.com
+    - bosch-sensortec.com
+    - bosch-si.com
+    - bosch-softtec.com
+    - bosch-stiftung.de
+    - bshg.com
+    - eax-solutions.com
+    - em-motive.com
+    - etas.com
+    - five.ai
+    - freud.it
+    - freudtools.com
+    - guss.buderus.de
+    - hc-cargo.com
+    - hc-cargo.pl
+    - institutorobertbosch.org.br
+    - itk-engineering.com
+    - itk-engineering.de
+    - le-hydraulix.com
+    - moehwald.de
+    - sia-abrafoam.co.uk
+    - sia-abrasives.com
   industry: Technology
   regex:
     - ^.*\.bosch\.com$
+    - ^.*\.azena\.com$
+    - ^.*\.buderus\.com$
+    - ^boschrexroth\.((co|com)\.)?(.){2,3}$
+    - ^buderus\.(.){2,3}$
 - company: Brave
   domains:
     - brave.com
@@ -1802,10 +1830,10 @@
   industry: Technology
   regex:
 - company: Wipro
-  domains: 
+  domains:
     - wipro.com
   industry: Professional Services
-  regex: 
+  regex:
 - company: DigitalOcean
   domains:
     - digitalocean.com
@@ -1814,7 +1842,7 @@
 - company: FARFETCH
   domains:
     - farfetch.com
-  regex:  
+  regex:
 - company: Infosys
   domains:
     - infosys.com
