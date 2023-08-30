@@ -588,6 +588,14 @@
     - flatironschool.com
   industry: Education
   regex:
+- company: Flywheels
+  domains:
+    - flywheels.com
+    - selectdb.com
+  industry: Technology
+  regex:
+    - ^.*\.flywheels\.com$
+    - ^.*\.selectdb\.com$
 - company: Forestry.io
   domains:
     - forestry.io
