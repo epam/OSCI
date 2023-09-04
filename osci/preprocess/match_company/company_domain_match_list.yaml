@@ -405,6 +405,12 @@
     - ctrl.nl
   industry: Technology
   regex:
+- company: DataStax
+  domains:
+    - datastax.com
+  industry: Technology
+  regex:
+    - ^.*\.datastax\.com$
 - company: D2L
   domains:
     - d2l.com
