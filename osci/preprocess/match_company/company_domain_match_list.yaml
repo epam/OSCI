@@ -1637,16 +1637,6 @@
   industry: Technology
   regex:
     - ^.*\.vaadin\.com$
-- company: Verizon Media
-  domains:
-    - verizonmedia.com
-    - oath.com
-    - ryot.org
-    - verizondigitalmedia.com
-    - flurry.com
-    - vdms.com
-  industry: Media & Telecoms
-  regex:
 - company: WIX
   domains:
     - wix.com
@@ -1684,6 +1674,14 @@
 - company: Yahoo
   domains:
     - yahoo-inc.com
+    - yahooinc.com
+    - verizonmedia.com
+    - oath.com
+    - teamaol.com
+    - ryot.org
+    - verizondigitalmedia.com
+    - flurry.com
+    - vdms.com
   industry: Technology
   regex:
 - company: Yandex
