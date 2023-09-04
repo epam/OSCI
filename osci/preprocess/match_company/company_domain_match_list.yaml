@@ -431,6 +431,11 @@
     - decred.org
   industry: Technology
   regex:
+- company: Deutsche Bahn
+  domains:
+    - deutschebahn.com
+  industry: Travel & Transport
+  regex:
 - company: Devexperts
   domains:
     - devexperts.com
