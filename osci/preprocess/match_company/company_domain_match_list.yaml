@@ -334,6 +334,11 @@
     - cloudcannon.com
   industry: Technology
   regex:
+- company: ClickHouse
+  domains:
+    - clickhouse.com
+  industry: Technology
+  regex:
 - company: CloudBees
   domains:
     - cloudbees.com
