@@ -62,7 +62,7 @@
   domains:
     - aiven.io
   industry: Technology
-  regex: 
+  regex:
 - company: Alfresco
   domains:
     - alfresco.com
@@ -242,11 +242,39 @@
 - company: Bosch
   domains:
     - bosch.com
-    - bosch-si.com
+    - aig-mbh.com
+    - aresi.it
     - bosch.io
+    - bosch-connectivity.com
+    - boschrexroth-us.com
+    - bosch-sensortec.com
+    - bosch-si.com
+    - bosch-softtec.com
+    - bosch-stiftung.de
+    - bshg.com
+    - eax-solutions.com
+    - em-motive.com
+    - etas.com
+    - five.ai
+    - freud.it
+    - freudtools.com
+    - guss.buderus.de
+    - hc-cargo.com
+    - hc-cargo.pl
+    - institutorobertbosch.org.br
+    - itk-engineering.com
+    - itk-engineering.de
+    - le-hydraulix.com
+    - moehwald.de
+    - sia-abrafoam.co.uk
+    - sia-abrasives.com
   industry: Technology
   regex:
     - ^.*\.bosch\.com$
+    - ^.*\.azena\.com$
+    - ^.*\.buderus\.com$
+    - ^boschrexroth\.((co|com)\.)?(.){2,3}$
+    - ^buderus\.(.){2,3}$
 - company: Brave
   domains:
     - brave.com
@@ -334,6 +362,11 @@
     - cloudcannon.com
   industry: Technology
   regex:
+- company: ClickHouse
+  domains:
+    - clickhouse.com
+  industry: Technology
+  regex:
 - company: CloudBees
   domains:
     - cloudbees.com
@@ -395,11 +428,22 @@
     - credera.co.uk
   industry: Professional Services
   regex:
+- company: Croesus
+  domains:
+    - croesus.com
+  industry: Banking, Insurance & Financial Services
+  regex:
 - company: Ctrl
   domains:
     - ctrl.nl
   industry: Technology
   regex:
+- company: DataStax
+  domains:
+    - datastax.com
+  industry: Technology
+  regex:
+    - ^.*\.datastax\.com$
 - company: D2L
   domains:
     - d2l.com
@@ -425,6 +469,11 @@
   domains:
     - decred.org
   industry: Technology
+  regex:
+- company: Deutsche Bahn
+  domains:
+    - deutschebahn.com
+  industry: Travel & Transport
   regex:
 - company: Devexperts
   domains:
@@ -588,6 +637,14 @@
     - flatironschool.com
   industry: Education
   regex:
+- company: Flywheels
+  domains:
+    - flywheels.com
+    - selectdb.com
+  industry: Technology
+  regex:
+    - ^.*\.flywheels\.com$
+    - ^.*\.selectdb\.com$
 - company: Forestry.io
   domains:
     - forestry.io
@@ -1122,6 +1179,9 @@
 - company: Optum
   domains:
     - optum.com
+    - rallyhealth.com
+    - uhc.com
+    - uhg.com
   industry: Healthcare & Pharma
   regex:
 - company: Oracle
@@ -1138,6 +1198,11 @@
 - company: Origin Energy
   domains:
     - originprotocol.com
+  industry: Technology
+  regex:
+- company: PlanetScale
+  domains:
+    - planetscale.com
   industry: Technology
   regex:
 - company: PTFS Europe
@@ -1632,16 +1697,6 @@
   industry: Technology
   regex:
     - ^.*\.vaadin\.com$
-- company: Verizon Media
-  domains:
-    - verizonmedia.com
-    - oath.com
-    - ryot.org
-    - verizondigitalmedia.com
-    - flurry.com
-    - vdms.com
-  industry: Media & Telecoms
-  regex:
 - company: WIX
   domains:
     - wix.com
@@ -1679,11 +1734,20 @@
 - company: Yahoo
   domains:
     - yahoo-inc.com
+    - yahooinc.com
+    - verizonmedia.com
+    - oath.com
+    - teamaol.com
+    - ryot.org
+    - verizondigitalmedia.com
+    - flurry.com
+    - vdms.com
   industry: Technology
   regex:
 - company: Yandex
   industry: Technology
   domains:
+    - userver.tech
     - yandex-team.ru
     - yandex-team.com
     - ytsaurus.tech
@@ -1802,10 +1866,10 @@
   industry: Technology
   regex:
 - company: Wipro
-  domains: 
+  domains:
     - wipro.com
   industry: Professional Services
-  regex: 
+  regex:
 - company: DigitalOcean
   domains:
     - digitalocean.com
@@ -1814,7 +1878,7 @@
 - company: FARFETCH
   domains:
     - farfetch.com
-  regex:  
+  regex:
 - company: Infosys
   domains:
     - infosys.com
@@ -1838,3 +1902,10 @@
     - layer5.io
   regex:
   industry: Technology
+- company: Renesas
+  domains:
+    - renesas.com
+    - bp.renesas.com
+  industry: Technology
+  regex:
+    - ^.*\.renesas\.com$
