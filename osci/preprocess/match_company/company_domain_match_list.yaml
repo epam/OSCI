@@ -650,6 +650,11 @@
     - forestry.io
   industry: Technology
   regex:
+- company: Fortinet
+  domains:
+    - fortinet.com
+  industry: Technology
+  regex:
 - company: Galera Cluster
   domains:
     - galeracluster.com
