@@ -1283,6 +1283,19 @@
     - polyapp.tech
   industry: Technology
   regex:
+- company: Porsche AG and Subsidiaries
+  domains:
+    - porsche.com
+    - porsche.de
+    - porsche.digital
+    - mhp.com
+    - porsche-engineering.de
+    - porsche-engineering.cz
+  regex:
+    - ^.*\.porsche\..*$
+    - ^.*\.mhp\..*$
+    - ^.*\.porsche-engineering\..*$
+  industry: Automotive
 - company: Povio
   domains:
     - poviolabs.com
