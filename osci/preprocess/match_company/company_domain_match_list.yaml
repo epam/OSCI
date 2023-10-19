@@ -1909,3 +1909,9 @@
   industry: Technology
   regex:
     - ^.*\.renesas\.com$
+- company: Spectro Cloud
+  domains:
+    - spectrocloud.com
+  industry: Technology
+  regex:
+    - ^.*\.spectrocloud\.com$
