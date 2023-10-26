@@ -331,6 +331,14 @@
   industry: Professional Services
   regex:
     - ^.*\.capgemini\.com$
+- company: ZEISS Group
+  domains:
+    - zeiss.com
+    - saxsys.de
+  industry: Technology
+  regex:
+    - ^.*\.zeiss\..*$
+    - ^.*\.saxsys\..*$
 - company: Centreon
   domains:
     - centreon.com
