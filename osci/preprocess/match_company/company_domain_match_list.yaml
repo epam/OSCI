@@ -1909,3 +1909,9 @@
   industry: Technology
   regex:
     - ^.*\.renesas\.com$
+- company: Databricks
+	domains:
+	  - databricks.com
+	regex:
+	  - ^.*\.databricks\.com$
+  industry: Technology
