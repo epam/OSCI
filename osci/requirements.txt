@@ -6,7 +6,7 @@ google-cloud-bigquery==1.25.0
 pyyaml==5.4
 pyarrow == 14.0.1
 pandas == 1.0.3
-requests==2.22.0
+requests==2.31.0
 click==7.1.2
 six==1.13.0
 XlsxWriter==1.2.3
