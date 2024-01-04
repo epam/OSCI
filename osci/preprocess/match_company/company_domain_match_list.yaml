@@ -331,6 +331,14 @@
   industry: Professional Services
   regex:
     - ^.*\.capgemini\.com$
+- company: ZEISS Group
+  domains:
+    - zeiss.com
+    - saxsys.de
+  industry: Technology
+  regex:
+    - ^.*\.zeiss\..*$
+    - ^.*\.saxsys\..*$
 - company: Centreon
   domains:
     - centreon.com
@@ -890,6 +898,16 @@
   domains:
     - jetbrains.com
   industry: Technology
+  regex:
+- company: JP Morgan Chase
+  domains:
+    - chase.com
+    - jpmchase.com
+    - jpmorgan.com
+    - jpmorganchase.com
+    - jpmchase.net
+    - jpmc.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Joyent
   domains:
@@ -1750,6 +1768,7 @@
     - userver.tech
     - yandex-team.ru
     - yandex-team.com
+    - ydb.tech
     - ytsaurus.tech
 - company: Yoast
   domains:
@@ -1915,3 +1934,9 @@
   industry: Technology
   regex:
     - ^.*\.spectrocloud\.com$
+- company: Databricks
+	domains:
+	  - databricks.com
+	regex:
+	  - ^.*\.databricks\.com$
+  industry: Technology
