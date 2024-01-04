@@ -331,6 +331,14 @@
   industry: Professional Services
   regex:
     - ^.*\.capgemini\.com$
+- company: ZEISS Group
+  domains:
+    - zeiss.com
+    - saxsys.de
+  industry: Technology
+  regex:
+    - ^.*\.zeiss\..*$
+    - ^.*\.saxsys\..*$
 - company: Centreon
   domains:
     - centreon.com
@@ -650,6 +658,11 @@
     - forestry.io
   industry: Technology
   regex:
+- company: Fortinet
+  domains:
+    - fortinet.com
+  industry: Technology
+  regex:
 - company: Galera Cluster
   domains:
     - galeracluster.com
@@ -890,6 +903,16 @@
   domains:
     - jetbrains.com
   industry: Technology
+  regex:
+- company: JP Morgan Chase
+  domains:
+    - chase.com
+    - jpmchase.com
+    - jpmorgan.com
+    - jpmorganchase.com
+    - jpmchase.net
+    - jpmc.com
+  industry: Banking, Insurance & Financial Services
   regex:
 - company: Joyent
   domains:
@@ -1283,6 +1306,19 @@
     - polyapp.tech
   industry: Technology
   regex:
+- company: Porsche AG and Subsidiaries
+  domains:
+    - porsche.com
+    - porsche.de
+    - porsche.digital
+    - mhp.com
+    - porsche-engineering.de
+    - porsche-engineering.cz
+  regex:
+    - ^.*\.porsche\..*$
+    - ^.*\.mhp\..*$
+    - ^.*\.porsche-engineering\..*$
+  industry: Automotive
 - company: Povio
   domains:
     - poviolabs.com
@@ -1750,6 +1786,7 @@
     - userver.tech
     - yandex-team.ru
     - yandex-team.com
+    - ydb.tech
     - ytsaurus.tech
 - company: Yoast
   domains:
@@ -1909,3 +1946,15 @@
   industry: Technology
   regex:
     - ^.*\.renesas\.com$
+- company: Spectro Cloud
+  domains:
+    - spectrocloud.com
+  industry: Technology
+  regex:
+    - ^.*\.spectrocloud\.com$
+- company: Databricks
+	domains:
+	  - databricks.com
+	regex:
+	  - ^.*\.databricks\.com$
+  industry: Technology
