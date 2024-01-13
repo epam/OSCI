@@ -515,6 +515,11 @@
   industry: Technology
   regex:
     - ^docker\..*$
+- company: DoliCloud
+  domains:
+    - dolicloud.com
+  industry: Technology
+  regex:
 - company: Dynatrace
   domains:
     - dynatrace.com
