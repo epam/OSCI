@@ -1,3 +1,9 @@
+- company: 10up
+  domains:
+    - 10up.com
+    - get10up.com
+  industry: Technology
+  regex:
 - company: 4teamwork
   domains:
     - 4teamwork.ch
