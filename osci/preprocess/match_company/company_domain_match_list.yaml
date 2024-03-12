@@ -1371,6 +1371,11 @@
     - qt.io
   industry: Technology
   regex:
+- company: Qualcomm Innovation Center, Inc.
+  domains:
+    - quicinc.com
+  industry: Technology
+  regex:
 - company: QualityKiosk
   domains:
     - qualitykiosk.com
