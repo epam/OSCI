@@ -9,6 +9,10 @@
   industry: Technology
   regex:
     - ^.*\.5minds\.de$
+- company: ALL Circuits
+  domains:
+    - allcircuits.com
+  industry: Professional Services
 - company: AMD
   domains:
     - amd.com
