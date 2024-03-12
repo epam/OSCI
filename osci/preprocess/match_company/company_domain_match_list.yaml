@@ -1969,8 +1969,8 @@
   regex:
     - ^.*\.spectrocloud\.com$
 - company: Databricks
-	domains:
-	  - databricks.com
-	regex:
-	  - ^.*\.databricks\.com$
+  domains:
+    - databricks.com
+  regex:
+    - ^.*\.databricks\.com$
   industry: Technology
