@@ -1916,6 +1916,7 @@
   domains:
     - farfetch.com
   regex:
+  industry: Retail & Hospitality
 - company: Infosys
   domains:
     - infosys.com
