@@ -483,6 +483,11 @@
     - datadoghq.com
   industry: Technology
   regex:
+- company: DB Schenker
+  domains:
+    - dbschenker.com
+  industry: Travel & Transport
+  regex:
 - company: Decred
   domains:
     - decred.org
