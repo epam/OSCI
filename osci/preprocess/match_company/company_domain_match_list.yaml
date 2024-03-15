@@ -904,14 +904,11 @@
     - jetbrains.com
   industry: Technology
   regex:
-- company: JP Morgan Chase
+- company: JPMorganChase
   domains:
+    - jpmorgan.com
     - chase.com
     - jpmchase.com
-    - jpmorgan.com
-    - jpmorganchase.com
-    - jpmchase.net
-    - jpmc.com
   industry: Banking, Insurance & Financial Services
   regex:
 - company: Joyent
