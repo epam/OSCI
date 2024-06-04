@@ -1958,3 +1958,7 @@
 	regex:
 	  - ^.*\.databricks\.com$
   industry: Technology
+- company: Mercedes-Benz Group AG
+  domains:
+    - mercedes-benz.com
+  industry: Automotive
