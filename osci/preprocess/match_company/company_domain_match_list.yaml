@@ -626,10 +626,12 @@
   domains:
     - fb.com
     - facebook.com
+    - meta.com
   industry: Technology
   regex:
     - ^.*\.fb\.com$
     - ^.*\.facebook\.com$
+    - ^.*\.meta\.com$
 - company: Financial Times
   domains:
     - ft.com
