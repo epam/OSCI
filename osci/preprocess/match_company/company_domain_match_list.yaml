@@ -1689,6 +1689,12 @@
     - twitter.com
   industry: Technology
   regex:
+- company: TYPO3
+  domains:
+    - typo3.com
+    - typo3.org
+  industry: Technology
+  regex:
 - company: Tyro
   domains:
     - tyro.com
