@@ -986,6 +986,12 @@
     - labkey.com
   industry: Technology
   regex:
+- company: LambdaTest
+  domains:
+    - lambdatest.com
+  regex:
+    - ^.*\.lambdatest\.com$
+  industry: Technology
 - company: Liferay
   domains:
     - liferay.com
