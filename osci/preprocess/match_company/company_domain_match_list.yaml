@@ -1966,6 +1966,13 @@
 	regex:
 	  - ^.*\.databricks\.com$
   industry: Technology
+- company: OVHCloud
+  domains:
+    - ovhcloud.com
+    - ovh.com
+  regex:
+    - ^.*\.ovh\.com$
+  industry: Technology
 - company: Mercedes-Benz Group AG
   domains:
     - mercedes-benz.com
