@@ -1,3 +1,9 @@
+- company: 10up
+  domains:
+    - 10up.com
+    - get10up.com
+  industry: Technology
+  regex:
 - company: 4teamwork
   domains:
     - 4teamwork.ch
@@ -9,6 +15,10 @@
   industry: Technology
   regex:
     - ^.*\.5minds\.de$
+- company: ALL Circuits
+  domains:
+    - allcircuits.com
+  industry: Professional Services
 - company: AMD
   domains:
     - amd.com
@@ -473,6 +483,11 @@
     - datadoghq.com
   industry: Technology
   regex:
+- company: DB Schenker
+  domains:
+    - dbschenker.com
+  industry: Travel & Transport
+  regex:
 - company: Decred
   domains:
     - decred.org
@@ -515,6 +530,11 @@
   industry: Technology
   regex:
     - ^docker\..*$
+- company: DoliCloud
+  domains:
+    - dolicloud.com
+  industry: Technology
+  regex:
 - company: Dynatrace
   domains:
     - dynatrace.com
@@ -906,14 +926,11 @@
     - jetbrains.com
   industry: Technology
   regex:
-- company: JP Morgan Chase
+- company: JPMorganChase
   domains:
+    - jpmorgan.com
     - chase.com
     - jpmchase.com
-    - jpmorgan.com
-    - jpmorganchase.com
-    - jpmchase.net
-    - jpmc.com
   industry: Banking, Insurance & Financial Services
   regex:
 - company: Joyent
@@ -1356,6 +1373,12 @@
 - company: QuickTrip
   domains:
     - qt.io
+  industry: Technology
+  regex:
+- company: Qualcomm Innovation Center, Inc.
+  domains:
+    - quicinc.com
+    - quic.qualcomm.com
   industry: Technology
   regex:
 - company: QualityKiosk
@@ -1924,6 +1947,7 @@
   domains:
     - farfetch.com
   regex:
+  industry: Retail & Hospitality
 - company: Infosys
   domains:
     - infosys.com
@@ -1961,10 +1985,10 @@
   regex:
     - ^.*\.spectrocloud\.com$
 - company: Databricks
-	domains:
-	  - databricks.com
-	regex:
-	  - ^.*\.databricks\.com$
+  domains:
+    - databricks.com
+  regex:
+    - ^.*\.databricks\.com$
   industry: Technology
 - company: OVHCloud
   domains:
