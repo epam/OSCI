@@ -626,10 +626,12 @@
   domains:
     - fb.com
     - facebook.com
+    - meta.com
   industry: Technology
   regex:
     - ^.*\.fb\.com$
     - ^.*\.facebook\.com$
+    - ^.*\.meta\.com$
 - company: Financial Times
   domains:
     - ft.com
@@ -1689,6 +1691,12 @@
     - twitter.com
   industry: Technology
   regex:
+- company: TYPO3
+  domains:
+    - typo3.com
+    - typo3.org
+  industry: Technology
+  regex:
 - company: Tyro
   domains:
     - tyro.com
@@ -1965,3 +1973,7 @@
   regex:
     - ^.*\.ovh\.com$
   industry: Technology
+- company: Mercedes-Benz Group AG
+  domains:
+    - mercedes-benz.com
+  industry: Automotive
