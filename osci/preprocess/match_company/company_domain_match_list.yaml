@@ -249,6 +249,11 @@
     - bootlin.com
   industry: Technology
   regex:
+- company: ETAS
+  domains:
+    - etas.com
+  industry: Automotive
+  regex:
 - company: Bosch
   domains:
     - bosch.com
