@@ -188,6 +188,11 @@
     - b2ck.com
   industry: Technology
   regex:
+- company: BayLibre
+  domains:
+    - baylibre.com
+  industry: Technology
+  regex:
 - company: BBC
   domains:
     - bbc.co.uk
