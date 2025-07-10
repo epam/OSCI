@@ -2001,3 +2001,15 @@
   domains:
     - mercedes-benz.com
   industry: Automotive
+- company: CIQ
+  domains:
+    - ciq.com
+    - ciq.co
+    - ctrl-cmd.com
+    - ctrliq.com
+  industry: Technology
+  regex:
+    - ^.*\.ciq\.com$
+    - ^.*\.ciq\.co$
+    - ^.*\.ctrl-cmd\.com$
+    - ^.*\.ctrliq\.com$
