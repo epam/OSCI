@@ -104,15 +104,15 @@ Run the application from the command line using the instruction below.
 ### Installation
 1) Clone repository
     ```shell script
-         git clone https://github.com/epam/OSCI.git
+git clone https://github.com/epam/OSCI.git
     ```
 1) Go to project directory
     ```shell script
-         cd OSCI
+cd OSCI
     ```
 1) Install requirements
     ```shell script
-         pip install -r requirements.txt
+pip install -r requirements.txt
    ```
 
 ### Configuration
@@ -122,15 +122,15 @@ A sample file [`default.yml`](osci/config/files/default.yml) is included, please
 ### Sample run
 1) Run script to download data from archive (for example for 01 January 2020)
     ```shell script
-         python3 osci-cli.py get-github-daily-push-events -d 2020-01-01
+python3 osci-cli.py get-github-daily-push-events -d 2020-01-01
     ```
 1) Run script to add company field (matched by domain) (for example for 01 January 2020)
     ```shell script
-         python3 osci-cli.py process-github-daily-push-events -d 2020-01-01
+python3 osci-cli.py process-github-daily-push-events -d 2020-01-01
     ```
 1) Run script to add company field (matched by domain) (for example for 01 January 2020)
     ```shell script
-         python3 osci-cli.py daily-osci-rankings -td 2020-01-02
+python3 osci-cli.py daily-osci-rankings -td 2020-01-02
     ```
 
 ## OSCI Versioning
