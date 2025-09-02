@@ -354,6 +354,11 @@
     - centreon.com
   industry: Technology
   regex:
+- company: Chainguard
+  domains:
+    - chainguard.dev
+  industry: Technology
+  regex:
 - company: Chef
   domains:
     - chef.io
