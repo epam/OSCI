@@ -1267,6 +1267,11 @@
     - palantir.com
   industry: Technology
   regex:
+- company: Palark
+  domains:
+    - palark.com
+  industry: Technology
+  regex:
 - company: Palo Alto Networks
   domains:
     - paloaltonetworks.com
