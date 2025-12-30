@@ -1650,6 +1650,11 @@
     - talend.com
   industry: Technology
   regex:
+- company: Tata Consultancy Services
+  domains:
+    - tcs.com
+  industry: Technology
+  regex:
 - company: TeamDev
   domains:
     - teamdev.com
