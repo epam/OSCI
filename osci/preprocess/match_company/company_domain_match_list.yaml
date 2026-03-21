@@ -1218,6 +1218,11 @@
     - openlattice.com
   industry: Technology
   regex:
+- company: Autonomyx
+  domains:
+    - openautonomyx.com
+  industry: Technology
+  regex:
 - company: Optum
   domains:
     - optum.com
